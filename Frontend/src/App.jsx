@@ -8,28 +8,26 @@ import Signup from "./pages/Signup/Signup";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
-      <Navbar />
+      {/*=================== Navbar */}
+      {/* <Navbar /> */}
 
-      {/* Main content */}
       <div className="flex flex-1">
         {/* Sidebar */}
-        <Sidebar />
+        {/* <Sidebar /> */}
 
-        {/* Page content */}
+        {/* Main content */}
         <div className="flex-1 p-6 bg-gray-100">
           <Routes>
-            <Route path="/login" element={<Login />} />
+            {/* Default page is Login */}
+            <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
       </div>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
-
- 
   );
 }
 
