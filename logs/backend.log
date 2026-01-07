@@ -1,0 +1,29 @@
+2026-01-07 17:51:03.607 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-07 17:51:03.707 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 27088 (C:\Users\inam\Downloads\Backend\Backend\target\classes started by inam in C:\Users\inam\Downloads\Backend\Backend)
+2026-01-07 17:51:03.709 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-07 17:51:05.854 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-07 17:51:05.864 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-07 17:51:05.864 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-07 17:51:05.950 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-07 17:51:06.232 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-07 17:51:06.312 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-07 17:51:06.378 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-07 17:51:06.926 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-07 17:51:07.217 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c6c2a73
+2026-01-07 17:51:07.220 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-07 17:51:07.328 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-07 17:51:07.345 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@ff03361) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@790654d5)
+2026-01-07 17:51:07.346 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5f935d49) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3321291a)
+2026-01-07 17:51:08.913 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-07 17:51:09.126 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-07 17:51:09.728 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-07 17:51:09.766 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.057 seconds (process running for 7.65)
+2026-01-07 17:51:59.771 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-07 17:51:59.779 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
