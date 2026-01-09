@@ -1,6 +1,5 @@
 package com.example.Backend.entity.group;
 
-
 import com.example.Backend.entity.contact.Contact;
 import com.example.Backend.entity.user.User;
 import jakarta.persistence.*;
@@ -11,11 +10,11 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 
 @Entity
-    @Table(name = "groups")
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public class Group {
+@Table(name = "groups")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +25,7 @@ import java.util.Set;
 
     private String description;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 

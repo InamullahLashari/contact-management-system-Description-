@@ -38,6 +38,10 @@ public class JwtUtil {
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
+
+    }
+    public boolean isAccessToken(String token) {
+        return "access".equals(extractClaim(token, c -> c.get("type", String.class)));
     }
 
     // Extract all claims
