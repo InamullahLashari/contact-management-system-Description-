@@ -1,4 +1,4 @@
-package com.example.Backend.dto.loginrequest;
+package com.example.Backend.dto.login;
 
 
 import jakarta.validation.constraints.Email;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class LoginRequestDTO {
+public class LoginRequestDto {
     @Email(message = "Invalid email format")
     @NotBlank(message = "Email is required")
     private String email;

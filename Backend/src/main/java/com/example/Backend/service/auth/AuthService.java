@@ -1,13 +1,13 @@
 package com.example.Backend.service.auth;
 
-import com.example.Backend.dto.loginrequest.LoginRequestDTO;
+import com.example.Backend.dto.login.LoginRequestDto;
 
 import java.util.Map;
 
 public interface AuthService {
 
 
-    Map<String, Object> login(LoginRequestDTO dto);
+    Map<String, Object> login(LoginRequestDto dto);
 
 
     void logout(String email);

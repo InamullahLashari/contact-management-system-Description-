@@ -1,17 +1,17 @@
-2026-01-08 09:59:43.296 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 09:59:43.379 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 5804 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 09:59:43.381 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 09:59:45.896 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 09:59:45.901 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 09:59:45.901 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 09:59:45.987 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 09:59:46.319 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 09:59:46.405 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 09:59:46.467 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 09:59:47.061 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 09:59:47.345 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48cf8414
-2026-01-08 09:59:47.348 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 09:59:47.438 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+2026-01-12 00:00:17.742 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:00:17.808 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 10864 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:00:17.810 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:00:20.122 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:00:20.125 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:00:20.126 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:00:20.211 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:00:20.433 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:00:20.503 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:00:20.569 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:00:21.046 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:00:21.300 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1cc708a7
+2026-01-12 00:00:21.302 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:00:21.400 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.6
@@ -19,28 +19,52 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-08 09:59:47.449 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@5a48d186) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@521ba38f)
-2026-01-08 09:59:47.449 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2086d469) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@b1d19ff)
-2026-01-08 09:59:49.030 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 09:59:49.233 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 09:59:49.802 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 09:59:49.845 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.518 seconds (process running for 8.132)
-2026-01-08 10:00:11.742 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 10:00:11.753 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 10:06:03.646 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 10:06:03.736 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 14004 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 10:06:03.737 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 10:06:05.880 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 10:06:05.882 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 10:06:05.883 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 10:06:05.970 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 10:06:06.302 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 10:06:06.393 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 10:06:06.445 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 10:06:06.995 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 10:06:07.266 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6903ed0e
-2026-01-08 10:06:07.269 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 10:06:07.369 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+2026-01-12 00:00:21.412 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@401926df) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@3ff8a3ad)
+2026-01-12 00:00:21.412 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@550fa96f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@54275b5d)
+2026-01-12 00:00:22.861 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:00:23.691 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:00:23.936 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:00:24.054 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:00:24.339 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:00:24.371 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.457 seconds (process running for 7.979)
+2026-01-12 00:00:47.883 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:00:47.961 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=null, lastName=null, title=null, address=null, emails=null, phones=null, groups=null)
+2026-01-12 00:00:48.151 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        u1_0.email is null
+2026-01-12 00:01:09.749 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:01:09.773 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:02:45.971 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:02:46.076 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 14728 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:02:46.077 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:02:48.261 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:02:48.264 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:02:48.265 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:02:48.347 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:02:48.546 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:02:48.635 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:02:48.695 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:02:49.170 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:02:49.467 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c421952
+2026-01-12 00:02:49.470 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:02:49.576 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.6
@@ -48,136 +72,166 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-08 10:06:07.382 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@402d6012) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@395281c2)
-2026-01-08 10:06:07.382 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@41d20f06) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3e753289)
-2026-01-08 10:06:08.883 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 10:06:09.103 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 10:06:09.665 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 10:06:09.701 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 6.989 seconds (process running for 7.619)
-2026-01-08 10:17:53.536 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 10:17:53.550 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 11:11:00.904 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 11:11:00.993 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 14432 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 11:11:00.995 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 11:11:02.964 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 11:11:02.967 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 11:11:02.967 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 11:11:03.052 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 11:11:03.351 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 11:11:03.425 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 11:11:03.480 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 11:11:03.961 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 11:11:04.221 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@faec277
-2026-01-08 11:11:04.223 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 11:11:04.316 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 11:11:04.326 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6cbdd1c5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@60816371)
-2026-01-08 11:11:04.326 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@678586f0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5ad6f98e)
-2026-01-08 11:11:05.813 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 11:11:06.013 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 11:11:06.566 | WARN  | [main] | o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword | 
-
-Using generated security password: 8af005e3-fef3-42b0-bf58-b8915cce4c39
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-01-08 11:11:06.757 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 11:11:06.811 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 6.728 seconds (process running for 7.495)
-2026-01-08 11:14:50.895 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 11:14:50.906 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 20:59:23.207 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 20:59:23.283 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 22236 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 20:59:23.284 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 20:59:26.173 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 20:59:26.176 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 20:59:26.177 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 20:59:26.277 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 20:59:26.628 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 20:59:26.735 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 20:59:26.808 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 20:59:27.535 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 20:59:27.893 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@166e5a6d
-2026-01-08 20:59:27.896 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 20:59:28.018 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 20:59:28.029 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@f76872f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2d4e99de)
-2026-01-08 20:59:28.030 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@580ffea) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@191e654)
-2026-01-08 20:59:29.599 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 20:59:29.687 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:02:49.588 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4cd7e993) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@685e6a68)
+2026-01-12 00:02:49.589 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fb48970) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4e8d9bb6)
+2026-01-12 00:02:51.137 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:02:51.192 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contact_emails (
+        id bigint generated by default as identity,
+        email_address varchar(255),
+        label varchar(255) not null,
+        contact_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:02:51.205 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contact_groups (
+        contact_id bigint not null,
+        group_id bigint not null,
+        primary key (contact_id, group_id)
+    )
+2026-01-12 00:02:51.208 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contact_phones (
+        id bigint generated by default as identity,
+        label varchar(255) not null,
+        phone_number varchar(255),
+        contact_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:02:51.214 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contacts (
+        id bigint generated by default as identity,
+        first_name varchar(255),
+        last_name varchar(255),
+        title varchar(255),
+        user_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:02:51.219 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table groups (
+        id bigint generated by default as identity,
+        description varchar(255),
+        group_name varchar(255) not null,
+        user_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:02:51.225 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table roles (
+        id bigint generated by default as identity,
+        role_name varchar(255) not null,
+        primary key (id)
+    )
+2026-01-12 00:02:51.229 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table users (
+        id bigint generated by default as identity,
+        active boolean not null,
+        is_deleted boolean,
+        email varchar(255) not null,
+        last_login timestamp(6),
+        name varchar(255),
+        password varchar(255),
+        refresh_token varchar(255),
+        reset_password_token varchar(255),
+        reset_token_expiry timestamp(6),
+        token_expiry timestamp(6),
+        verification_token varchar(255),
+        verified boolean not null,
+        role_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:02:51.235 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists roles 
+       drop constraint if exists UK716hgxp60ym1lifrdgp67xt5k
+2026-01-12 00:02:51.239 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | SQL Warning Code: 0, SQLState: 00000
+2026-01-12 00:02:51.240 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | constraint "uk716hgxp60ym1lifrdgp67xt5k" of relation "roles" does not exist, skipping
+2026-01-12 00:02:51.240 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists roles 
+       add constraint UK716hgxp60ym1lifrdgp67xt5k unique (role_name)
+2026-01-12 00:02:51.242 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
     alter table if exists users 
-       add column active boolean not null
-2026-01-08 20:59:29.694 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+       drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7
+2026-01-12 00:02:51.243 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | SQL Warning Code: 0, SQLState: 00000
+2026-01-12 00:02:51.244 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2026-01-12 00:02:51.244 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
     alter table if exists users 
-       add column is_deleted boolean
-2026-01-08 20:59:29.695 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
+2026-01-12 00:02:51.246 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_emails 
+       add constraint FKelumwei9rdn3dybkahl69vn7e 
+       foreign key (contact_id) 
+       references contacts
+2026-01-12 00:02:51.252 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_groups 
+       add constraint FK78b3lfapjw93pn3ox8b4y71bx 
+       foreign key (group_id) 
+       references groups
+2026-01-12 00:02:51.254 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_groups 
+       add constraint FKcux3rehp9vx10ur9hh8hhcubr 
+       foreign key (contact_id) 
+       references contacts
+2026-01-12 00:02:51.256 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_phones 
+       add constraint FKfhdgb0dro8m0a8mkqo35maxnv 
+       foreign key (contact_id) 
+       references contacts
+2026-01-12 00:02:51.257 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contacts 
+       add constraint FKna8bddygr3l3kq1imghgcskt8 
+       foreign key (user_id) 
+       references users
+2026-01-12 00:02:51.259 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists groups 
+       add constraint FK4cygfv5el2o2v3hbkdkscfw5q 
+       foreign key (user_id) 
+       references users
+2026-01-12 00:02:51.261 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
     alter table if exists users 
-       add column last_login timestamp(6)
-2026-01-08 20:59:29.697 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
-    alter table if exists users 
-       add column refresh_token varchar(255)
-2026-01-08 20:59:29.698 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
-    alter table if exists users 
-       add column reset_password_token varchar(255)
-2026-01-08 20:59:29.699 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
-    alter table if exists users 
-       add column reset_token_expiry timestamp(6)
-2026-01-08 20:59:29.700 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
-    alter table if exists users 
-       add column token_expiry timestamp(6)
-2026-01-08 20:59:29.700 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
-    alter table if exists users 
-       add column verification_token varchar(255)
-2026-01-08 20:59:29.701 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
-    alter table if exists users 
-       add column verified boolean not null
-2026-01-08 20:59:30.331 | WARN  | [main] | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authServiceImpI': Unsatisfied dependency expressed through field 'customUserDetailsService': No qualifying bean of type 'com.example.Backend.service.customdetail.customUserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2026-01-08 20:59:30.335 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 20:59:30.345 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 20:59:30.349 | INFO  | [main] | o.a.catalina.core.StandardService.log | Stopping service [Tomcat]
-2026-01-08 20:59:30.407 | ERROR | [main] | o.s.b.d.LoggingFailureAnalysisReporter.report | 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field customUserDetailsService in com.example.Backend.serviceImpI.auth.AuthServiceImpI required a bean of type 'com.example.Backend.service.customdetail.customUserDetailsService' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.example.Backend.service.customdetail.customUserDetailsService' in your configuration.
-
-2026-01-08 21:01:59.871 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:01:59.963 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 23716 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:01:59.965 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:02:02.667 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:02:02.670 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:02:02.670 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:02:02.758 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:02:03.070 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:02:03.162 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:02:03.220 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:02:03.773 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:02:04.089 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1201e064
-2026-01-08 21:02:04.095 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:02:04.186 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+       add constraint FKp56c1712k691lhsyewcssf40f 
+       foreign key (role_id) 
+       references roles
+2026-01-12 00:02:51.929 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:02:52.190 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:02:52.286 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:02:52.621 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:02:52.654 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.51 seconds (process running for 8.047)
+2026-01-12 00:03:26.223 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:03:26.318 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=null, lastName=null, title=null, address=null, emails=null, phones=null, groups=null)
+2026-01-12 00:03:26.465 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        u1_0.email is null
+2026-01-12 00:03:36.631 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:03:36.653 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:05:05.322 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:05:05.409 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 8056 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:05:05.411 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:05:09.037 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:05:09.039 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:05:09.040 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:05:09.125 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:05:09.384 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:05:09.492 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:05:09.569 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:05:10.059 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:05:10.644 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c421952
+2026-01-12 00:05:10.646 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:05:10.756 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.6
@@ -185,240 +239,17 @@ Consider defining a bean of type 'com.example.Backend.service.customdetail.custo
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-08 21:02:04.198 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6f6c8d45) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@7f2ca6f8)
-2026-01-08 21:02:04.198 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79d49790) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@13dc6649)
-2026-01-08 21:02:05.730 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:02:06.359 | WARN  | [main] | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authServiceImpI': Unsatisfied dependency expressed through field 'customUserDetailsService': No qualifying bean of type 'com.example.Backend.service.customdetail.customUserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2026-01-08 21:02:06.362 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:02:06.371 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:02:06.376 | INFO  | [main] | o.a.catalina.core.StandardService.log | Stopping service [Tomcat]
-2026-01-08 21:02:06.444 | ERROR | [main] | o.s.b.d.LoggingFailureAnalysisReporter.report | 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field customUserDetailsService in com.example.Backend.serviceImpI.auth.AuthServiceImpI required a bean of type 'com.example.Backend.service.customdetail.customUserDetailsService' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.example.Backend.service.customdetail.customUserDetailsService' in your configuration.
-
-2026-01-08 21:07:34.479 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:07:34.576 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 18424 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:07:34.578 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:07:37.077 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:07:37.080 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:07:37.081 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:07:37.176 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:07:37.467 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:07:37.552 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:07:37.606 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:07:38.141 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:07:38.439 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1846ad0f
-2026-01-08 21:07:38.442 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:07:38.549 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:07:38.562 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@13dc6649) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@1851c7d2)
-2026-01-08 21:07:38.563 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@250a946) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5fe5c68b)
-2026-01-08 21:07:40.199 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:07:40.825 | WARN  | [main] | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authServiceImpI': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2026-01-08 21:07:40.830 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:07:40.842 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:07:40.846 | INFO  | [main] | o.a.catalina.core.StandardService.log | Stopping service [Tomcat]
-2026-01-08 21:07:40.905 | ERROR | [main] | o.s.b.d.LoggingFailureAnalysisReporter.report | 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field passwordEncoder in com.example.Backend.serviceImpI.auth.AuthServiceImpI required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
-
-2026-01-08 21:09:18.990 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:09:19.079 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 16072 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:09:19.080 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:09:21.547 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:09:21.550 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:09:21.551 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:09:21.652 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:09:21.969 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:09:22.054 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:09:22.115 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:09:22.689 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:09:22.992 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a8dcfbb
-2026-01-08 21:09:22.996 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:09:23.094 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:09:23.107 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@79d49790) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@13dc6649)
-2026-01-08 21:09:23.107 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1851c7d2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@250a946)
-2026-01-08 21:09:24.666 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:09:25.327 | WARN  | [main] | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetails' defined in file [C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes\com\example\Backend\util\CustomUserDetails.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.Long' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-01-08 21:09:25.331 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:09:25.358 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:09:25.364 | INFO  | [main] | o.a.catalina.core.StandardService.log | Stopping service [Tomcat]
-2026-01-08 21:09:25.431 | ERROR | [main] | o.s.b.d.LoggingFailureAnalysisReporter.report | 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.example.Backend.util.CustomUserDetails required a bean of type 'java.lang.Long' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'java.lang.Long' in your configuration.
-
-2026-01-08 21:11:40.116 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:11:40.208 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 8312 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:11:40.210 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:11:43.092 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:11:43.094 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:11:43.095 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:11:43.194 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:11:43.491 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:11:43.599 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:11:43.661 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:11:44.213 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:11:44.511 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@606b53a3
-2026-01-08 21:11:44.514 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:11:44.623 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:11:44.633 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@191e654) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@3a6556b6)
-2026-01-08 21:11:44.634 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@63bca84d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6141647f)
-2026-01-08 21:11:46.327 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:11:47.256 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 21:11:48.033 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:11:48.067 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 8.886 seconds (process running for 9.495)
-2026-01-08 21:12:25.974 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-08 21:13:59.024 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:13:59.040 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:15:38.570 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:15:38.663 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 21092 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:15:38.665 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:15:41.425 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:15:41.428 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:15:41.429 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:15:41.523 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:15:41.829 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:15:41.928 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:15:41.987 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:15:42.538 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:15:42.855 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a8dcfbb
-2026-01-08 21:15:42.859 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:15:42.956 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:15:42.967 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@79d49790) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@13dc6649)
-2026-01-08 21:15:42.968 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1851c7d2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@250a946)
-2026-01-08 21:15:44.583 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:15:45.351 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 21:15:46.102 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:15:46.138 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 8.485 seconds (process running for 9.096)
-2026-01-08 21:16:05.486 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-08 21:17:07.869 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:17:07.883 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:18:40.291 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:18:40.376 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 18264 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:18:40.377 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:18:42.801 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:18:42.803 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:18:42.804 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:18:42.899 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:18:43.197 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:18:43.309 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:18:43.373 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:18:43.925 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:18:44.211 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@606b53a3
-2026-01-08 21:18:44.213 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:18:44.312 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:18:44.324 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@191e654) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@3a6556b6)
-2026-01-08 21:18:44.325 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@63bca84d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6141647f)
-2026-01-08 21:18:45.882 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:18:46.588 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 21:18:47.272 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:18:47.308 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.955 seconds (process running for 8.57)
-2026-01-08 21:19:09.702 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-08 21:21:46.986 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:21:46.997 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:21:59.527 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:21:59.616 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 18748 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:21:59.618 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:22:02.191 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:22:02.193 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:22:02.194 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:22:02.279 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:22:02.584 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:22:02.671 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:22:02.731 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:22:03.272 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:22:03.586 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a8dcfbb
-2026-01-08 21:22:03.589 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:22:03.690 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:22:03.705 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@79d49790) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@13dc6649)
-2026-01-08 21:22:03.706 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1851c7d2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@250a946)
-2026-01-08 21:22:05.458 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:22:06.186 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 21:22:06.896 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:22:06.933 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 8.338 seconds (process running for 8.945)
-2026-01-08 21:22:37.608 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-08 21:22:37.798 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.controller.user.UserController.signUpUser | Sign-up attempt with data: UserRequestDto(name=Alice Smith, email=alice.smith@example.com, password=StrongPassword123)
-2026-01-08 21:22:37.989 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:05:10.769 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4cd7e993) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@685e6a68)
+2026-01-12 00:05:10.770 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fb48970) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4e8d9bb6)
+2026-01-12 00:05:12.319 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:05:13.455 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:05:13.705 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:05:13.805 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:05:14.135 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:05:14.176 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 9.75 seconds (process running for 10.351)
+2026-01-12 00:06:07.229 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:06:07.438 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.user.UserController.signUpUser | Sign-up attempt with data: UserRequestDto(name=inam, email=inam@gmail.com, password=1234)
+2026-01-12 00:06:07.636 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
     select
         u1_0.id,
         u1_0.active,
@@ -438,16 +269,146 @@ Consider defining a bean of type 'java.lang.Long' in your configuration.
         users u1_0 
     where
         upper(u1_0.email)=upper(?)
-2026-01-08 21:22:38.223 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:06:07.680 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.role_name=?
+2026-01-12 00:08:20.927 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:08:20.948 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:12:02.752 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:12:02.844 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 976 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:12:02.846 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:12:05.072 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:12:05.074 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:12:05.074 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:12:05.152 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:12:05.390 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:12:05.477 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:12:05.537 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:12:06.008 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:12:06.259 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c421952
+2026-01-12 00:12:06.261 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:12:06.358 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:12:06.371 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4cd7e993) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@685e6a68)
+2026-01-12 00:12:06.372 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fb48970) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4e8d9bb6)
+2026-01-12 00:12:07.884 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:12:08.632 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:12:08.907 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:12:08.988 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:12:09.273 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:12:09.305 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.367 seconds (process running for 7.919)
+2026-01-12 00:12:27.404 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:12:27.608 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.controller.user.UserController.signUpUser | Sign-up attempt with data: UserRequestDto(name=inam, email=inam@gmail.com, password=1234)
+2026-01-12 00:12:27.793 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:12:27.841 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.role_name=?
+2026-01-12 00:15:51.847 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:15:51.865 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:17:50.141 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:17:50.234 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 33676 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:17:50.236 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:17:52.437 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:17:52.441 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:17:52.442 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:17:52.526 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:17:52.750 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:17:52.835 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:17:52.892 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:17:53.379 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:17:53.644 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33215ffb
+2026-01-12 00:17:53.647 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:17:53.736 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:17:53.746 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@79b7c350) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@586737ff)
+2026-01-12 00:17:53.747 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4cd7e993) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@685e6a68)
+2026-01-12 00:17:55.298 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:17:56.080 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:17:56.347 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:17:56.441 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:17:56.749 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:17:56.781 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.434 seconds (process running for 7.966)
+2026-01-12 00:18:14.373 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:18:14.534 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.user.UserController.signUpUser | Sign-up attempt with data: UserRequestDto(name=inam, email=inam@gmail.com, password=1234)
+2026-01-12 00:18:14.681 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:18:14.717 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.role_name=?
+2026-01-12 00:18:14.864 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
     insert 
     into
         users
         (active, is_deleted, email, last_login, name, password, refresh_token, reset_password_token, reset_token_expiry, role_id, token_expiry, verification_token, verified) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2026-01-08 21:22:38.273 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.controller.user.UserController.signUpUser | Sign-up successful for email: alice.smith@example.com
-2026-01-08 21:24:00.367 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.B.controller.auth.AuthController.login | Login attempt for email: alice.smith@example.com
-2026-01-08 21:24:00.370 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:18:14.895 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.user.UserController.signUpUser | Sign-up successful for email: User(id=1, name=inam, email=inam@gmail.com, refreshToken=null, password=$2a$10$KxdcSICpw8GANPbwp8VY2.Qxj/CXufVJ.6u7TsguXcghEMoPhnpSa, active=true, verified=false, tokenExpiry=null, deleted=false, lastLogin=null, resetPasswordToken=null, resetTokenExpiry=null, verificationToken=null, role=Role(id=2, roleName=ROLE_USER), contacts=null, groups=null)
+2026-01-12 00:18:23.599 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.B.controller.auth.AuthController.login | Login attempt for email: inam@gmail.com
+2026-01-12 00:18:23.601 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
     select
         u1_0.id,
         u1_0.active,
@@ -467,78 +428,7 @@ Consider defining a bean of type 'java.lang.Long' in your configuration.
         users u1_0 
     where
         upper(u1_0.email)=upper(?)
-2026-01-08 21:24:00.483 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
-    select
-        u1_0.id,
-        u1_0.active,
-        u1_0.is_deleted,
-        u1_0.email,
-        u1_0.last_login,
-        u1_0.name,
-        u1_0.password,
-        u1_0.refresh_token,
-        u1_0.reset_password_token,
-        u1_0.reset_token_expiry,
-        u1_0.role_id,
-        u1_0.token_expiry,
-        u1_0.verification_token,
-        u1_0.verified 
-    from
-        users u1_0 
-    where
-        upper(u1_0.email)=upper(?)
-2026-01-08 21:29:24.325 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:29:24.336 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
-2026-01-08 21:29:37.543 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
-2026-01-08 21:29:37.641 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 12880 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
-2026-01-08 21:29:37.643 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
-2026-01-08 21:29:40.117 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:29:40.120 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
-2026-01-08 21:29:40.120 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-01-08 21:29:40.217 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
-2026-01-08 21:29:40.510 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-08 21:29:40.626 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
-2026-01-08 21:29:40.684 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
-2026-01-08 21:29:41.247 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
-2026-01-08 21:29:41.637 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d6c4079
-2026-01-08 21:29:41.639 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
-2026-01-08 21:29:41.743 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-08 21:29:41.758 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@580ffea) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@191e654)
-2026-01-08 21:29:41.759 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3a6556b6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@63bca84d)
-2026-01-08 21:29:43.353 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-08 21:29:44.080 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-08 21:29:45.769 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
-2026-01-08 21:29:45.829 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 9.222 seconds (process running for 9.839)
-2026-01-08 21:30:09.616 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-08 21:30:09.837 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.auth.AuthController.login | Login attempt for email: alice.smith@example.com
-2026-01-08 21:30:09.996 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
-    select
-        u1_0.id,
-        u1_0.active,
-        u1_0.is_deleted,
-        u1_0.email,
-        u1_0.last_login,
-        u1_0.name,
-        u1_0.password,
-        u1_0.refresh_token,
-        u1_0.reset_password_token,
-        u1_0.reset_token_expiry,
-        u1_0.role_id,
-        u1_0.token_expiry,
-        u1_0.verification_token,
-        u1_0.verified 
-    from
-        users u1_0 
-    where
-        upper(u1_0.email)=upper(?)
-2026-01-08 21:30:10.049 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:18:23.619 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
     select
         r1_0.id,
         r1_0.role_name 
@@ -546,7 +436,7 @@ Consider defining a bean of type 'java.lang.Long' in your configuration.
         roles r1_0 
     where
         r1_0.id=?
-2026-01-08 21:30:10.189 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:18:23.718 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
     select
         u1_0.id,
         u1_0.active,
@@ -566,7 +456,7 @@ Consider defining a bean of type 'java.lang.Long' in your configuration.
         users u1_0 
     where
         upper(u1_0.email)=upper(?)
-2026-01-08 21:30:10.310 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+2026-01-12 00:18:23.761 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
     update
         users 
     set
@@ -585,6 +475,795 @@ Consider defining a bean of type 'java.lang.Long' in your configuration.
         verified=? 
     where
         id=?
-2026-01-08 21:30:10.337 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.auth.AuthController.login | Login successful for email: alice.smith@example.com
-2026-01-08 21:43:19.117 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
-2026-01-08 21:43:19.131 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:18:23.768 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.B.controller.auth.AuthController.login | Login successful for email: inam@gmail.com
+2026-01-12 00:18:40.943 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=null, lastName=null, title=null, address=null, emails=null, phones=null, groups=null)
+2026-01-12 00:18:40.950 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        u1_0.email is null
+2026-01-12 00:19:16.088 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=null, lastName=null, title=null, address=null, emails=null, phones=null, groups=null)
+2026-01-12 00:19:16.090 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:19:16.092 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:19:16.095 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.B.c.contact.ContactController.addContact | authEmail inam@gmail.com
+2026-01-12 00:20:19.963 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:20:19.977 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:21:04.237 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:21:04.395 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 15920 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:21:04.400 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:21:08.212 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:21:08.216 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:21:08.217 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:21:08.325 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:21:08.608 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:21:08.705 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:21:08.769 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:21:09.698 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:21:10.053 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65f5cae3
+2026-01-12 00:21:10.062 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:21:10.169 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:21:10.188 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@588d630d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@eb91027)
+2026-01-12 00:21:10.189 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5342eec5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@60e47aab)
+2026-01-12 00:21:12.191 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:21:13.298 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:21:13.662 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:21:13.769 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:21:14.188 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:21:14.251 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 11.12 seconds (process running for 12.099)
+2026-01-12 00:21:21.096 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:23:14.666 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s477ms864µs400ns).
+2026-01-12 00:23:14.675 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=null, lastName=null, title=null, address=null, emails=null, phones=null, groups=null)
+2026-01-12 00:23:16.752 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:23:16.950 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:23:31.426 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | authEmail inam@gmail.com
+2026-01-12 00:23:31.561 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:23:31.591 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:29:04.474 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:29:04.568 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 11184 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:29:04.570 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:29:06.892 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:29:06.894 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:29:06.894 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:29:06.966 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:29:07.164 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:29:07.245 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:29:07.312 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:29:07.764 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:29:08.051 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@416a4275
+2026-01-12 00:29:08.054 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:29:08.143 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:29:08.154 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@5368e981) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@1c171746)
+2026-01-12 00:29:08.155 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79b7c350) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@586737ff)
+2026-01-12 00:29:09.661 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:29:09.714 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contact_emails (
+        id bigint generated by default as identity,
+        email_address varchar(255),
+        label varchar(255) not null,
+        contact_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:29:09.722 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contact_groups (
+        contact_id bigint not null,
+        group_id bigint not null,
+        primary key (contact_id, group_id)
+    )
+2026-01-12 00:29:09.726 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contact_phones (
+        id bigint generated by default as identity,
+        label varchar(255) not null,
+        phone_number varchar(255),
+        contact_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:29:09.731 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table contacts (
+        id bigint generated by default as identity,
+        first_name varchar(255),
+        last_name varchar(255),
+        title varchar(255),
+        user_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:29:09.737 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table groups (
+        id bigint generated by default as identity,
+        description varchar(255),
+        group_name varchar(255) not null,
+        user_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:29:09.743 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table roles (
+        id bigint generated by default as identity,
+        role_name varchar(255) not null,
+        primary key (id)
+    )
+2026-01-12 00:29:09.746 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    create table users (
+        id bigint generated by default as identity,
+        active boolean not null,
+        is_deleted boolean,
+        email varchar(255) not null,
+        last_login timestamp(6),
+        name varchar(255),
+        password varchar(255),
+        refresh_token varchar(255),
+        reset_password_token varchar(255),
+        reset_token_expiry timestamp(6),
+        token_expiry timestamp(6),
+        verification_token varchar(255),
+        verified boolean not null,
+        role_id bigint not null,
+        primary key (id)
+    )
+2026-01-12 00:29:09.752 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists roles 
+       drop constraint if exists UK716hgxp60ym1lifrdgp67xt5k
+2026-01-12 00:29:09.756 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | SQL Warning Code: 0, SQLState: 00000
+2026-01-12 00:29:09.756 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | constraint "uk716hgxp60ym1lifrdgp67xt5k" of relation "roles" does not exist, skipping
+2026-01-12 00:29:09.757 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists roles 
+       add constraint UK716hgxp60ym1lifrdgp67xt5k unique (role_name)
+2026-01-12 00:29:09.759 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists users 
+       drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7
+2026-01-12 00:29:09.760 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | SQL Warning Code: 0, SQLState: 00000
+2026-01-12 00:29:09.760 | WARN  | [main] | o.h.e.jdbc.spi.SqlExceptionHelper.logWarning | constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2026-01-12 00:29:09.761 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
+2026-01-12 00:29:09.763 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_emails 
+       add constraint FKelumwei9rdn3dybkahl69vn7e 
+       foreign key (contact_id) 
+       references contacts
+2026-01-12 00:29:09.766 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_groups 
+       add constraint FK78b3lfapjw93pn3ox8b4y71bx 
+       foreign key (group_id) 
+       references groups
+2026-01-12 00:29:09.768 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_groups 
+       add constraint FKcux3rehp9vx10ur9hh8hhcubr 
+       foreign key (contact_id) 
+       references contacts
+2026-01-12 00:29:09.770 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contact_phones 
+       add constraint FKfhdgb0dro8m0a8mkqo35maxnv 
+       foreign key (contact_id) 
+       references contacts
+2026-01-12 00:29:09.772 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists contacts 
+       add constraint FKna8bddygr3l3kq1imghgcskt8 
+       foreign key (user_id) 
+       references users
+2026-01-12 00:29:09.774 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists groups 
+       add constraint FK4cygfv5el2o2v3hbkdkscfw5q 
+       foreign key (user_id) 
+       references users
+2026-01-12 00:29:09.775 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    alter table if exists users 
+       add constraint FKp56c1712k691lhsyewcssf40f 
+       foreign key (role_id) 
+       references roles
+2026-01-12 00:29:10.425 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:29:10.680 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:29:10.767 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:29:11.070 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:29:11.104 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.424 seconds (process running for 7.958)
+2026-01-12 00:30:27.634 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:30:27.797 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.controller.user.UserController.signUpUser | Sign-up attempt with data: UserRequestDto(name=inam, email=inam@gmail.com, password=1234)
+2026-01-12 00:30:27.953 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:30:27.992 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.role_name=?
+2026-01-12 00:30:28.141 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        users
+        (active, is_deleted, email, last_login, name, password, refresh_token, reset_password_token, reset_token_expiry, role_id, token_expiry, verification_token, verified) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-12 00:30:28.174 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.controller.user.UserController.signUpUser | Sign-up successful for email: User(id=1, name=inam, email=inam@gmail.com, refreshToken=null, password=$2a$10$QmFRc4URjltHDnGzjjxwBugunAx2SDRjArjUwi8c7uzi.puRHgAX6, active=true, verified=false, tokenExpiry=null, deleted=false, lastLogin=null, resetPasswordToken=null, resetTokenExpiry=null, verificationToken=null, role=Role(id=2, roleName=ROLE_USER), contacts=null, groups=null)
+2026-01-12 00:30:31.678 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.auth.AuthController.login | Login attempt for email: inam@gmail.com
+2026-01-12 00:30:31.680 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:30:31.695 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:30:31.785 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:30:31.827 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        active=?,
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        reset_password_token=?,
+        reset_token_expiry=?,
+        role_id=?,
+        token_expiry=?,
+        verification_token=?,
+        verified=? 
+    where
+        id=?
+2026-01-12 00:30:31.832 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.controller.auth.AuthController.login | Login successful for email: inam@gmail.com
+2026-01-12 00:30:53.217 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=Ali, lastName=Khan, title=Software Engineer, address=null, emails=[ContactEmailDto(emailAddress=ali.khan@example.com, label=work), ContactEmailDto(emailAddress=ali.personal@example.com, label=personal)], phones=[ContactPhoneDto(phoneNumber=+923001234567, label=mobile), ContactPhoneDto(phoneNumber=+92441234567, label=home)], groups=null)
+2026-01-12 00:30:53.221 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:30:53.223 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:30:53.227 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:30:53.232 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:30:53.237 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:30:53.240 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:30:53.242 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.B.c.contact.ContactController.addContact | authEmail inam@gmail.com
+2026-01-12 00:31:52.150 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:31:52.166 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:32:14.520 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:32:14.648 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 16552 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:32:14.651 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:32:18.127 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:32:18.129 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:32:18.130 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:32:18.257 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:32:18.694 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:32:18.788 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:32:18.896 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:32:19.615 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:32:19.978 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4aeaff64
+2026-01-12 00:32:19.982 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:32:20.105 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:32:20.125 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@7c69e1e1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@7b52b18a)
+2026-01-12 00:32:20.126 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@aedc426) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39b85a73)
+2026-01-12 00:32:22.127 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:32:23.068 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:32:23.472 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:32:23.608 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:32:24.098 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:32:24.158 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 10.817 seconds (process running for 11.806)
+2026-01-12 00:32:35.039 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:33:28.903 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s771ms657µs300ns).
+2026-01-12 00:33:28.905 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=Ali, lastName=Khan, title=Software Engineer, address=null, emails=[ContactEmailDto(emailAddress=ali.khan@example.com, label=work), ContactEmailDto(emailAddress=ali.personal@example.com, label=personal)], phones=[ContactPhoneDto(phoneNumber=+923001234567, label=mobile), ContactPhoneDto(phoneNumber=+92441234567, label=home)], groups=null)
+2026-01-12 00:33:29.040 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:33:29.077 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:33:29.092 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:33:29.097 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:33:29.101 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:33:29.104 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:33:29.106 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | authEmail inam@gmail.com
+2026-01-12 00:33:29.210 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:33:29.241 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:33:49.416 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:33:49.539 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 16160 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:33:49.540 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:33:51.730 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:33:51.733 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:33:51.733 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:33:51.816 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:33:52.031 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:33:52.120 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:33:52.180 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:33:52.649 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:33:52.927 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7657d90b
+2026-01-12 00:33:52.929 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:33:53.020 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:33:53.032 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6851b296) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@9e50283)
+2026-01-12 00:33:53.033 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5368e981) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1c171746)
+2026-01-12 00:33:54.538 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:33:55.316 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:33:55.572 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:33:55.665 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:33:55.978 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:33:56.015 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.396 seconds (process running for 7.95)
+2026-01-12 00:34:02.217 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:34:02.435 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=Ali, lastName=Khan, title=Software Engineer, address=null, emails=[ContactEmailDto(emailAddress=ali.khan@example.com, label=work), ContactEmailDto(emailAddress=ali.personal@example.com, label=personal)], phones=[ContactPhoneDto(phoneNumber=+923001234567, label=mobile), ContactPhoneDto(phoneNumber=+92441234567, label=home)], groups=null)
+2026-01-12 00:34:02.584 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:34:02.629 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:34:02.654 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:34:02.660 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:34:02.664 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:34:02.668 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:34:02.671 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.B.c.contact.ContactController.addContact | authEmail inam@gmail.com
+2026-01-12 00:35:52.286 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:35:52.300 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-01-12 00:40:58.182 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-01-12 00:40:58.264 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 28440 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
+2026-01-12 00:40:58.266 | INFO  | [main] | c.example.Backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-01-12 00:41:00.698 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:41:00.700 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-01-12 00:41:00.701 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-12 00:41:00.792 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-01-12 00:41:01.003 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-12 00:41:01.110 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-12 00:41:01.166 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-01-12 00:41:01.637 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-01-12 00:41:01.919 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f289728
+2026-01-12 00:41:01.922 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-01-12 00:41:02.011 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-12 00:41:02.025 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@586737ff) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4cd7e993)
+2026-01-12 00:41:02.026 | DEBUG | [main] | o.h.t.d.sql.spi.DdlTypeRegistry.addDescriptor | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@685e6a68) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2fb48970)
+2026-01-12 00:41:03.510 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-12 00:41:04.266 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-12 00:41:04.560 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-12 00:41:04.700 | WARN  | [main] | o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry.requestMatchers | One of the patterns in [user/hello] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-01-12 00:41:05.071 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-01-12 00:41:05.107 | INFO  | [main] | c.example.Backend.BackendApplication.logStarted | Started BackendApplication in 7.716 seconds (process running for 8.406)
+2026-01-12 00:41:13.184 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-12 00:41:13.410 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.c.contact.ContactController.addContact | addContact ContactDto(id=null, firstName=Ali, lastName=Khan, title=Software Engineer, address=null, emails=[ContactEmailDto(emailAddress=ali.khan@example.com, label=work), ContactEmailDto(emailAddress=ali.personal@example.com, label=personal)], phones=[ContactPhoneDto(phoneNumber=+923001234567, label=mobile), ContactPhoneDto(phoneNumber=+92441234567, label=home)], groups=null)
+2026-01-12 00:41:13.573 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.reset_password_token,
+        u1_0.reset_token_expiry,
+        u1_0.role_id,
+        u1_0.token_expiry,
+        u1_0.verification_token,
+        u1_0.verified 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-01-12 00:41:13.616 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-01-12 00:41:13.646 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:41:13.657 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        ce1_0.id,
+        ce1_0.contact_id,
+        ce1_0.email_address,
+        ce1_0.label 
+    from
+        contact_emails ce1_0 
+    where
+        ce1_0.email_address=?
+2026-01-12 00:41:13.666 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:41:13.671 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        cp1_0.id,
+        cp1_0.contact_id,
+        cp1_0.label,
+        cp1_0.phone_number 
+    from
+        contact_phones cp1_0 
+    where
+        cp1_0.phone_number=?
+2026-01-12 00:41:13.727 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        contacts
+        (first_name, last_name, title, user_id) 
+    values
+        (?, ?, ?, ?)
+2026-01-12 00:41:13.746 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        contact_emails
+        (contact_id, email_address, label) 
+    values
+        (?, ?, ?)
+2026-01-12 00:41:13.749 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        contact_emails
+        (contact_id, email_address, label) 
+    values
+        (?, ?, ?)
+2026-01-12 00:41:13.751 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        contact_phones
+        (contact_id, label, phone_number) 
+    values
+        (?, ?, ?)
+2026-01-12 00:41:13.754 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        contact_phones
+        (contact_id, label, phone_number) 
+    values
+        (?, ?, ?)
+2026-01-12 00:41:13.773 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.B.c.contact.ContactController.addContact | authEmail inam@gmail.com
+2026-01-12 00:41:13.854 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.user_id,
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=?
+2026-01-12 00:42:24.213 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-01-12 00:42:24.236 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.

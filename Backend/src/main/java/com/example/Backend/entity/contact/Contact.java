@@ -1,5 +1,7 @@
 package com.example.Backend.entity.contact;
 
+import com.example.Backend.entity.contactemail.ContactEmail;
+import com.example.Backend.entity.contactphone.ContactPhone;
 import com.example.Backend.entity.group.Group;
 import com.example.Backend.entity.user.User;
 import jakarta.persistence.*;
@@ -8,12 +10,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Set;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="contact")
+@Table(name="contacts")
 public class Contact {
 
     @Id
@@ -22,14 +25,22 @@ public class Contact {
 
     private String firstName;
     private String lastName;
-    private String phone;
-    private String email;
-    private String address;
+    private String title;
 
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    // Contact → Emails (multiple, labeled)
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ContactEmail> emails;
+
+    // Contact → Phones (multiple, labeled)
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ContactPhone> phones;
+
+    // Many-to-Many → Groups (bonus)
     @ManyToMany
     @JoinTable(
             name = "contact_groups",
@@ -37,6 +48,4 @@ public class Contact {
             inverseJoinColumns = @JoinColumn(name = "group_id")
     )
     private Set<Group> groups;
-
-
 }

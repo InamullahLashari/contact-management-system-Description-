@@ -1,12 +1,11 @@
 package com.example.Backend.serviceImpI.auth;
 
-import com.example.Backend.dto.loginrequest.LoginRequestDTO;
+import com.example.Backend.dto.login.LoginRequestDto;
 import com.example.Backend.entity.user.User;
 import com.example.Backend.exception.InvalidActionException;
 import com.example.Backend.repository.user.UserRepository;
 import com.example.Backend.service.auth.AuthService;
-import com.example.Backend.service.customdetail.customUserDetailsService;
-import com.example.Backend.serviceImpI.customdetialImpI.CustomUserDetailsServiceImpl;
+
 import com.example.Backend.util.JwtUtil;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,8 @@ public class AuthServiceImpI implements AuthService {
     private UserRepository userRepository;
 
     @Autowired
-    private CustomUserDetailsServiceImpl customUserDetailsService;
+    private com.example.Backend.serviceImpl.customdetailImpl.CustomUserDetailsServiceImpl customUserDetailsService;
+
 
 
     @Autowired
@@ -35,33 +35,33 @@ public class AuthServiceImpI implements AuthService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public Map<String, Object> login(LoginRequestDTO dto) {
+    public Map<String, Object> login(LoginRequestDto dto) {
 
         String email = dto.getEmail();
         String password = dto.getPassword();
 
-        // 1️⃣ Fetch user
+
         User user = userRepository.findByEmailIgnoreCase(email)
                 .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
-        // 2️⃣ Verify password
+
         if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new InvalidActionException("Invalid password");
         }
 
-        // 3️⃣ Load UserDetails
+
         UserDetails userDetails = customUserDetailsService.loadUserByUsername(email);
 
-        // 4️⃣ Generate tokens
+
         String accessToken = jwtUtil.generateAccessToken(userDetails);
         String refreshToken = jwtUtil.generateRefreshToken(userDetails);
 
-        // 5️⃣ Update user entity
+
         user.setRefreshToken(refreshToken);
         user.setLastLogin(LocalDateTime.now());
         userRepository.save(user);
 
-        // 6️⃣ Prepare response
+
         String roleType = user.getRole().getRoleName(); // set roleType from user
         Map<String, String> tokens = new LinkedHashMap<>();
         tokens.put("accessToken", accessToken);

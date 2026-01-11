@@ -1,7 +1,7 @@
 package com.example.Backend.controller.auth;
 
 
-import com.example.Backend.dto.loginrequest.LoginRequestDTO;
+import com.example.Backend.dto.login.LoginRequestDto;
 import com.example.Backend.service.auth.AuthService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ public class AuthController {
     @Autowired
     private AuthService authService;
         @PostMapping("/login")
-        public ResponseEntity<?> login(@RequestBody @Valid LoginRequestDTO dto) {
+        public ResponseEntity<?> login(@RequestBody @Valid LoginRequestDto dto) {
         log.trace("Entering login() with DTO: {}", dto);
         log.info("Login attempt for email: {}", dto.getEmail());
 

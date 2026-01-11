@@ -1,10 +1,11 @@
 package com.example.Backend.config;
 
-
+import com.example.Backend.service.customdetail.CustomUserDetailsService;
 import com.example.Backend.util.JWTFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -18,9 +19,11 @@ import org.springframework.web.cors.CorsConfigurationSource;
 @EnableWebSecurity
 @Configuration
 public class SecurityConfig {
-@Autowired
-    private  JWTFilter jwtFilter;
 
+    @Autowired
+    private JWTFilter jwtFilter;
+
+    @Autowired private CustomUserDetailsService customUserDetailsServic;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -29,45 +32,29 @@ public class SecurityConfig {
 
 
     @Bean
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setUserDetailsService(customUserDetailsServic);
+        provider.setPasswordEncoder(passwordEncoder());
+        return provider;
+    }
+
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, CorsConfigurationSource corsConfigurationSource) throws Exception {
+        http
+                .csrf(csrf -> csrf.disable()) // Disable CSRF for APIs
+                .cors(cors -> cors.configurationSource(corsConfigurationSource)) // Apply CORS config
+                .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Stateless session
 
+                        .authorizeHttpRequests(auth -> auth
+                                .requestMatchers("/public", "/user/signup", "/auth/login","/contact").permitAll()
+                                .requestMatchers("user/hello").hasRole("USER")
+                                .anyRequest().authenticated()
+                        )
 
-                http
-    .csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.configurationSource(corsConfigurationSource))
-                .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/public", "/user/signup", "/auth/login").permitAll()
-                        .anyRequest().authenticated()
-                )
-
-                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class); //
-
+                .authenticationProvider(authenticationProvider())
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
