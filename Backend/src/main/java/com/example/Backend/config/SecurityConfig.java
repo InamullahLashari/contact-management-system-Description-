@@ -47,8 +47,9 @@ public class SecurityConfig {
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Stateless session
 
                         .authorizeHttpRequests(auth -> auth
-                                .requestMatchers("/public", "/user/signup", "/auth/login","/contact").permitAll()
+                                .requestMatchers("/public", "/user/signup", "/auth/login","/contact/*").permitAll()
                                 .requestMatchers("user/hello").hasRole("USER")
+
                                 .anyRequest().authenticated()
                         )
 

@@ -8,12 +8,14 @@ import com.example.Backend.entity.contactemail.ContactEmail;
 import com.example.Backend.entity.contactphone.ContactPhone;
 import com.example.Backend.entity.user.User;
 import com.example.Backend.exception.InvalidActionException;
-import com.example.Backend.repository.ContactRepository;
+import com.example.Backend.repository.contact.ContactRepository;
 import com.example.Backend.repository.email.EmailRepository;
 import com.example.Backend.repository.phone.PhoneRepository;
 import com.example.Backend.repository.user.UserRepository;
 import com.example.Backend.service.contact.ContactService;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,7 +53,8 @@ public class ContactServiceImpI implements ContactService {
 
     }
 
-         //-----------------------------get User------------------------//
+
+    //-----------------------------get User------------------------//
 
        private User getUser(String email) {
            return userRepo.findByEmailIgnoreCase(email).orElseThrow(() -> new EntityNotFoundException());
@@ -137,6 +140,28 @@ public class ContactServiceImpI implements ContactService {
 
 
 
-    //================================================Get Contact=======================================//
+    //================================================Pagenation  Contact=======================================//
+    @Override
+    public Page<Contact> contactList(String keyword, Pageable pageable) {
+
+
+
+        if(keyword==null||keyword.isEmpty())
+        {
+
+
+            return contactRepo.findAll(pageable);
+        }
+
+else{
+
+  return contactRepo.searchContacts(keyword,pageable);
+
+        }
+
     }
+
+
+
+}
 
