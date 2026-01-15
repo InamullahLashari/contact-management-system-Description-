@@ -5,8 +5,6 @@ import com.example.Backend.dto.contact.ContactDto;
 import com.example.Backend.dto.email.ContactEmailDto;
 import com.example.Backend.dto.phone.ContactPhoneDto;
 import com.example.Backend.entity.contact.Contact;
-import com.example.Backend.entity.contactemail.ContactEmail;
-import com.example.Backend.entity.contactphone.ContactPhone;
 import com.example.Backend.service.contact.ContactService;
 import com.example.Backend.util.AuthenticationUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -96,7 +94,7 @@ public class ContactController {
                 ))
                 .toList();
 
-        // 5️⃣ Prepare final response
+
         Map<String, Object> response = new HashMap<>();
         response.put("status", "success");
         response.put("message", "Contacts fetched successfully");
@@ -104,8 +102,52 @@ public class ContactController {
         response.put("currentPage", contacts.getNumber());
         response.put("totalItems", contacts.getTotalElements());
         response.put("totalPages", contacts.getTotalPages());
-
         return ResponseEntity.ok(response);
     }
 
+
+  //==================================update conatct==============================================//
+
+    @PutMapping("/contacts")
+    public ResponseEntity<?> updateContact(@RequestBody ContactDto contactDto) {
+        log.info("Updating contact: {}", contactDto);
+
+        long id = contactDto.getId();
+        Contact updatedContact = contactService.updateContact(id, authUtil.getEmail(), contactDto);
+
+        log.info("Authenticated user: {}", authUtil.getEmail());
+
+        return ResponseEntity.ok(Map.of(
+                "status", "Success",
+                "message", "Updated successfully",
+                "contact", updatedContact
+        ));
+    }
+
+    //==================================Delete conatct==============================================//
+
+    @DeleteMapping("/contacts/{id}")
+    public ResponseEntity<?> deleteContact(@PathVariable long id) {
+        log.info("Deleting contact: {}", id);
+
+        Boolean status = contactService.deleteContact(id, authUtil.getEmail());
+        log.info("Authenticated user: {}", authUtil.getEmail());
+
+        log.info("status {}", status);
+        return ResponseEntity.ok(Map.of(
+                "status", "Success",
+                "message", "Deleted successfully"
+        ));
+    }
+
+
+
+
+
 }
+
+
+
+
+
+
