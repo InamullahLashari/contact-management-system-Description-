@@ -2,6 +2,7 @@ package com.example.Backend.controller.contact;
 
 
 import com.example.Backend.dto.contact.ContactDto;
+import com.example.Backend.dto.contact.ContactResponseDto;
 import com.example.Backend.dto.email.ContactEmailDto;
 import com.example.Backend.dto.phone.ContactPhoneDto;
 import com.example.Backend.entity.contact.Contact;
@@ -37,7 +38,7 @@ public class ContactController {
     public ResponseEntity<?> addContact(@RequestBody ContactDto contactDto) {
         log.info("addContact {}", contactDto);
 
-        Contact newConatct = contactService.createContact(contactDto, authUtil.getEmail());
+        ContactResponseDto newConatct = contactService.createContact(contactDto, authUtil.getEmail());
 
         log.info("authEmail {}", authUtil.getEmail());
 
@@ -108,12 +109,12 @@ public class ContactController {
 
   //==================================update conatct==============================================//
 
-    @PutMapping("/contacts")
+    @PutMapping("/update")
     public ResponseEntity<?> updateContact(@RequestBody ContactDto contactDto) {
         log.info("Updating contact: {}", contactDto);
 
         long id = contactDto.getId();
-        Contact updatedContact = contactService.updateContact(id, authUtil.getEmail(), contactDto);
+        ContactResponseDto updatedContact = contactService.updateContact(id, authUtil.getEmail(), contactDto);
 
         log.info("Authenticated user: {}", authUtil.getEmail());
 

@@ -1,8 +1,11 @@
 package com.example.Backend.serviceImpI.contact;
 
 import com.example.Backend.dto.contact.ContactDto;
+import com.example.Backend.dto.contact.ContactResponseDto;
 import com.example.Backend.dto.email.ContactEmailDto;
+import com.example.Backend.dto.email.ContactEmailResponseDto;
 import com.example.Backend.dto.phone.ContactPhoneDto;
+import com.example.Backend.dto.phone.ContactPhoneResponseDto;
 import com.example.Backend.entity.contact.Contact;
 import com.example.Backend.entity.contactemail.ContactEmail;
 import com.example.Backend.entity.contactphone.ContactPhone;
@@ -40,22 +43,58 @@ public class ContactServiceImpI implements ContactService {
 
     //================================================Add Contact=======================================//
     @Override
-    public Contact createContact(ContactDto contactDto, String email) {
+    public ContactResponseDto createContact(ContactDto contactDto, String email) {
 
-        User newUser = getUser(email);
+        User user = getUser(email);
 
-        Contact Addcontact = mapDtoToContact(contactDto, newUser);
+        Contact contact = new Contact();
+        contact.setFirstName(contactDto.getFirstName());
+        contact.setLastName(contactDto.getLastName());
+        contact.setTitle(contactDto.getTitle());
+        contact.setUser(user);
 
-        List<ContactEmail> newEmail = processEmail(contactDto.getEmails(), Addcontact);
+        List<ContactEmail> newEmail = processEmail(contactDto.getEmails(), contact);
 
-        List<ContactPhone> newPhone = processPhone(contactDto.getPhones(), Addcontact);
+        List<ContactPhone> newPhone = processPhone(contactDto.getPhones(), contact);
 
-        Addcontact.setEmails(newEmail);
-        Addcontact.setPhones(newPhone);
+        contact.setEmails(newEmail);
+        contact.setPhones(newPhone);
+        Contact saved = contactRepo.save(contact);
 
-        return contactRepo.save(Addcontact);
+        return toResponseDto(saved); //here i call helperx function
 
     }
+   //----------------------helper function-------------------------------//
+   private ContactResponseDto toResponseDto(Contact contact) {
+
+       ContactResponseDto dto = new ContactResponseDto();
+       dto.setId(contact.getId());
+       dto.setFirstName(contact.getFirstName());
+       dto.setLastName(contact.getLastName());
+       dto.setTitle(contact.getTitle());
+
+       dto.setEmails(
+               contact.getEmails().stream()
+                       .map(e -> new ContactEmailResponseDto(
+                               e.getId(),
+                               e.getEmailAddress(),
+                               e.getLabel()
+                       ))
+                       .toList()
+       );
+
+       dto.setPhones(
+               contact.getPhones().stream()
+                       .map(p -> new ContactPhoneResponseDto(
+                               p.getId(),
+                               p.getPhoneNumber(),
+                               p.getLabel()
+                       ))
+                       .toList()
+       );
+
+       return dto;
+   }
 
 
     //-----------------------------get User------------------------//
@@ -140,67 +179,64 @@ public class ContactServiceImpI implements ContactService {
 
 
     //================================================Pagenation  Contact=======================================//
+
+
+
     @Override
     public Page<Contact> contactList(String keyword, Pageable pageable) {
-        if (keyword == null || keyword.isEmpty()) {
-            return contactRepo.findAll(pageable);
-        } else {
-            return contactRepo.searchContacts(keyword, pageable);
-
-        }
-
+        return (keyword == null || keyword.isBlank())
+                ? contactRepo.findAll(pageable)
+                : contactRepo.searchContacts(keyword, pageable);
     }
+
+
+
+
 
     //================================================update Contact=======================================//
+
     @Override
-    public Contact updateContact(long id, String email, ContactDto contactDto) {
+    public ContactResponseDto updateContact(long id, String email, ContactDto dto) {
 
-        User user = userRepo.findByEmailIgnoreCase(email)
-                .orElseThrow(() -> new EntityNotFoundException("user not found"));
+        User user = getUser(email);
 
-        Contact updateContact = contactRepo.findByIdAndUser(id, user)
+        Contact contact = contactRepo.findByIdAndUser(id, user)
                 .orElseThrow(() ->
-                        new InvalidActionException("User can't change contact of other user"));
+                        new InvalidActionException("User can't update another user's contact"));
 
-        updateContact.setFirstName(contactDto.getFirstName());
-        updateContact.setLastName(contactDto.getLastName());
-        updateContact.setTitle(contactDto.getTitle());
+        contact.setFirstName(dto.getFirstName());
+        contact.setLastName(dto.getLastName());
+        contact.setTitle(dto.getTitle());
 
-        updateContact.getEmails().clear();
-        updateContact.getPhones().clear();
+        contact.getEmails().clear();
+        contact.getPhones().clear();
 
-        updateContact.getEmails().addAll(
-                processEmail(contactDto.getEmails(), updateContact)
-        );
-        updateContact.getPhones().addAll(
-                processPhone(contactDto.getPhones(), updateContact)
-        );
+        contact.getEmails().addAll(processEmail(dto.getEmails(), contact));
+        contact.getPhones().addAll(processPhone(dto.getPhones(), contact));
 
-        return contactRepo.save(updateContact);
+        Contact updated = contactRepo.save(contact);
+
+        log.info("User {} updated contact {}", email, updated.getId());
+
+        return toResponseDto(updated);
     }
 
-
-
     //================================================Delete Contact=======================================//
+
     @Transactional
     @Override
     public boolean deleteContact(long id, String email) {
 
-
-        User user = userRepo.findByEmailIgnoreCase(email)
-                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+        User user = getUser(email);
 
         Contact contact = contactRepo.findByIdAndUser(id, user)
-                .orElseThrow(() -> new InvalidActionException("User can't delete contact of other user"));
+                .orElseThrow(() ->
+                        new InvalidActionException("User can't delete another user's contact"));
 
         contactRepo.delete(contact);
 
-
-        log.info("User {} deleted contact {}", user.getEmail(), contact.getId());
-
-
+        log.info("User {} deleted contact {}", email, id);
         return true;
     }
-
 
 }

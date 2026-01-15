@@ -29,6 +29,6 @@ public class Group {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToMany(mappedBy = "groups")
+    @ManyToMany(mappedBy = "groups",fetch = FetchType.LAZY)
     private Set<Contact> contacts;
 }

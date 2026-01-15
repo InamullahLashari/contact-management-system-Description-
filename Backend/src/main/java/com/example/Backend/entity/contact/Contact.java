@@ -32,16 +32,15 @@ public class Contact {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    // Contact → Emails (multiple, labeled)
-    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
     private List<ContactEmail> emails;
 
-    // Contact → Phones (multiple, labeled)
-    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
     private List<ContactPhone> phones;
 
-    // Many-to-Many → Groups (bonus)
-    @ManyToMany
+
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "contact_groups",
             joinColumns = @JoinColumn(name = "contact_id"),
