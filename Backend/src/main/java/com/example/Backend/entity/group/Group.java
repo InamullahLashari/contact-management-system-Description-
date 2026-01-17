@@ -1,6 +1,7 @@
 package com.example.Backend.entity.group;
 
 import com.example.Backend.entity.contact.Contact;
+import com.example.Backend.entity.contactphone.ContactPhone;
 import com.example.Backend.entity.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -29,6 +30,13 @@ public class Group {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToMany(mappedBy = "groups",fetch = FetchType.LAZY)
-    private Set<Contact> contacts;
+    // Direct connection to phone numbers
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "group_phones",
+            joinColumns = @JoinColumn(name = "group_id"),
+            inverseJoinColumns = @JoinColumn(name = "phone_id")
+    )
+    private Set<ContactPhone> phones;
 }
+

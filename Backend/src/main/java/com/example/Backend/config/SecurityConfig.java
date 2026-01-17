@@ -23,7 +23,8 @@ public class SecurityConfig {
     @Autowired
     private JWTFilter jwtFilter;
 
-    @Autowired private CustomUserDetailsService customUserDetailsServic;
+    @Autowired
+    private CustomUserDetailsService customUserDetailsServic;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -46,14 +47,15 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource)) // Apply CORS config
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Stateless session
 
-                        .authorizeHttpRequests(auth -> auth
-                                .requestMatchers("/public", "/user/signup", "/auth/login","/contact/list").permitAll()
-                                .requestMatchers("/user/hello").hasRole("USER")
-                                .requestMatchers("/contact/*").hasRole("USER")
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/public", "/user/signup", "/auth/login", "/contact/list").permitAll()
+                        .requestMatchers("/user/hello").hasRole("USER")
+                        .requestMatchers("/contact/*").hasRole("USER")
+                        .requestMatchers("/group/*").hasRole("USER")
 
 
-                                .anyRequest().authenticated()
-                        )
+                        .anyRequest().authenticated()
+                )
 
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
