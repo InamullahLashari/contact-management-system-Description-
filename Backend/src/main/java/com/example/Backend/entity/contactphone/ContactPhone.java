@@ -1,13 +1,10 @@
 package com.example.Backend.entity.contactphone;
 
 import com.example.Backend.entity.contact.Contact;
-import com.example.Backend.entity.group.Group;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -28,8 +25,4 @@ public class ContactPhone {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "contact_id", nullable = false)
     private Contact contact;
-
-    // Many-to-Many with Group
-    @ManyToMany(mappedBy = "phones", fetch = FetchType.LAZY)
-    private Set<Group> groups;
 }

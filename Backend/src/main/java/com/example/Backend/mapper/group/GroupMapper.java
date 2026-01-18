@@ -2,15 +2,21 @@ package com.example.Backend.mapper.group;
 
 import com.example.Backend.dto.group.GroupCreateRequest;
 import com.example.Backend.dto.group.GroupResponseDto;
+import com.example.Backend.dto.group.ListGroupResponse;
+import com.example.Backend.entity.contact.Contact;
 import com.example.Backend.entity.group.Group;
 import org.springframework.stereotype.Component;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 
 @Component
 public class GroupMapper {
 
+    // Convert Group entity to GroupResponseDto
     public GroupResponseDto toDto(Group group) {
         if (group == null) return null;
 
@@ -19,25 +25,35 @@ public class GroupMapper {
         dto.setGroupName(group.getGroupName());
         dto.setDescription(group.getDescription());
 
-        // Map phone IDs only
-        dto.setPhoneIds(
-                group.getPhones() != null
-                        ? group.getPhones().stream()
-                        .map(p -> p.getId())
+
+        // Contacts → Contact IDs
+        dto.setContactIds(
+                group.getContacts()
+                        .stream()
+                        .map(Contact::getId)
                         .collect(Collectors.toSet())
-                        : Set.of()
         );
 
         return dto;
     }
 
-    public Group toEntity(GroupCreateRequest request) {
-        if (request == null) return null;
 
-        Group group = new Group();
-        group.setGroupName(request.getGroupName());
-        group.setDescription(request.getDescription());
-        // Phones will be set in service
-        return group;
+    public Set<ListGroupResponse> toDto(Set<Group> groups) {
+
+        Set<ListGroupResponse> dtoSet = new HashSet<>();
+
+        for (Group group : groups) {
+
+            ListGroupResponse dto = new ListGroupResponse();
+            dto.setId(group.getId());
+            dto.setName(group.getGroupName());
+            dto.setDescription(group.getDescription());
+
+            dtoSet.add(dto);
+        }
+
+        return dtoSet;
     }
+
+
 }

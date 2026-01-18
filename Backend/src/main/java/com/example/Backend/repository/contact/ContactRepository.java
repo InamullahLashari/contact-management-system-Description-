@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
+import java.util.Set;
 
 
 public interface ContactRepository extends JpaRepository<Contact,Long> {
@@ -24,7 +25,7 @@ WHERE (:keyword IS NULL OR :keyword = ''
     Page<Contact> searchContacts(@Param("keyword") String keyword, Pageable pageable);
 
     Optional<Contact> findByIdAndUser(Long id, User user);
-
+    Set<Contact> findAllByIdInAndUserId(Set<Long> contactIds, Long userId);
 }
 
 

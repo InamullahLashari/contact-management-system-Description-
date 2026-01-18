@@ -22,12 +22,7 @@ public class ContactEmail {
     @Column(nullable = false)
     private String label; // work, personal, other
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "contact_id", nullable = false)
     private Contact contact;
-
-
-
-
 }

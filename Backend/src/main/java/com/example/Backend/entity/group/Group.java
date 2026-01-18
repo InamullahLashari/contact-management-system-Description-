@@ -1,7 +1,6 @@
 package com.example.Backend.entity.group;
 
 import com.example.Backend.entity.contact.Contact;
-import com.example.Backend.entity.contactphone.ContactPhone;
 import com.example.Backend.entity.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,11 +9,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
-@Entity
-@Table(name = "groups")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "groups",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"group_name", "user_id"}))
 public class Group {
 
     @Id
@@ -30,13 +30,11 @@ public class Group {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    // Direct connection to phone numbers
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "group_phones",
+            name = "group_contacts",
             joinColumns = @JoinColumn(name = "group_id"),
-            inverseJoinColumns = @JoinColumn(name = "phone_id")
+            inverseJoinColumns = @JoinColumn(name = "contact_id")
     )
-    private Set<ContactPhone> phones;
+    private Set<Contact> contacts;
 }
-
