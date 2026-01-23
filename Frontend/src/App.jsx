@@ -1,33 +1,37 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./assets/components/layout/Navbar/Navbar";
-import Footer from "./assets/components/layout/Foooter/Footer";
-import Sidebar from "./assets/components/layout/Sidebar/Sidebar";
+
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-
+import ProtectedRoute from "./assets/components/ProtectedRoute";
+import DashboardLayout from "./assets/components/layout/DashboardLayout";
+import DashboardContent from "./pages/Dashboard/DashboardContent";
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/*=================== Navbar */}
-      {/* <Navbar /> */}
+    <Routes>
 
-      <div className="flex flex-1">
-        {/* Sidebar */}
-        {/* <Sidebar /> */}
+      {/* Public routes */}
+      <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
 
-        {/* Main content */}
-        <div className="flex-1 p-6 bg-gray-100">
-          <Routes>
-            {/* Default page is Login */}
-            <Route path="/" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
-        </div>
-      </div>
+      {/* Protected dashboard layout */}
+      <Route
+        path="/dashboard/*"
+        element={
+          <ProtectedRoute>
+            <DashboardLayout />
+          </ProtectedRoute>
+        }
+      >
+        {/* Default dashboard page */}
+        <Route index element={<DashboardContent />} />
 
-      {/* Footer */}
-      {/* <Footer /> */}
-    </div>
+  
+
+      </Route>
+
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 
