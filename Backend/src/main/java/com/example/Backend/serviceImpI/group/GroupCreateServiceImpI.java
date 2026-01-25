@@ -19,6 +19,8 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -53,9 +55,11 @@ public class GroupCreateServiceImpI implements GroupCreateService {
 
         // Build & save group
         Group group = buildGroup(request, user, newContact);
-        group = groupRepo.save(group);
 
-        return groupMapper.toDto(group);
+        Group groups = groupRepo.save(group);
+
+        return groupMapper.toDto(groups);
+
 
     }
 
@@ -70,35 +74,56 @@ public class GroupCreateServiceImpI implements GroupCreateService {
             throw new EntityExistsException("Group with this name already exists for this user");
         }
     }
+//
+//    private Set<Contact> getConatct(Set<Long> contactIds, User user) {
+//        if (contactIds == null || contactIds.isEmpty()) {
+//            throw new IllegalArgumentException("At least two contacts must be added to a group");
+//        }
+//
+//
+//        Set<Contact> contactgrup = contactRepo.findAllByIdInAndUserId(contactIds, user.getId());
+//
+////        if (contactgrup.size() != contactgrup.size()) {
+////            throw new EntityNotFoundException("Some phone IDs do not belong to the current user");
+////        }
+//
+//        if (contactgrup.size() < 2) {
+//            throw new IllegalArgumentException("At least two contacts must be added to a group");
+//        }
+//
+//        return contactgrup;
+//    }
 
-    private Set<Contact> getConatct(Set<Long> contactIds, User user) {
-        if (contactIds == null || contactIds.isEmpty()) {
-            throw new IllegalArgumentException("At least two contacts must be added to a group");
-        }
-
-
-        Set<Contact> contactgrup = contactRepo.findAllByIdInAndUserId(contactIds, user.getId());
-
-        if (contactgrup.size() != contactgrup.size()) {
-            throw new EntityNotFoundException("Some phone IDs do not belong to the current user");
-        }
-
-        if (contactgrup.size() < 2) {
-            throw new IllegalArgumentException("At least two contacts must be added to a group");
-        }
-
-        return contactgrup;
+private Set<Contact> getConatct(Set<Long> contactIds, User user) {
+    if (contactIds == null || contactIds.isEmpty()) {
+        throw new IllegalArgumentException("At least two contacts must be added to a group");
     }
+
+    List<Contact> contacts =
+            contactRepo.findAllByIdInAndUserId(contactIds, user.getId());
+
+    if (contacts.size() < 2) {
+        throw new IllegalArgumentException("At least two contacts must be added to a group");
+    }
+
+    // here doing EXPLICIT conversion
+    return new HashSet<>(contacts);
+}
+
+
 
     private Group buildGroup(GroupCreateRequest request, User user, Set<Contact> newContact) {
         Group group = new Group();
         group.setGroupName(request.getGroupName());
         group.setDescription(request.getDescription());
         group.setUser(user);
-        group.setContacts(newContact);
+
+        // here Hibernate-safe
+        group.getContacts().addAll(newContact);
 
         return group;
     }
+
 //========================================fetch Group========================================//
 
     @Override

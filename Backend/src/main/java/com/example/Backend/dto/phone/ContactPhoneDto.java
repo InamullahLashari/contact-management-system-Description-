@@ -6,9 +6,9 @@ import lombok.Data;
 public class ContactPhoneDto {
 
     private  long id;
-        private String phoneNumber;
-        private String label;
-    }
+    private String phoneNumber;
+    private String label;
+}
 
 
 

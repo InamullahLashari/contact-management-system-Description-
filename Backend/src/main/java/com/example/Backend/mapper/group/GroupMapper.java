@@ -1,6 +1,71 @@
+//package com.example.Backend.mapper.group;
+//
+//import com.example.Backend.dto.group.GroupCreateRequest;
+//import com.example.Backend.dto.group.GroupResponseDto;
+//import com.example.Backend.dto.group.ListGroupResponse;
+//import com.example.Backend.entity.contact.Contact;
+//import com.example.Backend.entity.group.Group;
+//import org.springframework.stereotype.Component;
+//
+//import java.util.HashSet;
+//import java.util.List;
+//import java.util.Set;
+//import java.util.stream.Collectors;
+//
+//
+//@Component
+//public class GroupMapper {
+//
+//    // Convert Group entity to GroupResponseDto
+//    public GroupResponseDto toDto(Group group) {
+//        if (group == null) return null;
+//
+//        GroupResponseDto dto = new GroupResponseDto();
+//        dto.setId(group.getId());
+//        dto.setGroupName(group.getGroupName());
+//        dto.setDescription(group.getDescription());
+//
+//
+//        // Contacts → Contact IDs
+//        dto.setContactIds(
+//                group.getContacts()
+//                        .stream()
+//                        .map(Contact::getId)
+//                        .collect(Collectors.toSet())
+//        );
+//
+//        return dto;
+//    }
+//
+//
+//    public Set<ListGroupResponse> toDto(Set<Group> groups) {
+//        return groups.stream()
+//                .map(group -> {
+//                    ListGroupResponse dto = new ListGroupResponse();
+//                    dto.setId(group.getId());
+//                    dto.setGroupName(group.getGroupName());
+//                    dto.setDescription(group.getDescription());
+//
+//                    // Add first names of contacts
+//                    Set<String> contactFirstNames = new HashSet<>();
+//                    if (group.getContacts() != null) {
+//                        contactFirstNames = group.getContacts()
+//                                .stream()
+//                                .map(Contact::getFirstName) // only firstName
+//                                .collect(Collectors.toSet());
+//                    }
+//                    dto.setContactFirstNames(contactFirstNames);
+//
+//                    return dto;
+//                })
+//                .collect(Collectors.toSet());
+//    }
+//
+//
+//
+//}
 package com.example.Backend.mapper.group;
 
-import com.example.Backend.dto.group.GroupCreateRequest;
 import com.example.Backend.dto.group.GroupResponseDto;
 import com.example.Backend.dto.group.ListGroupResponse;
 import com.example.Backend.entity.contact.Contact;
@@ -8,52 +73,60 @@ import com.example.Backend.entity.group.Group;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
-
 
 @Component
 public class GroupMapper {
 
     // Convert Group entity to GroupResponseDto
     public GroupResponseDto toDto(Group group) {
-        if (group == null) return null;
+        if (group == null) {
+            return null;
+        }
 
         GroupResponseDto dto = new GroupResponseDto();
         dto.setId(group.getId());
         dto.setGroupName(group.getGroupName());
         dto.setDescription(group.getDescription());
 
-
-        // Contacts → Contact IDs
-        dto.setContactIds(
-                group.getContacts()
-                        .stream()
-                        .map(Contact::getId)
-                        .collect(Collectors.toSet())
-        );
+        // Contacts → Contact IDs (no streams)
+        Set<Long> contactIds = new HashSet<>();
+        if (group.getContacts() != null) {
+            for (Contact contact : group.getContacts()) {
+                contactIds.add(contact.getId());
+            }
+        }
+        dto.setContactIds(contactIds);
 
         return dto;
     }
 
-
+    // Convert Set<Group> to Set<ListGroupResponse>
     public Set<ListGroupResponse> toDto(Set<Group> groups) {
+        Set<ListGroupResponse> responseSet = new HashSet<>();
 
-        Set<ListGroupResponse> dtoSet = new HashSet<>();
-
-        for (Group group : groups) {
-
-            ListGroupResponse dto = new ListGroupResponse();
-            dto.setId(group.getId());
-            dto.setName(group.getGroupName());
-            dto.setDescription(group.getDescription());
-
-            dtoSet.add(dto);
+        if (groups == null) {
+            return responseSet;
         }
 
-        return dtoSet;
+        for (Group group : groups) {
+            ListGroupResponse dto = new ListGroupResponse();
+            dto.setId(group.getId());
+            dto.setGroupName(group.getGroupName());
+            dto.setDescription(group.getDescription());
+
+            // Add first names of contacts (no streams)
+            Set<String> contactFirstNames = new HashSet<>();
+            if (group.getContacts() != null) {
+                for (Contact contact : group.getContacts()) {
+                    contactFirstNames.add(contact.getFirstName());
+                }
+            }
+
+            dto.setContactFirstNames(contactFirstNames);
+            responseSet.add(dto);
+        }
+
+        return responseSet;
     }
-
-
 }

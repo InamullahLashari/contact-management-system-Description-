@@ -3,22 +3,26 @@ package com.example.Backend.entity.group;
 import com.example.Backend.entity.contact.Contact;
 import com.example.Backend.entity.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) // here  Prevent infinite recursion
 @Entity
-@Table(name = "groups",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"group_name", "user_id"}))
+@Table(
+        name = "groups",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"group_name", "user_id"})
+)
 public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include // here Only include ID for equals/hashCode
     private Long id;
 
     @Column(nullable = false)
@@ -30,11 +34,11 @@ public class Group {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY) // LAZY to avoid N+1
     @JoinTable(
             name = "group_contacts",
             joinColumns = @JoinColumn(name = "group_id"),
             inverseJoinColumns = @JoinColumn(name = "contact_id")
     )
-    private Set<Contact> contacts;
+    private Set<Contact> contacts = new HashSet<>(); // here Initialize collection
 }

@@ -62,7 +62,7 @@ public class AuthServiceImpI implements AuthService {
         userRepository.save(user);
 
 
-        String roleType = user.getRole().getRoleName(); // set roleType from user
+        String roleType = user.getRole().getRoleName().name(); // set roleType from user
         Map<String, String> tokens = new LinkedHashMap<>();
         tokens.put("accessToken", accessToken);
         tokens.put("refreshToken", refreshToken);

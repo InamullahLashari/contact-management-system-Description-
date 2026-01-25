@@ -24,7 +24,7 @@ public  static User toEntity(UserRequestDto userRequestDto) {
         dto.setEmail(user.getEmail());
         dto.setActive(user.isActive());
         dto.setVerified(user.isVerified());
-        dto.setRoleName(user.getRole().getRoleName());
+        dto.setRoleName(user.getRole().getRoleName().name());
         dto.setContacts(user.getContacts());  // optional
         dto.setGroups(user.getGroups());      // optional
         return dto;

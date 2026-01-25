@@ -11,5 +11,7 @@ public class GroupCreateRequest {
 
     private String groupName;
     private String description;
-    private Set<Long>  contactIds;
+    @JsonDeserialize(as = HashSet.class)
+    private Set<Long> contactIds;
+
 }

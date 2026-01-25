@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -25,7 +27,11 @@ WHERE (:keyword IS NULL OR :keyword = ''
     Page<Contact> searchContacts(@Param("keyword") String keyword, Pageable pageable);
 
     Optional<Contact> findByIdAndUser(Long id, User user);
-    Set<Contact> findAllByIdInAndUserId(Set<Long> contactIds, Long userId);
+//    Set<Contact> findAllByIdInAndUserId(Set<Long> ids, Long userId);
+
+    List<Contact> findAllByIdInAndUserId(Set<Long> ids, Long userId);
+
+
 }
 
 

@@ -1,6 +1,7 @@
 package com.example.Backend.serviceImpI.user;
 
 import com.example.Backend.entity.role.Role;
+import com.example.Backend.entity.roleEnum.RoleName;
 import com.example.Backend.entity.user.User;
 import com.example.Backend.exception.InvalidActionException;
 import com.example.Backend.repository.role.RoleRepository;
@@ -34,7 +35,7 @@ public User signUpUser(User user) {
 
 
 
-    Role role = roleRepository.findByRoleName("ROLE_USER")
+    Role role = roleRepository.findByRoleName(RoleName.ROLE_USER)
             .orElseThrow(() -> new EntityNotFoundException("Role not found"));
     String encodedPassword = passwordEncoder.encode(user.getPassword());
 
