@@ -1,5 +1,4 @@
 
-// export default App;
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
@@ -8,17 +7,22 @@ import DashboardLayout from "./assets/components/layout/DashboardLayout";
 import DashboardContent from "./pages/Dashboard/DashboardContent";
 import ContactList from "./pages/Contacts/ContactList"; // Keep this if ContactList is the main file
 import ContactCard from "./pages/Contacts/components/ContactCard";
-// OR if you want to be more specific:
-// import ContactList from "./pages/Contacts/ContactList/ContactList";
+import Groups from "./pages/Groups/Groups";
+import ForgotPassword from "./pages/password/ForgotPassword";
+import ResetPassword from "./pages/password/ResetPassword";
+
 
 function App() {
   return (
     <Routes>
 
-      
+    
       {/* Public routes */}
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+<Route path="/reset-password" element={<ResetPassword />} />
+
 
       {/* Protected dashboard layout */}
       <Route
@@ -35,7 +39,7 @@ function App() {
         {/* Nested routes */}
         <Route path="contactlist" element={<ContactList />} />
 
-        {/* <Route path="groups" element={<Groups/>}/> */}
+        <Route path="groups" element={<Groups/>}/>
       </Route>
 
       {/* Fallback */}

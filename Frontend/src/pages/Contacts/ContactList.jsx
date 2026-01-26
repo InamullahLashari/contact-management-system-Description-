@@ -24,10 +24,6 @@ const ContactList = () => {
     firstName: "",
     lastName: "",
     title: "",
-    company: "",
-    department: "",
-    address: "",
-    notes: "",
     phones: [{ label: "Mobile", phoneNumber: "" }],
     emails: [{ label: "Work", emailAddress: "" }]
   });
@@ -70,6 +66,8 @@ const ContactList = () => {
       setLoading(true);
       const { keywords, sortBy, sortDir } = getSearchFilters();
       
+      console.log("Fetching contacts with filters:", { page, size, keywords, sortBy, sortDir });
+      
       const response = await contactApi.getContacts({
         page,
         size,
@@ -78,41 +76,30 @@ const ContactList = () => {
         sortDir
       });
 
-      console.log("API Response:", response); // Debug log
+      console.log("API Response:", response);
 
-      // Check response structure based on common patterns
       let contactsData = [];
       let totalElements = 0;
       let totalPages = 0;
 
       if (response.data) {
-        // Pattern 1: Spring Boot style
         if (response.data.content) {
           contactsData = response.data.content;
           totalElements = response.data.totalElements || 0;
           totalPages = response.data.totalPages || 0;
-        }
-        // Pattern 2: Custom contacts property
-        else if (response.data.contacts) {
+        } else if (response.data.contacts) {
           contactsData = response.data.contacts;
           totalElements = response.data.totalElements || response.data.contacts.length;
           totalPages = response.data.totalPages || Math.ceil(response.data.contacts.length / size);
-        }
-        // Pattern 3: Direct array
-        else if (Array.isArray(response.data)) {
+        } else if (Array.isArray(response.data)) {
           contactsData = response.data;
           totalElements = response.data.length;
           totalPages = Math.ceil(response.data.length / size);
-        }
-        // Pattern 4: Nested in data property
-        else if (response.data.data && Array.isArray(response.data.data)) {
+        } else if (response.data.data && Array.isArray(response.data.data)) {
           contactsData = response.data.data;
           totalElements = response.data.total || response.data.data.length;
           totalPages = response.data.totalPages || Math.ceil(response.data.data.length / size);
-        }
-        // Pattern 5: Check for any other array property
-        else {
-          // Check all properties for an array
+        } else {
           Object.keys(response.data).forEach(key => {
             if (Array.isArray(response.data[key]) && !contactsData.length) {
               contactsData = response.data[key];
@@ -126,14 +113,14 @@ const ContactList = () => {
         }
       }
 
-      console.log("Processed Data:", { contactsData, totalElements, totalPages }); // Debug log
+      console.log("Processed Data:", { contactsData, totalElements, totalPages });
 
       setContacts(contactsData);
       setPagination({
         currentPage: page,
         pageSize: size,
         totalElements: totalElements,
-        totalPages: totalPages || 1 // Ensure at least 1 page
+        totalPages: totalPages || 1
       });
       
       setError(null);
@@ -183,10 +170,6 @@ const ContactList = () => {
         firstName: contact.firstName || "",
         lastName: contact.lastName || "",
         title: contact.title || "",
-        company: contact.company || "",
-        department: contact.department || "",
-        address: contact.address || "",
-        notes: contact.notes || "",
         phones: contact.phones?.length > 0
           ? contact.phones.map(phone => ({
             label: phone.label || "Mobile",
@@ -207,10 +190,6 @@ const ContactList = () => {
         firstName: "",
         lastName: "",
         title: "",
-        company: "",
-        department: "",
-        address: "",
-        notes: "",
         phones: [{ label: "Mobile", phoneNumber: "" }],
         emails: [{ label: "Work", emailAddress: "" }]
       });
@@ -268,7 +247,7 @@ const ContactList = () => {
     }
   };
 
-  // Save contact (update or create)
+  // THE FIX: Save contact (update or create)
   const handleSaveContact = async () => {
     try {
       // Validation
@@ -293,43 +272,126 @@ const ContactList = () => {
         return;
       }
 
+      // Prepare contact data
       const contactData = {
         ...editForm,
         phones: editForm.phones.filter(phone => phone.phoneNumber.trim() !== ""),
         emails: editForm.emails.filter(email => email.emailAddress.trim() !== "")
       };
 
+      console.log("Saving contact data:", contactData);
+
       if (editForm.id) {
         // Update existing contact
-        await contactApi.updateContact(editForm.id, contactData);
+        const response = await contactApi.updateContact(editForm.id, contactData);
+        console.log("Update response:", response);
+        
+        // Get the updated contact data from backend response
+        let updatedContact;
+        if (response.data) {
+          updatedContact = response.data;
+        } else if (response) {
+          updatedContact = response;
+        } else {
+          // Fallback: use what we sent
+          updatedContact = contactData;
+        }
 
-        // Update local state
-        setContacts(contacts.map(contact =>
-          contact.id === editForm.id ? { ...contact, ...contactData } : contact
-        ));
+        // Update local state with backend response
+        setContacts(prevContacts => 
+          prevContacts.map(contact =>
+            contact.id === editForm.id ? { ...contact, ...updatedContact } : contact
+          )
+        );
 
-        // Update selected contact for view mode
-        setSelectedContact({ ...selectedContact, ...contactData });
+        // Update selected contact
+        setSelectedContact(prev => prev ? { ...prev, ...updatedContact } : updatedContact);
 
         alert("Contact updated successfully!");
       } else {
-        // Create new contact
+        // Create new contact - THE FIX IS HERE
+        console.log("Creating new contact:", contactData);
+        
+        // OPTIMISTIC UPDATE: Add contact immediately with temporary data
+        const tempContact = {
+          ...contactData,
+          id: `temp-${Date.now()}`, // Temporary ID
+          // Use the actual form data (which has user input) instead of empty strings
+          firstName: contactData.firstName,
+          lastName: contactData.lastName,
+          title: contactData.title || "",
+          phones: contactData.phones || [],
+          emails: contactData.emails || []
+        };
+        
+        console.log("Temporary contact for optimistic update:", tempContact);
+        
+        // Add to state immediately (optimistic update)
+        setContacts(prevContacts => [tempContact, ...prevContacts]);
+        
+        // Send to backend
         const response = await contactApi.createContact(contactData);
-        const newContact = response.data;
-
-        // Add to local state
-        setContacts([newContact, ...contacts]);
-        setSelectedContact(newContact);
-
-        alert("Contact created successfully!");
+        console.log("Create response from backend:", response);
+        
+        // Get the actual saved contact from backend
+        let savedContact;
+        if (response.data) {
+          savedContact = response.data;
+        } else if (response.contact) {
+          savedContact = response.contact;
+        } else if (response) {
+          savedContact = response;
+        }
+        
+        if (savedContact && savedContact.id) {
+          console.log("Backend returned saved contact:", savedContact);
+          
+          // Replace the temporary contact with the real one from backend
+          setContacts(prevContacts => 
+            prevContacts.map(contact => 
+              contact.id === tempContact.id ? savedContact : contact
+            )
+          );
+          
+          setSelectedContact(savedContact);
+          
+          // Update pagination
+          setPagination(prev => ({
+            ...prev,
+            totalElements: prev.totalElements + 1
+          }));
+          
+          alert("Contact created successfully!");
+        } else {
+          console.warn("Backend didn't return complete contact data:", response);
+          // If backend doesn't return full data, keep the optimistic update
+          // The next refresh will fetch the correct data
+          alert("Contact created! Refreshing list...");
+          // Refresh the list to get correct data from backend
+          setTimeout(() => {
+            fetchContacts(0, pagination.pageSize);
+          }, 500);
+        }
       }
 
       // Switch back to view mode
       setModalMode('view');
+      
+      // Close modal after success
+      setTimeout(() => {
+        setShowModal(false);
+      }, 1500);
 
     } catch (err) {
       console.error("Error saving contact:", err);
       alert(err.response?.data?.message || "Failed to save contact. Please try again.");
+      
+      // If create failed, remove the optimistic update
+      if (!editForm.id) {
+        setContacts(prevContacts => 
+          prevContacts.filter(contact => !contact.id.startsWith('temp-'))
+        );
+      }
     }
   };
 
@@ -354,7 +416,9 @@ const ContactList = () => {
     try {
       await contactApi.deleteContact(deleteConfirm.contactId);
 
-      setContacts(contacts.filter(contact => contact.id !== deleteConfirm.contactId));
+      setContacts(prevContacts => 
+        prevContacts.filter(contact => contact.id !== deleteConfirm.contactId)
+      );
       setPagination(prev => ({
         ...prev,
         totalElements: prev.totalElements - 1
@@ -401,20 +465,23 @@ const ContactList = () => {
 
   // Format contact data for display
   const formatContactForDisplay = (contact) => {
-    return {
+    const formattedContact = {
       ...contact,
+      id: contact.id || "",
+      firstName: contact.firstName || "",
+      lastName: contact.lastName || "",
+      title: contact.title || "",
       phones: contact.phones?.map(phone => ({
         label: phone.label || "Mobile",
-        phoneNumber: phone.phoneNumber || "Not provided"
+        phoneNumber: phone.phoneNumber || ""
       })) || [],
       emails: contact.emails?.map(email => ({
         label: email.label || "Email",
-        emailAddress: email.emailAddress || "Not provided"
-      })) || [],
-      title: contact.title || "Not specified",
-      company: contact.company || "Not specified",
-      department: contact.department || "Not specified"
+        emailAddress: email.emailAddress || ""
+      })) || []
     };
+    
+    return formattedContact;
   };
 
   // Render loading state

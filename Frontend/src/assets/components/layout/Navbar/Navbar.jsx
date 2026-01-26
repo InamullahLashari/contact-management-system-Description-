@@ -118,12 +118,18 @@ const Navbar = () => {
   const handleAddContact = () => navigate("/dashboard/contactlist?action=add");
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("refreshToken");
-    localStorage.removeItem("contactSearchFilters");
+    // Remove session storage items
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("refreshToken");
+    sessionStorage.removeItem("contactSearchFilters");
+
+    // Clear any timeout if set
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+    // Redirect to home page
     navigate("/");
-  };
+};
+
 
   const handleFilterChange = (type, value) => {
     const newFilters = { ...filters, [type]: value };

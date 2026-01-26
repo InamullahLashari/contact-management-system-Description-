@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Phone, Mail, Briefcase, Building, MapPin, StickyNote, X, Save, Plus, Minus, ArrowLeft } from 'lucide-react';
+import { User, Phone, Mail, Briefcase, X, Save, Plus, Minus, ArrowLeft } from 'lucide-react';
 
 const EditContactModal = ({ 
   editForm, 
@@ -92,59 +92,12 @@ const EditContactModal = ({
               placeholder="Software Engineer"
             />
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Company</label>
-            <input
-              type="text"
-              name="company"
-              value={editForm.company}
-              onChange={onChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-              placeholder="Tech Corp"
-            />
-          </div>
         </div>
 
-        {/* Additional Info */}
+        {/* Spacer column - you could add other fields here in the future */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-800">Additional Information</h3>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Department</label>
-            <input
-              type="text"
-              name="department"
-              value={editForm.department}
-              onChange={onChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-              placeholder="Engineering"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
-            <textarea
-              name="address"
-              value={editForm.address}
-              onChange={onChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-              placeholder="123 Main St, City, Country"
-              rows="2"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
-            <textarea
-              name="notes"
-              value={editForm.notes}
-              onChange={onChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-              placeholder="Additional notes about this contact..."
-              rows="3"
-            />
-          </div>
+          <h3 className="text-lg font-semibold text-gray-800">&nbsp;</h3>
+          {/* This empty column maintains the grid layout */}
         </div>
 
         {/* Phone Numbers */}

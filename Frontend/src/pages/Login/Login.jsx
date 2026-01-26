@@ -10,7 +10,7 @@ const Login = () => {
 
   // Redirect to dashboard if already logged in
   useEffect(() => {
-    if (localStorage.getItem("token")) {
+    if (sessionStorage.getItem("token")) { // <-- use sessionStorage here
       navigate("/dashboard");
     }
   }, [navigate]);
@@ -31,8 +31,10 @@ const Login = () => {
       const response = await api.post("auth/login", formData);
 
       if (response.data.tokens?.accessToken && response.data.tokens?.refreshToken) {
-        localStorage.setItem("token", response.data.tokens.accessToken);
-        localStorage.setItem("refreshToken", response.data.tokens.refreshToken);
+        // Store tokens in sessionStorage
+        sessionStorage.setItem("token", response.data.tokens.accessToken);
+        sessionStorage.setItem("refreshToken", response.data.tokens.refreshToken);
+
         navigate("/dashboard"); // redirect after login
       } else {
         setError("Login succeeded but tokens not received");
