@@ -26,18 +26,22 @@ public class User {
 
     @Column(nullable = false, unique = true)
     private String email;
-    private String refreshToken;
-    private String password;
-    private boolean active = true;
-    private boolean verified = false;
-    private LocalDateTime tokenExpiry;
-    @Column(name = "is_deleted")
-    private boolean deleted = false;
-    private LocalDateTime lastLogin;
-    private String resetPasswordToken;
-    private LocalDateTime resetTokenExpiry;
-    private String verificationToken;
 
+    @Column(nullable = false)
+    private String password;
+
+    private String refreshToken;
+
+    @Column(name = "is_deleted")
+    private boolean deleted = false; // soft delete
+
+    private LocalDateTime lastLogin;
+
+    @Transient
+    private String confirmPassword;
+//    // password reset
+//    private String resetPasswordToken;
+//    private LocalDateTime resetTokenExpiry;
 
     // Role-based access
     @ManyToOne(fetch = FetchType.EAGER)
@@ -45,14 +49,10 @@ public class User {
     private Role role;
 
     // One user → Many contacts
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Contact> contacts;
 
     // One user → Many groups
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Group> groups;
 }
-
-
-
-

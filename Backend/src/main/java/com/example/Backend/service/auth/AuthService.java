@@ -15,9 +15,11 @@ public interface AuthService {
 
     String refreshTokens(String refreshToken);
 
-    void generateResetPasswordToken(String email);
+    void forgetPassword(String email);
 
-    void resetPassword(String token, String newPassword);
+    void resetPassword(String  email,String newPassword, String confirmPassword);
+
+
 
 }
 

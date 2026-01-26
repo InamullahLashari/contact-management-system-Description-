@@ -3,6 +3,7 @@ package com.example.Backend.serviceImpI.auth;
 import com.example.Backend.dto.login.LoginRequestDto;
 import com.example.Backend.entity.user.User;
 import com.example.Backend.exception.InvalidActionException;
+import com.example.Backend.exception.PasswordReuseException;
 import com.example.Backend.repository.user.UserRepository;
 import com.example.Backend.service.auth.AuthService;
 
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @Service
 public class AuthServiceImpI implements AuthService {
@@ -48,8 +50,6 @@ public class AuthServiceImpI implements AuthService {
         if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new InvalidActionException("Invalid password");
         }
-
-
         UserDetails userDetails = customUserDetailsService.loadUserByUsername(email);
 
 
@@ -90,14 +90,44 @@ public class AuthServiceImpI implements AuthService {
         // Implement refresh token logic
         return "";
     }
-
+//=============================generateResetPasswordToken=======================//
     @Override
-    public void generateResetPasswordToken(String email) {
-        // Implement reset password token generation
+    public void forgetPassword(String email) {
+
+       User user = userRepository.findByEmailIgnoreCase(email).
+                orElseThrow(()-> new EntityNotFoundException("User not found"));
+
+        if(user.isDeleted()) {
+            throw new InvalidActionException("User has been deleted");
+        }
+
+//        user.setResetPasswordToken(UUID.randomUUID().toString());
+//        user.setResetTokenExpiry(LocalDateTime.now().plusMinutes(15));
+//        userRepository.save(user);
+
     }
 
+
+
     @Override
-    public void resetPassword(String token, String newPassword) {
-        // Implement password reset using token
+    public void resetPassword(String email , String newPassword,String confirmPassword) {
+
+        User user = userRepository.findByEmailIgnoreCase(email).orElseThrow(
+                ()-> new EntityNotFoundException("User not found")
+        );
+
+        if(user.isDeleted()) {
+
+            throw new InvalidActionException("User has been deleted");
+
+        }
+
+            if (passwordEncoder.matches(newPassword, user.getPassword())) {
+                throw new PasswordReuseException("New password must be different from the old password");
+            }
+             user.setPassword(passwordEncoder.encode(newPassword));
+
+userRepository.save(user);
+
     }
 }

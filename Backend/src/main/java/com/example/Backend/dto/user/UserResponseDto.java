@@ -18,7 +18,6 @@ public class UserResponseDto {
         private boolean active;
         private boolean verified;
         private String roleName;
-
         private List<Contact> contacts;
         private List<Group> groups;
     }

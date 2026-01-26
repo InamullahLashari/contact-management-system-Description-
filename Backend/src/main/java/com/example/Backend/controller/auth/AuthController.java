@@ -2,15 +2,13 @@ package com.example.Backend.controller.auth;
 
 
 import com.example.Backend.dto.login.LoginRequestDto;
+import com.example.Backend.exception.PasswordMismatchException;
 import com.example.Backend.service.auth.AuthService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -18,15 +16,15 @@ import java.util.Map;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-
-
     @Autowired
     private AuthService authService;
+
+
+
+    //==================================User Login================================================
         @PostMapping("/login")
         public ResponseEntity<?> login(@RequestBody @Valid LoginRequestDto dto) {
         log.trace("Entering login() with DTO: {}", dto);
-        log.info("Login attempt for email: {}", dto.getEmail());
-
         // Delegate to service for business logic
         Map<String, Object> response = authService.login(dto);
 
@@ -36,8 +34,45 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
-
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgetPassword(@RequestParam String email) {
+        authService.forgetPassword(email);
+        return ResponseEntity.ok("User verified. Please enter old and new password.");
     }
+
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<String> resetPassword(
+            @RequestParam String email,
+            @RequestParam String newPassword,
+            @RequestParam String confirmPassword) {
+
+        if(!newPassword.equals(confirmPassword)) {
+            throw new PasswordMismatchException("Passwords do not match");
+        }
+
+        authService.resetPassword(email, newPassword, confirmPassword);
+        log.info("Reset password for email: {}", email);
+
+        return ResponseEntity.ok("New password successfully set");
+    }
+
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
 
 
 

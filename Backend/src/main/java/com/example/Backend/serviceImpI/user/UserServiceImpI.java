@@ -42,9 +42,7 @@ public User signUpUser(User user) {
 
     User newUser = new User();
     newUser.setRole(role);
-    newUser.setActive(true);
     newUser.setDeleted(false);
-    newUser.setVerified(false);
     newUser.setEmail(user.getEmail());
     newUser.setPassword(encodedPassword);
     newUser.setName(user.getName());
