@@ -1,7 +1,5 @@
 package com.example.Backend.dto.contact;
-import com.example.Backend.dto.email.ContactEmailDto;
 import com.example.Backend.dto.email.ContactEmailResponseDto;
-import com.example.Backend.dto.phone.ContactPhoneDto;
 import com.example.Backend.dto.phone.ContactPhoneResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;

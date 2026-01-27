@@ -1,6 +1,4 @@
 package com.example.Backend.dto.login;
-
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

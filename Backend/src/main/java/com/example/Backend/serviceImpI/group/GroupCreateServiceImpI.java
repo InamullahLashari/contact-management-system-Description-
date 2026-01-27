@@ -2,12 +2,9 @@ package com.example.Backend.serviceImpI.group;
 import com.example.Backend.dto.group.GroupCreateRequest;
 import com.example.Backend.dto.group.GroupResponseDto;
 import com.example.Backend.dto.group.ListGroupResponse;
-import com.example.Backend.dto.phone.GroupWithPhonesDto;
 import com.example.Backend.entity.contact.Contact;
-import com.example.Backend.entity.contactphone.ContactPhone;
 import com.example.Backend.entity.group.Group;
 import com.example.Backend.entity.user.User;
-
 import com.example.Backend.mapper.group.GroupMapper;
 import com.example.Backend.repository.contact.ContactRepository;
 import com.example.Backend.repository.group.GroupCreateRepository;
@@ -19,7 +16,6 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

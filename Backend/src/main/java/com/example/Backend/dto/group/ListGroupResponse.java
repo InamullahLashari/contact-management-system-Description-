@@ -1,10 +1,7 @@
 package com.example.Backend.dto.group;
-
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.Set;
 
 @AllArgsConstructor

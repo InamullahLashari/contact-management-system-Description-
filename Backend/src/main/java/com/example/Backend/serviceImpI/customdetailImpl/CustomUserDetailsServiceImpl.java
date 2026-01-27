@@ -1,4 +1,4 @@
-package com.example.Backend.serviceImpl.customdetailImpl;
+package com.example.Backend.serviceImpI.customdetailImpl;
 
 import com.example.Backend.entity.user.User;
 import com.example.Backend.repository.user.UserRepository;

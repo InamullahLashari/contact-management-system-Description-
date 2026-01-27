@@ -6,18 +6,16 @@ import com.example.Backend.exception.InvalidActionException;
 import com.example.Backend.exception.PasswordReuseException;
 import com.example.Backend.repository.user.UserRepository;
 import com.example.Backend.service.auth.AuthService;
-
 import com.example.Backend.util.JwtUtil;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.UUID;
+
 
 @Service
 public class AuthServiceImpI implements AuthService {
