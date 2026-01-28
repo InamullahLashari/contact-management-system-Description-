@@ -26,10 +26,10 @@
     </appender>
 
     <!-- Application loggers (MATCH PACKAGE NAME EXACTLY) -->
-    <logger name="com.example.Backend" level="DEBUG"/>
-    <logger name="com.example.Backend.service" level="DEBUG"/>
-    <logger name="com.example.Backend.controller" level="DEBUG"/>
-    <logger name="com.example.Backend.repository" level="INFO"/>
+    <logger name="com.example.backend" level="DEBUG"/>
+    <logger name="com.example.backend.service" level="DEBUG"/>
+    <logger name="com.example.backend.controller" level="DEBUG"/>
+    <logger name="com.example.backend.repository" level="INFO"/>
 
     <!-- Hibernate SQL -->
     <logger name="org.hibernate.SQL" level="DEBUG"/>

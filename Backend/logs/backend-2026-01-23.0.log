@@ -33,7 +33,7 @@
 	Maximum pool size: undefined/unknown
 2026-01-18 11:26:29.085 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 11:26:29.296 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 11:26:29.769 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 11:26:29.769 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 11:26:29.875 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 11:26:31.619 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 11:26:32.035 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -432,7 +432,7 @@
        foreign key (role_id) 
        references roles
 2026-01-18 11:55:19.733 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 11:55:20.526 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 11:55:20.526 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 11:55:20.627 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 11:55:22.576 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 11:55:23.000 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -474,7 +474,7 @@
 	Maximum pool size: undefined/unknown
 2026-01-18 12:38:21.386 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 12:38:21.556 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 12:38:21.983 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 12:38:21.983 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 12:38:22.065 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 12:38:23.506 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 12:38:23.755 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -598,7 +598,7 @@
 	Maximum pool size: undefined/unknown
 2026-01-18 12:44:42.212 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 12:44:42.386 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 12:44:42.835 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 12:44:42.835 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 12:44:42.915 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 12:44:44.290 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 12:44:44.533 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -672,9 +672,9 @@
 	Maximum pool size: undefined/unknown
 2026-01-18 12:47:48.206 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 12:47:48.370 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 12:47:48.854 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 12:47:48.854 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 12:47:48.961 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-18 12:47:50.327 | WARN  | [main] | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'groupCreateController': Unsatisfied dependency expressed through field 'groupService': No qualifying bean of type 'com.example.Backend.service.Group.GroupCreateService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-01-18 12:47:50.327 | WARN  | [main] | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'groupCreateController': Unsatisfied dependency expressed through field 'groupService': No qualifying bean of type 'com.example.backend.service.group.GroupCreateService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2026-01-18 12:47:50.328 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-01-18 12:47:50.333 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
 2026-01-18 12:47:50.345 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
@@ -690,7 +690,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field groupService in com.example.Backend.controller.group.GroupCreateController required a bean of type 'com.example.Backend.service.Group.GroupCreateService' that could not be found.
+Field groupService in com.example.backend.controller.group.GroupCreateController required a bean of type 'com.example.backend.service.group.GroupCreateService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -698,7 +698,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateService' in your configuration.
+Consider defining a bean of type 'com.example.backend.service.group.GroupCreateService' in your configuration.
 
 2026-01-18 12:48:42.940 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
 2026-01-18 12:48:43.013 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 11688 (C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\10pearl\contact-management-system-Description-\Backend)
@@ -729,7 +729,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-18 12:48:47.988 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 12:48:48.148 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 12:48:48.595 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 12:48:48.595 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 12:48:48.704 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 12:48:50.096 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 12:48:50.384 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -1119,7 +1119,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-18 14:38:23.141 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 14:38:23.344 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 14:38:24.057 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 14:38:24.057 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 14:38:24.191 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 14:38:26.982 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 14:38:27.541 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -1319,7 +1319,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-18 14:41:09.432 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 14:41:09.616 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 14:41:10.263 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 14:41:10.263 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 14:41:10.409 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 14:41:12.261 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 14:41:12.592 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -1493,7 +1493,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-18 17:01:15.279 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 17:01:15.486 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 17:01:16.055 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 17:01:16.055 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 17:01:16.329 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 17:01:18.777 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 17:01:19.681 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -1624,7 +1624,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-18 17:15:02.188 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 17:15:02.374 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 17:15:02.896 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 17:15:02.896 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 17:15:03.038 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 17:15:04.837 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 17:15:05.154 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -2050,7 +2050,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-18 17:49:28.767 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-18 17:49:28.949 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-18 17:49:29.622 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-18 17:49:29.622 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-18 17:49:29.774 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-18 17:49:31.675 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-18 17:49:32.297 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -2198,7 +2198,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-23 18:31:39.824 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-23 18:31:40.012 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-23 18:31:40.535 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-23 18:31:40.535 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-23 18:31:40.735 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-23 18:31:43.242 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-23 18:31:43.779 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -23087,7 +23087,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-23 21:19:19.503 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-23 21:19:19.741 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-23 21:19:20.391 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-23 21:19:20.391 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-23 21:19:20.752 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-23 21:19:20.792 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
 2026-01-23 21:19:20.887 | INFO  | [main] | c.example.Backend.BackendApplication.logStarting | Starting BackendApplication using Java 24.0.1 with PID 5376 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
@@ -23124,7 +23124,7 @@ Consider defining a bean of type 'com.example.Backend.service.Group.GroupCreateS
 	Maximum pool size: undefined/unknown
 2026-01-23 21:19:29.413 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-23 21:19:29.599 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-23 21:19:30.108 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-23 21:19:30.108 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-23 21:19:30.247 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-23 21:19:31.974 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-23 21:19:32.280 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -23185,7 +23185,7 @@ Identify and stop the process that's listening on port 8082 or configure this ap
 	Maximum pool size: undefined/unknown
 2026-01-23 21:19:55.785 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-23 21:19:55.959 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-23 21:19:56.514 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-23 21:19:56.514 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-23 21:19:56.840 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-23 21:19:58.997 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-23 21:19:59.339 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider

@@ -143,7 +143,7 @@
        foreign key (role_id) 
        references roles
 2026-01-26 12:05:32.052 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26 12:05:32.506 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-26 12:05:32.506 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-26 12:05:32.614 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-26 12:05:34.051 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-26 12:05:34.291 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -311,7 +311,7 @@
 	Maximum pool size: undefined/unknown
 2026-01-26 12:11:03.528 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-26 12:11:03.685 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26 12:11:04.125 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-26 12:11:04.125 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-26 12:11:04.251 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-26 12:11:05.581 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-26 12:11:05.821 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
@@ -506,7 +506,7 @@
 	Maximum pool size: undefined/unknown
 2026-01-26 12:52:45.797 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-01-26 12:52:45.971 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-26 12:52:46.497 | DEBUG | [main] | com.example.Backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-01-26 12:52:46.497 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
 2026-01-26 12:52:46.632 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
 2026-01-26 12:52:48.119 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-01-26 12:52:48.395 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
