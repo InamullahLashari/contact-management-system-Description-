@@ -20,10 +20,9 @@ public class AuthController {
     private AuthService authService;
 
 
-
     //==================================User Login================================================
-        @PostMapping("/login")
-        public ResponseEntity<?> login(@RequestBody @Valid LoginRequestDto dto) {
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody @Valid LoginRequestDto dto) {
         log.trace("Entering login() with DTO: {}", dto);
         // Delegate to service for business logic
         Map<String, Object> response = authService.login(dto);
@@ -47,7 +46,7 @@ public class AuthController {
             @RequestParam String newPassword,
             @RequestParam String confirmPassword) {
 
-        if(!newPassword.equals(confirmPassword)) {
+        if (!newPassword.equals(confirmPassword)) {
             throw new PasswordMismatchException("Passwords do not match");
         }
 
@@ -58,11 +57,7 @@ public class AuthController {
     }
 
 
-
-
-
-
- }
+}
 
 
 

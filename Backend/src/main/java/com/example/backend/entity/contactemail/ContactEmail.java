@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="contact_emails")
+@Table(name = "contact_emails")
 public class ContactEmail {
 
     @Id

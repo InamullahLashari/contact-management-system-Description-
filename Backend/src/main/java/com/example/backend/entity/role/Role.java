@@ -2,7 +2,10 @@ package com.example.backend.entity.role;
 
 import com.example.backend.entity.roleEnum.RoleName;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Data
 @Entity
 @NoArgsConstructor

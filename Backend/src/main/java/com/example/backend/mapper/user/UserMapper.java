@@ -1,20 +1,22 @@
 package com.example.backend.mapper.user;
+
 import com.example.backend.dto.user.UserRequestDto;
 import com.example.backend.dto.user.UserResponseDto;
 import com.example.backend.entity.user.User;
 
 public class UserMapper {
 
-public  static User toEntity(UserRequestDto userRequestDto) {
+    public static User toEntity(UserRequestDto userRequestDto) {
 
-    User newUser = new User();
-    newUser.setEmail(userRequestDto.getEmail());
-    newUser.setPassword(userRequestDto.getPassword());
-    newUser.setName(userRequestDto.getName());
+        User newUser = new User();
+        newUser.setEmail(userRequestDto.getEmail());
+        newUser.setPassword(userRequestDto.getPassword());
+        newUser.setName(userRequestDto.getName());
 
-    return newUser;
+        return newUser;
 
-}
+    }
+
     public static UserResponseDto ToDto(User user) {
         UserResponseDto dto = new UserResponseDto();
         dto.setId(user.getId());
@@ -27,7 +29,7 @@ public  static User toEntity(UserRequestDto userRequestDto) {
     }
 
 
-    }
+}
 
 
 

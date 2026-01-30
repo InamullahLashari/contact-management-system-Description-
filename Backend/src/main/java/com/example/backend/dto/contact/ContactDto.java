@@ -19,7 +19,6 @@ public class ContactDto {
     private String firstName;
     private String lastName;
     private String title;
-    private String address;
     private List<ContactEmailDto> emails;
     private List<ContactPhoneDto> phones;
     private Set<String> groups;

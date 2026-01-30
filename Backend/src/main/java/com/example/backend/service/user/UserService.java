@@ -5,5 +5,5 @@ import com.example.backend.entity.user.User;
 public interface UserService {
 
 
-    User  signUpUser (User user);
+    User signUpUser(User user);
 }

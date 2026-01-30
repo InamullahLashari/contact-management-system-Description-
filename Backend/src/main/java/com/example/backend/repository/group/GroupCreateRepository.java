@@ -1,13 +1,15 @@
 package com.example.backend.repository.group;
+
 import com.example.backend.entity.group.Group;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
+
 import java.util.Optional;
 import java.util.Set;
 
-public interface GroupCreateRepository extends JpaRepository<Group,Long> {
+public interface GroupCreateRepository extends JpaRepository<Group, Long> {
 
-    ///// ///fecth the group by user
+    /// // ///fecth the group by user
 //Set<Group> findByUser_Id(Long id);
 //
 //    Optional<Group> findByGroupNameAndUserId(String groupName, Long userId);
@@ -20,7 +22,6 @@ public interface GroupCreateRepository extends JpaRepository<Group,Long> {
 
     @EntityGraph(attributePaths = {"contacts"})
     Optional<Group> findByGroupNameAndUserId(String groupName, Long userId);
-
 
 
 }

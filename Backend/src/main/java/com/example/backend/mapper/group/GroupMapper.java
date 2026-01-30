@@ -1,5 +1,5 @@
-
 package com.example.backend.mapper.group;
+
 import com.example.backend.dto.group.GroupResponseDto;
 import com.example.backend.dto.group.ListGroupResponse;
 import com.example.backend.entity.contact.Contact;
@@ -56,11 +56,12 @@ public class GroupMapper {
                     contactFirstNames.add(contact.getFirstName());
                 }
             }
-
             dto.setContactFirstNames(contactFirstNames);
             responseSet.add(dto);
         }
 
         return responseSet;
     }
+
+
 }

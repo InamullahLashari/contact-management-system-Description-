@@ -10,14 +10,14 @@ import org.springframework.stereotype.Component;
 public class AuthenticationUtil {
 
 
-        public String getEmail() {
-            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            if (authentication != null && authentication.getPrincipal() instanceof UserDetails userDetails) {
-                return userDetails.getUsername();
-            }
-            return null;
+    public String getEmail() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails userDetails) {
+            return userDetails.getUsername();
         }
+        return null;
     }
+}
 
 
 

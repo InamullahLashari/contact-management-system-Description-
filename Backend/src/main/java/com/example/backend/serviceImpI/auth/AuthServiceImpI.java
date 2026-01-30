@@ -9,9 +9,10 @@ import com.example.backend.service.auth.AuthService;
 import com.example.backend.serviceImpI.customdetailImpl.CustomUserDetailsServiceImpl;
 import com.example.backend.util.JwtUtil;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,7 +20,6 @@ import java.util.Map;
 
 @Service
 public class AuthServiceImpI implements AuthService {
-
 
 
     private final UserRepository userRepository;
@@ -91,14 +91,15 @@ public class AuthServiceImpI implements AuthService {
         // Implement refresh token logic
         return "";
     }
-//=============================generateResetPasswordToken=======================//
+
+    //=============================generateResetPasswordToken=======================//
     @Override
     public void forgetPassword(String email) {
 
-       User user = userRepository.findByEmailIgnoreCase(email).
-                orElseThrow(()-> new EntityNotFoundException("User not found"));
+        User user = userRepository.findByEmailIgnoreCase(email).
+                orElseThrow(() -> new EntityNotFoundException("User not found"));
 
-        if(user.isDeleted()) {
+        if (user.isDeleted()) {
             throw new InvalidActionException("User has been deleted");
         }
 
@@ -109,26 +110,25 @@ public class AuthServiceImpI implements AuthService {
     }
 
 
-
     @Override
-    public void resetPassword(String email , String newPassword,String confirmPassword) {
+    public void resetPassword(String email, String newPassword, String confirmPassword) {
 
         User user = userRepository.findByEmailIgnoreCase(email).orElseThrow(
-                ()-> new EntityNotFoundException("User not found")
+                () -> new EntityNotFoundException("User not found")
         );
 
-        if(user.isDeleted()) {
+        if (user.isDeleted()) {
 
             throw new InvalidActionException("User has been deleted");
 
         }
 
-            if (passwordEncoder.matches(newPassword, user.getPassword())) {
-                throw new PasswordReuseException("New password must be different from the old password");
-            }
-             user.setPassword(passwordEncoder.encode(newPassword));
+        if (passwordEncoder.matches(newPassword, user.getPassword())) {
+            throw new PasswordReuseException("New password must be different from the old password");
+        }
+        user.setPassword(passwordEncoder.encode(newPassword));
 
-userRepository.save(user);
+        userRepository.save(user);
 
     }
 }

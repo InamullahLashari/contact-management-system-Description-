@@ -15,6 +15,7 @@ import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,18 +28,16 @@ public class GroupCreateServiceImpl implements GroupCreateService {
     private final UserRepository userRepo;
 
     private final ContactRepository contactRepo;
-     private final GroupMapper  groupMapper;
+    private final GroupMapper groupMapper;
 
     public GroupCreateServiceImpl(GroupCreateRepository groupRepo,
-                                  UserRepository userRepo, ContactRepository contactRepo, GroupMapper  groupMapper){
+                                  UserRepository userRepo, ContactRepository contactRepo, GroupMapper groupMapper) {
         this.groupRepo = groupRepo;
         this.userRepo = userRepo;
         this.contactRepo = contactRepo;
         this.groupMapper = groupMapper;
 
     }
-
-
 
 
     @Transactional
@@ -74,22 +73,21 @@ public class GroupCreateServiceImpl implements GroupCreateService {
         }
     }
 
-private Set<Contact> getConatct(Set<Long> contactIds, User user) {
-    if (contactIds == null || contactIds.isEmpty()) {
-        throw new IllegalArgumentException("At least two contacts must be added to a group");
+    private Set<Contact> getConatct(Set<Long> contactIds, User user) {
+        if (contactIds == null || contactIds.isEmpty()) {
+            throw new IllegalArgumentException("At least two contacts must be added to a group");
+        }
+
+        List<Contact> contacts =
+                contactRepo.findAllByIdInAndUserId(contactIds, user.getId());
+
+        if (contacts.size() < 2) {
+            throw new IllegalArgumentException("At least two contacts must be added to a group");
+        }
+
+        // here doing EXPLICIT conversion
+        return new HashSet<>(contacts);
     }
-
-    List<Contact> contacts =
-            contactRepo.findAllByIdInAndUserId(contactIds, user.getId());
-
-    if (contacts.size() < 2) {
-        throw new IllegalArgumentException("At least two contacts must be added to a group");
-    }
-
-    // here doing EXPLICIT conversion
-    return new HashSet<>(contacts);
-}
-
 
 
     private Group buildGroup(GroupCreateRequest request, User user, Set<Contact> newContact) {
@@ -109,7 +107,7 @@ private Set<Contact> getConatct(Set<Long> contactIds, User user) {
     @Override
     @Transactional
     public Set<ListGroupResponse> getAllGroups(String email) {
-        User user =   userRepo.findByEmailIgnoreCase(email)
+        User user = userRepo.findByEmailIgnoreCase(email)
                 .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
         Set<Group> groups = groupRepo.findByUser_Id(user.getId());
@@ -120,8 +118,6 @@ private Set<Contact> getConatct(Set<Long> contactIds, User user) {
 
         return groupMapper.toDto(groups);
     }
-
-
 
 
 }

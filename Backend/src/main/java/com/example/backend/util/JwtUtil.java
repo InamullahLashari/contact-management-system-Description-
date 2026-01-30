@@ -18,9 +18,9 @@ import java.util.function.Function;
 public class JwtUtil {
 
 
-    private  String secretKey="giNWBuwhsqJOxczFnDEhUFEThR3ZugEt2vDrg-fR5ro";
-    private  long accessExpiry=10000 * 60 * 20;
-    private  long refreshExpiry=1000 * 60 * 60 * 24 * 7;
+    private String secretKey = "giNWBuwhsqJOxczFnDEhUFEThR3ZugEt2vDrg-fR5ro";
+    private long accessExpiry = 10000 * 60 * 20;
+    private long refreshExpiry = 1000 * 60 * 60 * 24 * 7;
 
 
     // Extract username (email in your case) from token
@@ -39,6 +39,7 @@ public class JwtUtil {
         return claimsResolver.apply(claims);
 
     }
+
     public boolean isAccessToken(String token) {
         return "access".equals(extractClaim(token, c -> c.get("type", String.class)));
     }
@@ -90,6 +91,7 @@ public class JwtUtil {
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
+
     public String getTokenType(String token) {
         return extractAllClaims(token).get("type", String.class);
     }

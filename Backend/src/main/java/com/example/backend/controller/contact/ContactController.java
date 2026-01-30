@@ -70,8 +70,6 @@ public class ContactController {
         Page<Contact> contacts = contactService.contactList(keywords, pageable);
 
 
-
-
         var newContacts = contacts.getContent().stream()
                 .map(c -> Map.of(
                         "id", c.getId(),
@@ -107,7 +105,7 @@ public class ContactController {
     }
 
 
-  //==================================update conatct==============================================//
+    //==================================update conatct==============================================//
 
     @PutMapping("/update")
     public ResponseEntity<?> updateContact(@RequestBody ContactDto contactDto) {
@@ -140,7 +138,6 @@ public class ContactController {
                 "message", "Deleted successfully"
         ));
     }
-
 
 
 }

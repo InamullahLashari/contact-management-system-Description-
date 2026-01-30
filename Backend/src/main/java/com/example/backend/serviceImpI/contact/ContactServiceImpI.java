@@ -3,14 +3,13 @@ package com.example.backend.serviceImpI.contact;
 import com.example.backend.dto.contact.ContactDto;
 import com.example.backend.dto.contact.ContactResponseDto;
 import com.example.backend.dto.email.ContactEmailDto;
-import com.example.backend.dto.email.ContactEmailResponseDto;
 import com.example.backend.dto.phone.ContactPhoneDto;
-import com.example.backend.dto.phone.ContactPhoneResponseDto;
 import com.example.backend.entity.contact.Contact;
 import com.example.backend.entity.contactemail.ContactEmail;
 import com.example.backend.entity.contactphone.ContactPhone;
 import com.example.backend.entity.user.User;
 import com.example.backend.exception.InvalidActionException;
+import com.example.backend.mapper.contact.ContactMapper;
 import com.example.backend.repository.contact.ContactRepository;
 import com.example.backend.repository.email.EmailRepository;
 import com.example.backend.repository.phone.PhoneRepository;
@@ -22,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,15 +33,17 @@ public class ContactServiceImpI implements ContactService {
     private final UserRepository userRepo;
     private final EmailRepository emailRepo;
     private final ContactRepository contactRepo;
+    private final ContactMapper contactMapper;
 
     public ContactServiceImpI(PhoneRepository phoneRepo,
                               UserRepository userRepo,
                               EmailRepository emailRepo,
-                              ContactRepository contactRepo) {
+                              ContactRepository contactRepo, ContactMapper contactMapper) {
         this.phoneRepo = phoneRepo;
         this.userRepo = userRepo;
         this.emailRepo = emailRepo;
         this.contactRepo = contactRepo;
+        this.contactMapper = contactMapper;
     }
 
     //================================================Add Contact=======================================//
@@ -56,63 +58,30 @@ public class ContactServiceImpI implements ContactService {
         contact.setTitle(contactDto.getTitle());
         contact.setUser(user);
 
-        List<ContactEmail> newEmail = processEmail(contactDto.getEmails(), contact);
+        List<ContactEmail> newEmail = processEmail(contactDto.getEmails(), contact, user.getId());
 
-        List<ContactPhone> newPhone = processPhone(contactDto.getPhones(), contact);
+        List<ContactPhone> newPhone = processPhone(contactDto.getPhones(), contact, user.getId());
 
         contact.setEmails(newEmail);
         contact.setPhones(newPhone);
         Contact saved = contactRepo.save(contact);
 
-        return toResponseDto(saved); //here i call helperx function
+        return contactMapper.toDto(saved); //here i call helperx function
 
     }
-   //----------------------helper function-------------------------------//
-   private ContactResponseDto toResponseDto(Contact contact) {
-
-       ContactResponseDto dto = new ContactResponseDto();
-       dto.setId(contact.getId());
-       dto.setFirstName(contact.getFirstName());
-       dto.setLastName(contact.getLastName());
-       dto.setTitle(contact.getTitle());
-
-       dto.setEmails(
-               contact.getEmails().stream()
-                       .map(e -> new ContactEmailResponseDto(
-                               e.getId(),
-                               e.getEmailAddress(),
-                               e.getLabel()
-                       ))
-                       .toList()
-       );
-
-       dto.setPhones(
-               contact.getPhones().stream()
-                       .map(p -> new ContactPhoneResponseDto(
-                               p.getId(),
-                               p.getPhoneNumber(),
-                               p.getLabel()
-                       ))
-                       .toList()
-       );
-
-       return dto;
-   }
-
 
     //-----------------------------get User------------------------//
 
     private User getUser(String email) {
-        return userRepo.findByEmailIgnoreCase(email).orElseThrow(() -> new EntityNotFoundException());
+        return userRepo.findByEmailIgnoreCase(email).orElseThrow(() -> new EntityNotFoundException("user not found"));
 
     }
-
 
     //--------------------------process Email------------------------//
 
     private List<ContactEmail> processEmail(
             List<ContactEmailDto> contactEmailDtos,
-            Contact contact) {
+            Contact contact, Long User_Id) {
 
         List<ContactEmail> contactEmails = new ArrayList<>();
 
@@ -120,7 +89,7 @@ public class ContactServiceImpI implements ContactService {
 
             for (ContactEmailDto emailDto : contactEmailDtos) {
 
-                emailRepo.findByEmailAddress(emailDto.getEmailAddress())
+                emailRepo.findByEmailAddressAndContact_User_Id(emailDto.getEmailAddress(), User_Id)
                         .ifPresent(e -> {
                             throw new InvalidActionException(
                                     "Email exists: " + e.getEmailAddress()
@@ -141,7 +110,7 @@ public class ContactServiceImpI implements ContactService {
     //----------------------------Process phone------------------------//
     private List<ContactPhone> processPhone(
             List<ContactPhoneDto> contactPhoneDtos,
-            Contact contact) {
+            Contact contact, Long User_Id) {
 
         List<ContactPhone> contactPhones = new ArrayList<>();
 
@@ -149,7 +118,7 @@ public class ContactServiceImpI implements ContactService {
 
             for (ContactPhoneDto phoneDto : contactPhoneDtos) {
 
-                phoneRepo.findByPhoneNumber(phoneDto.getPhoneNumber())
+                phoneRepo.findByPhoneNumberAndContact_User_Id(phoneDto.getPhoneNumber(), User_Id)
                         .ifPresent(p -> {
                             throw new InvalidActionException(
                                     "PhoneNo exists: " + p.getPhoneNumber()
@@ -168,21 +137,8 @@ public class ContactServiceImpI implements ContactService {
         return contactPhones;
     }
 
-    //---------------------------mapper Contact-----------------------//
-    private Contact mapDtoToContact(ContactDto contactDto, User newUser) {
-
-        Contact newContact = new Contact();
-        newContact.setFirstName(contactDto.getFirstName());
-        newContact.setLastName(contactDto.getLastName());
-        newContact.setTitle(contactDto.getTitle());
-        newContact.setUser(newUser);
-        return newContact;
-
-    }
-
 
     //================================================Pagenation  Contact=======================================//
-
 
 
     @Override
@@ -191,9 +147,6 @@ public class ContactServiceImpI implements ContactService {
                 ? contactRepo.findAll(pageable)
                 : contactRepo.searchContacts(keyword, pageable);
     }
-
-
-
 
 
     //================================================update Contact=======================================//
@@ -214,14 +167,15 @@ public class ContactServiceImpI implements ContactService {
         contact.getEmails().clear();
         contact.getPhones().clear();
 
-        contact.getEmails().addAll(processEmail(dto.getEmails(), contact));
-        contact.getPhones().addAll(processPhone(dto.getPhones(), contact));
+//        contact.getEmails().addAll(processEmail(dto.getEmails(), contact));
+//        contact.getPhones().addAll(processPhone(dto.getPhones(), contact));
 
         Contact updated = contactRepo.save(contact);
 
         log.info("User {} updated contact {}", email, updated.getId());
 
-        return toResponseDto(updated);
+//        return toResponseDto(updated);
+        return null;
     }
 
     //================================================Delete Contact=======================================//
@@ -243,3 +197,5 @@ public class ContactServiceImpI implements ContactService {
     }
 
 }
+
+

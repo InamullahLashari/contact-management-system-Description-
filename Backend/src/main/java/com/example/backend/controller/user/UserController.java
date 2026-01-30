@@ -21,12 +21,10 @@ public class UserController {
 
 
     @Autowired
-private UserService userService;
+    private UserService userService;
 
 
-
-
-//=================================User SignUp=============================================//
+    //=================================User SignUp=============================================//
     @PostMapping("/signup")
     public ResponseEntity<?> signUpUser(@RequestBody @Valid UserRequestDto userRequestDto) {
         log.info("Sign-up attempt with data: {}", userRequestDto);
@@ -48,9 +46,6 @@ private UserService userService;
     public ResponseEntity<?> hello() {
         return ResponseEntity.ok("Hello! User controller is working.");
     }
-
-
-
 
 
 }

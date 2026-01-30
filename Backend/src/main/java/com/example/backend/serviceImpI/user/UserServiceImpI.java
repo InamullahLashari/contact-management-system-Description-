@@ -13,51 +13,48 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class UserServiceImpI implements UserService{
+public class UserServiceImpI implements UserService {
 
-   private final UserRepository userRepository;
+    private final UserRepository userRepository;
 
-     private final PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
-  private final RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
-public UserServiceImpI(UserRepository userRepository,PasswordEncoder passwordEncoder,RoleRepository roleRepository){
-    this.userRepository= userRepository;
-    this.passwordEncoder= passwordEncoder;
-    this.roleRepository=roleRepository;
-
-
-
-}
-
-//==================================signUp Implementation=================================//
-@Override
-public User signUpUser(User user) {
+    public UserServiceImpI(UserRepository userRepository, PasswordEncoder passwordEncoder, RoleRepository roleRepository) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.roleRepository = roleRepository;
 
 
-    userRepository.findByEmailIgnoreCase(user.getEmail()).ifPresent(existingUser -> {
-        throw new InvalidActionException("Email already in use");
-    });
+    }
+
+    //==================================signUp Implementation=================================//
+    @Override
+    public User signUpUser(User user) {
 
 
-
-    Role role = roleRepository.findByRoleName(RoleName.ROLE_USER)
-            .orElseThrow(() -> new EntityNotFoundException("Role not found"));
-    String encodedPassword = passwordEncoder.encode(user.getPassword());
-
-
-    User newUser = new User();
-    newUser.setRole(role);
-    newUser.setDeleted(false);
-    newUser.setEmail(user.getEmail());
-    newUser.setPassword(encodedPassword);
-    newUser.setName(user.getName());
-    newUser.setLastLogin(null);
+        userRepository.findByEmailIgnoreCase(user.getEmail()).ifPresent(existingUser -> {
+            throw new InvalidActionException("Email already in use");
+        });
 
 
+        Role role = roleRepository.findByRoleName(RoleName.ROLE_USER)
+                .orElseThrow(() -> new EntityNotFoundException("Role not found"));
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
 
-    return userRepository.save(newUser);
-}
+
+        User newUser = new User();
+        newUser.setRole(role);
+        newUser.setDeleted(false);
+        newUser.setEmail(user.getEmail());
+        newUser.setPassword(encodedPassword);
+        newUser.setName(user.getName());
+        newUser.setLastLogin(null);
+
+
+        return userRepository.save(newUser);
+    }
 
 
 }

@@ -8,9 +8,12 @@ import org.springframework.data.domain.Pageable;
 
 public interface ContactService {
 
-    ContactResponseDto createContact(ContactDto contactDto , String email);
+    ContactResponseDto createContact(ContactDto contactDto, String email);
+
     Page<Contact> contactList(String keyword, Pageable pageable);
-    ContactResponseDto updateContact(long id ,String email, ContactDto contactDto);
-    boolean deleteContact(long id,String email);
+
+    ContactResponseDto updateContact(long id, String email, ContactDto contactDto);
+
+    boolean deleteContact(long id, String email);
 
 }
