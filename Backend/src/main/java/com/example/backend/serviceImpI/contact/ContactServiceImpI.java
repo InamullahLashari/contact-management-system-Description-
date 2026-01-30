@@ -142,12 +142,18 @@ public class ContactServiceImpI implements ContactService {
 
 
     @Override
-    public Page<Contact> contactList(String keyword, Pageable pageable) {
-        return (keyword == null || keyword.isBlank())
-                ? contactRepo.findAll(pageable)
-                : contactRepo.searchContacts(keyword, pageable);
+    public Page<ContactResponseDto> contactList(String email, String keyword, Pageable pageable) {
+        return contactRepo.findUserContacts(email, keyword, pageable)
+                .map(contactMapper::toDto); // convert entity → DTO
     }
 
+    public ContactResponseDto getContact(Long contactId, String email) {
+        Contact contact = contactRepo.findById(contactId)
+                .filter(c -> c.getUser().getEmail().equalsIgnoreCase(email))
+                .orElseThrow(() -> new InvalidActionException("Contact not found or not owned by user"));
+
+        return contactMapper.toDto(contact);
+    }
 
     //================================================update Contact=======================================//
 

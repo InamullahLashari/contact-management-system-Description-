@@ -10,7 +10,7 @@ public interface ContactService {
 
     ContactResponseDto createContact(ContactDto contactDto, String email);
 
-    Page<Contact> contactList(String keyword, Pageable pageable);
+    Page<ContactResponseDto> contactList(String email, String keyword, Pageable pageable);
 
     ContactResponseDto updateContact(long id, String email, ContactDto contactDto);
 

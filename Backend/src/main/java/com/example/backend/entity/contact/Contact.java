@@ -31,7 +31,7 @@ public class Contact {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    // Emails & phones are deleted automatically when contact is deleted
+
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<ContactPhone> phones;
 

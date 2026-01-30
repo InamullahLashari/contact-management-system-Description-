@@ -18,7 +18,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -52,9 +54,9 @@ public class ContactController {
     }
 
     //====================================Pagination===================================================//
-    @PostMapping("/list")
-    public ResponseEntity<?> contactList(
-            @RequestParam(required = false) String keywords,
+    @GetMapping("/list")
+    public ResponseEntity<?> listContacts(
+            @RequestParam(required = false) String keyword,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "firstName") String sortBy,
@@ -66,43 +68,23 @@ public class ContactController {
                 ? Sort.by(sortBy).ascending()
                 : Sort.by(sortBy).descending();
 
-        Pageable pageable = PageRequest.of(page, size, sort);
-        Page<Contact> contacts = contactService.contactList(keywords, pageable);
-
-
-        var newContacts = contacts.getContent().stream()
-                .map(c -> Map.of(
-                        "id", c.getId(),
-                        "firstName", c.getFirstName(),
-                        "lastName", c.getLastName(),
-                        "title", c.getTitle(),
-                        "emails", c.getEmails().stream()
-                                .map(e -> {
-                                    ContactEmailDto dto = new ContactEmailDto();
-                                    dto.setEmailAddress(e.getEmailAddress());
-                                    dto.setLabel(e.getLabel());
-                                    return dto;
-                                }).toList(),
-                        "phones", c.getPhones().stream()
-                                .map(p -> {
-                                    ContactPhoneDto dto = new ContactPhoneDto();
-                                    dto.setPhoneNumber(p.getPhoneNumber());
-                                    dto.setLabel(p.getLabel());
-                                    return dto;
-                                }).toList()
-                ))
-                .toList();
-
+        PageRequest pageRequest = PageRequest.of(page, size, sort);
+        String email=authUtil.getEmail();
+        log.info("email {}", email);
+        Page<ContactResponseDto> contacts = contactService.contactList(email, keyword, pageRequest);
+        log.info("contacts {}", contacts);
 
         Map<String, Object> response = new HashMap<>();
         response.put("status", "success");
         response.put("message", "Contacts fetched successfully");
-        response.put("contacts", newContacts);
+        response.put("contacts", contacts.getContent());
         response.put("currentPage", contacts.getNumber());
         response.put("totalItems", contacts.getTotalElements());
         response.put("totalPages", contacts.getTotalPages());
+
         return ResponseEntity.ok(response);
     }
+
 
 
     //==================================update conatct==============================================//

@@ -14,42 +14,36 @@ import java.util.List;
 @Component
 public class ContactMapper {
 
-
     public ContactResponseDto toDto(Contact contact) {
+        ContactResponseDto dto = new ContactResponseDto();
 
-        ContactResponseDto contactResponseDto = new ContactResponseDto();
+        dto.setId(contact.getId());
+        dto.setFirstName(contact.getFirstName());
+        dto.setLastName(contact.getLastName());
+        dto.setTitle(contact.getTitle());
 
-        contactResponseDto.setId(contact.getId());
-        contactResponseDto.setFirstName(contact.getFirstName());
-        contactResponseDto.setLastName(contact.getLastName());
-        contactResponseDto.setTitle(contact.getTitle());
-        List<ContactEmailResponseDto> Emails = new ArrayList<>();
 
-        for (ContactEmail contactEmail : contact.getEmails()) {
-            ContactEmailResponseDto Emaildto = new ContactEmailResponseDto();
-            Emaildto.setId(contactEmail.getId());
-            Emaildto.setLabel(contactEmail.getLabel());
-            Emaildto.setEmailAddress(contactEmail.getEmailAddress());
-            Emails.add(Emaildto);
+        List<ContactEmailResponseDto> emailDtos = new ArrayList<>();
+        for (ContactEmail email : contact.getEmails()) {
+            ContactEmailResponseDto emailDto = new ContactEmailResponseDto();
+            emailDto.setId(email.getId());
+            emailDto.setLabel(email.getLabel());
+            emailDto.setEmailAddress(email.getEmailAddress());
+            emailDtos.add(emailDto);
         }
-        contactResponseDto.setEmails(Emails);
+        dto.setEmails(emailDtos);
 
-        List<ContactPhoneResponseDto> Phones = new ArrayList<>();
 
-        for (ContactPhone contactPhones : contact.getPhones()) {
-
-            ContactPhoneResponseDto PhoneDto = new ContactPhoneResponseDto();
-
-            PhoneDto.setId(contactPhones.getId());
-            PhoneDto.setLabel(contactPhones.getLabel());
-            PhoneDto.setPhoneNumber(contactPhones.getPhoneNumber());
-            Phones.add(PhoneDto);
-
+        List<ContactPhoneResponseDto> phoneDtos = new ArrayList<>();
+        for (ContactPhone phone : contact.getPhones()) {
+            ContactPhoneResponseDto phoneDto = new ContactPhoneResponseDto();
+            phoneDto.setId(phone.getId());
+            phoneDto.setLabel(phone.getLabel());
+            phoneDto.setPhoneNumber(phone.getPhoneNumber());
+            phoneDtos.add(phoneDto);
         }
-        contactResponseDto.setPhones(Phones);
+        dto.setPhones(phoneDtos);
 
-        return contactResponseDto;
-
-
+        return dto;
     }
 }

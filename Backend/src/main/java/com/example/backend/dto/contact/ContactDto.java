@@ -21,7 +21,7 @@ public class ContactDto {
     private String title;
     private List<ContactEmailDto> emails;
     private List<ContactPhoneDto> phones;
-    private Set<String> groups;
+//    private Set<String> groups;
 
 
 }

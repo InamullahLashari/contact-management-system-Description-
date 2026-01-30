@@ -18,10 +18,8 @@ public class ContactResponseDto {
     private String firstName;
     private String lastName;
     private String title;
-
     private Long userId; // Only the ID of the user who owns the contact
-
     private List<ContactEmailResponseDto> emails;
     private List<ContactPhoneResponseDto> phones;
-    private Set<Long> groupIds;
+
 }
