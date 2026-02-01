@@ -3,6 +3,7 @@ package com.example.backend.controller.contact;
 
 import com.example.backend.dto.contact.ContactDto;
 import com.example.backend.dto.contact.ContactResponseDto;
+import com.example.backend.dto.contact.ContactUpdateDto;
 import com.example.backend.dto.email.ContactEmailDto;
 import com.example.backend.dto.phone.ContactPhoneDto;
 import com.example.backend.entity.contact.Contact;
@@ -90,11 +91,11 @@ public class ContactController {
     //==================================update conatct==============================================//
 
     @PutMapping("/update")
-    public ResponseEntity<?> updateContact(@RequestBody ContactDto contactDto) {
-        log.info("Updating contact: {}", contactDto);
+    public ResponseEntity<?> updateContact(@RequestBody ContactUpdateDto UpdateDto) {
+        log.info("Updating contact: {}", UpdateDto);
 
-        long id = contactDto.getId();
-        ContactResponseDto updatedContact = contactService.updateContact(id, authUtil.getEmail(), contactDto);
+        long id = UpdateDto.getId();
+        ContactResponseDto updatedContact = contactService.updateContact(id, authUtil.getEmail(), UpdateDto);
 
         log.info("Authenticated user: {}", authUtil.getEmail());
 

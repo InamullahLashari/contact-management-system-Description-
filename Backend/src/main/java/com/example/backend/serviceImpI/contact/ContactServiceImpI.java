@@ -1,7 +1,8 @@
-package com.example.backend.serviceImpI.contact;
 
+package com.example.backend.serviceImpI.contact;
 import com.example.backend.dto.contact.ContactDto;
 import com.example.backend.dto.contact.ContactResponseDto;
+import com.example.backend.dto.contact.ContactUpdateDto;
 import com.example.backend.dto.email.ContactEmailDto;
 import com.example.backend.dto.phone.ContactPhoneDto;
 import com.example.backend.entity.contact.Contact;
@@ -21,9 +22,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 @Service
@@ -155,36 +155,90 @@ public class ContactServiceImpI implements ContactService {
         return contactMapper.toDto(contact);
     }
 
+
+
+
+
+
+
+
+
     //================================================update Contact=======================================//
+    public ContactResponseDto updateContact(long id, String email, ContactUpdateDto dto) {
 
-    @Override
-    public ContactResponseDto updateContact(long id, String email, ContactDto dto) {
-
+        //  Get user
         User user = getUser(email);
 
+        //  Fetch contact for this user
         Contact contact = contactRepo.findByIdAndUser(id, user)
                 .orElseThrow(() ->
                         new InvalidActionException("User can't update another user's contact"));
-
+        // Overwrite basic fields
         contact.setFirstName(dto.getFirstName());
         contact.setLastName(dto.getLastName());
         contact.setTitle(dto.getTitle());
 
-        contact.getEmails().clear();
-        contact.getPhones().clear();
+        // ---- Emails ----
+        if (dto.getEmails() != null && !dto.getEmails().isEmpty()) {
+            // Clear existing emails
+            contact.getEmails().clear();
 
-//        contact.getEmails().addAll(processEmail(dto.getEmails(), contact));
-//        contact.getPhones().addAll(processPhone(dto.getPhones(), contact));
+            // Check for duplicates
+            Set<String> emailSet = new HashSet<>();
+            for (ContactEmailDto emailObj : dto.getEmails()) {
+                if (!emailSet.add(emailObj.getEmailAddress().toLowerCase())) {
+                    throw new InvalidActionException("Duplicate email found: " + emailObj.getEmailAddress());
+                }
+            }
 
+
+            contact.getEmails().clear();
+            for (ContactEmailDto emailObj : dto.getEmails()) {
+                ContactEmail contactEmail = new ContactEmail();
+                contactEmail.setEmailAddress(emailObj.getEmailAddress());
+                contactEmail.setLabel(emailObj.getLabel());
+                contactEmail.setContact(contact);
+                contact.getEmails().add(contactEmail); //
+            }
+        }
+
+        // ---- Phones ----
+        if (dto.getPhones() != null && !dto.getPhones().isEmpty()) {
+            // Clear existing phones
+            contact.getPhones().clear();
+
+            // Check for duplicates
+            Set<String> phoneSet = new HashSet<>();
+            for (ContactPhoneDto phone : dto.getPhones()) {
+                if (!phoneSet.add(phone.getPhoneNumber())) {
+                    throw new InvalidActionException("Duplicate phone number found: " + phone.getPhoneNumber());
+                }
+            }
+
+            // Map DTO to entity and link to parent contact
+
+            for (ContactPhoneDto phoneDto : dto.getPhones()) {
+                ContactPhone contactPhone = new ContactPhone();
+                contactPhone.setPhoneNumber(phoneDto.getPhoneNumber());
+                contactPhone.setLabel(phoneDto.getLabel());
+                contactPhone.setContact(contact); //
+                contact.getPhones().add(contactPhone);
+            }
+
+        }
+
+        //  Save updated contact
         Contact updated = contactRepo.save(contact);
 
         log.info("User {} updated contact {}", email, updated.getId());
 
-//        return toResponseDto(updated);
-        return null;
+        // Return DTO
+        return contactMapper.toDto(updated);
     }
 
-    //================================================Delete Contact=======================================//
+
+
+        //================================================Delete Contact=======================================//
 
     @Transactional
     @Override
@@ -192,9 +246,10 @@ public class ContactServiceImpI implements ContactService {
 
         User user = getUser(email);
 
+
         Contact contact = contactRepo.findByIdAndUser(id, user)
                 .orElseThrow(() ->
-                        new InvalidActionException("User can't delete another user's contact"));
+                        new InvalidActionException("Contact not found or user can't delete another user's contact"));
 
         contactRepo.delete(contact);
 

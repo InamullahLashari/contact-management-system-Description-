@@ -7,15 +7,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.Set;
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Data
-public class ContactDto {
+public class ContactUpdateDto {
 
 
-
+    private Long id;
     private String firstName;
     private String lastName;
     private String title;

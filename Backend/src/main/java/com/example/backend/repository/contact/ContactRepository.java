@@ -31,6 +31,8 @@ public interface ContactRepository extends JpaRepository<Contact, Long> {
     List<Contact> findAllByIdInAndUserId(Set<Long> ids, Long userId);
 
 
+
+
 }
 
 
