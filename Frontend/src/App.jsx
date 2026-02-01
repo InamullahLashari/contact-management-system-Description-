@@ -5,11 +5,12 @@ import Signup from "./pages/Signup/Signup";
 import ProtectedRoute from "./assets/components/ProtectedRoute";
 import DashboardLayout from "./assets/components/layout/DashboardLayout";
 import DashboardContent from "./pages/Dashboard/DashboardContent";
-import ContactList from "./pages/Contacts/ContactList"; // Keep this if ContactList is the main file
+import ContactList from "./pages/Contacts/ContactList"; 
 import ContactCard from "./pages/Contacts/components/ContactCard";
 import Groups from "./pages/Groups/Groups";
 import ForgotPassword from "./pages/password/ForgotPassword";
 import ResetPassword from "./pages/password/ResetPassword";
+import AdminDashboard from "./pages/adminDashboard/AdminDashboard";
 
 
 function App() {
@@ -23,6 +24,15 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
 <Route path="/reset-password" element={<ResetPassword />} />
 
+{/* Admin dashboard route */}
+<Route
+  path="/admin-dashboard"
+  element={
+    <ProtectedRoute requiredRole="ROLE_ADMIN">
+      <AdminDashboard />
+    </ProtectedRoute>
+  }
+/>
 
       {/* Protected dashboard layout */}
       <Route

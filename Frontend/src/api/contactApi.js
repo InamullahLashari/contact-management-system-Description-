@@ -3,7 +3,7 @@ import api from "./axios";
 const contactAPI = {
   // 🔹 LIST CONTACTS
   getContacts: (params) => {
-    return api.post("/contact/list", null, {
+    return api.get("/contact/list", null, {
       params: {
         page: params?.page || 0,
         size: params?.size || 10,

@@ -7,46 +7,62 @@ const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   // Redirect to dashboard if already logged in
   useEffect(() => {
-    if (sessionStorage.getItem("token")) { // <-- use sessionStorage here
+    if (sessionStorage.getItem("token")) {
       navigate("/dashboard");
     }
   }, [navigate]);
 
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // Handle input changes
+  const handleChange = ({ target: { name, value } }) =>
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+  e.preventDefault();
+  setError("");
+  setIsLoading(true);
 
-    if (!formData.email || !formData.password) {
-      setError("Email and password are required");
-      return;
-    }
+  if (!formData.email || !formData.password) {
+    setError("Email and password are required");
+    setIsLoading(false);
+    return;
+  }
 
-    try {
-      const response = await api.post("auth/login", formData);
+  try {
+    const response = await api.post("auth/login", formData);
 
-      if (response.data.tokens?.accessToken && response.data.tokens?.refreshToken) {
-        // Store tokens in sessionStorage
-        sessionStorage.setItem("token", response.data.tokens.accessToken);
-        sessionStorage.setItem("refreshToken", response.data.tokens.refreshToken);
+    const { tokens, role, status } = response.data;
+    const { accessToken, refreshToken } = tokens;
 
-        navigate("/dashboard"); // redirect after login
+    if (status === "success" && accessToken && refreshToken) {
+      sessionStorage.setItem("token", accessToken);
+      sessionStorage.setItem("refreshToken", refreshToken);
+      sessionStorage.setItem("role", role);
+
+      // Navigate based on role
+      if (role === "ROLE_ADMIN") {
+        navigate("/admin-dashboard");
       } else {
-        setError("Login succeeded but tokens not received");
+        navigate("/dashboard");
       }
-    } catch (err) {
-      setError(
-        err.response?.data?.message ||
-        err.response?.data?.error ||
-        "Login failed. Check email/password."
-      );
+    } else {
+      setError("Login succeeded but tokens not received");
     }
-  };
+  } catch (err) {
+    console.error("Login error:", err);
+    setError(
+      err.response?.data?.message ||
+      err.response?.data?.error ||
+      "Login failed. Check email/password."
+    );
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   return (
     <>
@@ -56,6 +72,7 @@ const Login = () => {
         formData={formData}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        isLoading={isLoading} // pass loading state if you want to disable the button inside AuthForm
       />
     </>
   );
