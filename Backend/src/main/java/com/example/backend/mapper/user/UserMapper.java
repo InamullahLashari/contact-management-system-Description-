@@ -23,8 +23,8 @@ public class UserMapper {
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());
         dto.setRoleName(user.getRole().getRoleName().name());
-        dto.setContacts(user.getContacts());  // optional
-        dto.setGroups(user.getGroups());      // optional
+        dto.setContacts(user.getContacts());
+        dto.setGroups(user.getGroups());
         return dto;
     }
 

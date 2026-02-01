@@ -147,6 +147,8 @@ public class ContactServiceImpI implements ContactService {
                 .map(contactMapper::toDto); // convert entity → DTO
     }
 
+
+
     public ContactResponseDto getContact(Long contactId, String email) {
         Contact contact = contactRepo.findById(contactId)
                 .filter(c -> c.getUser().getEmail().equalsIgnoreCase(email))

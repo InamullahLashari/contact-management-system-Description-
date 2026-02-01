@@ -4,24 +4,20 @@ package com.example.backend.controller.contact;
 import com.example.backend.dto.contact.ContactDto;
 import com.example.backend.dto.contact.ContactResponseDto;
 import com.example.backend.dto.contact.ContactUpdateDto;
-import com.example.backend.dto.email.ContactEmailDto;
-import com.example.backend.dto.phone.ContactPhoneDto;
-import com.example.backend.entity.contact.Contact;
 import com.example.backend.service.contact.ContactService;
 import com.example.backend.util.AuthenticationUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
-import java.util.List;
+
 import java.util.Map;
 
 @Slf4j
