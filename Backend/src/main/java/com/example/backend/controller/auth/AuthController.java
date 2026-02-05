@@ -3,7 +3,9 @@ package com.example.backend.controller.auth;
 
 import com.example.backend.dto.login.LoginRequestDto;
 import com.example.backend.exception.PasswordMismatchException;
+import com.example.backend.exception.UnauthorizedActionException;
 import com.example.backend.service.auth.AuthService;
+import com.example.backend.util.AuthenticationUtil;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ import java.util.Map;
 public class AuthController {
     @Autowired
     private AuthService authService;
+    @Autowired
+    private AuthenticationUtil authUtil;
 
 
     //==================================User Login================================================
@@ -56,6 +60,27 @@ public class AuthController {
         return ResponseEntity.ok("New password successfully set");
     }
 
+
+    //===================logout==================================
+    @PostMapping("/logout")
+    public ResponseEntity<?> logout() {
+        log.trace("Entering logout");
+
+        String email = authUtil.getEmail();
+
+        if (email == null) {
+            log.warn("Logout failed: No authenticated user.");
+            throw new UnauthorizedActionException("Unauthorized: No valid token provided.");
+        }
+
+        authService.logout(email);
+        System.out.println("me logout bro: " + email);
+        log.info("Logout successful for email: {}", email);
+        return ResponseEntity.ok(Map.of(
+                "status", "success",
+                "message", "Logged out successfully"
+        ));
+    }
 
 }
 
