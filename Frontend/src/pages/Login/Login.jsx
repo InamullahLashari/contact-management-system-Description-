@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthForm from "../../assets/components/AuthForm";
+import AuthForm from "../../assets/components/AuthForm/AuthForm";
 import api from "../../api/axios";
 
 const Login = () => {

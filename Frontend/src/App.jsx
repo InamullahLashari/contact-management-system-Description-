@@ -2,8 +2,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-import ProtectedRoute from "./assets/components/ProtectedRoute";
-import DashboardLayout from "./assets/components/layout/DashboardLayout";
+import ProtectedRoute from "./assets/components/ProtectedRoute/ProtectedRoute";
+import DashboardLayout from "./assets/components/layout/DashboardLayout/DashboardLayout";
 import DashboardContent from "./pages/Dashboard/DashboardContent";
 import ContactList from "./pages/Contacts/ContactList"; 
 import ContactCard from "./pages/Contacts/components/ContactCard";
