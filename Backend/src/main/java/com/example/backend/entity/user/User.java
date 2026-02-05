@@ -39,9 +39,6 @@ public class User {
 
     @Transient
     private String confirmPassword;
-//    // password reset
-//    private String resetPasswordToken;
-//    private LocalDateTime resetTokenExpiry;
 
     // Role-based access
     @ManyToOne(fetch = FetchType.EAGER)

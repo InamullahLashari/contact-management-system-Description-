@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -51,20 +53,24 @@ public class GroupCreateController {
         String email = authUtil.getEmail();
         log.info("Authenticated email: {}", email);
 
-
         Set<ListGroupResponse> groups = groupService.getAllGroups(email);
-
         log.info("Returning all groups: {}", groups);
+
+        // Wrap into a Map with total count
+        Map<String, Object> responseData = new HashMap<>();
+        responseData.put("totalGroups", groups.size());
+        responseData.put("groups", groups);
 
         // Return in standard API response
         return ResponseEntity.ok(
                 new ApiResponse<>(
                         "success",
                         "Groups fetched successfully",
-                        groups
+                        responseData
                 )
         );
     }
+
 
 
 }

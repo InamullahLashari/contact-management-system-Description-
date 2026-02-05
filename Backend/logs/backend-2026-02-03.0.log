@@ -1,0 +1,1554 @@
+2026-02-03 12:09:23.145 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-03 12:09:23.283 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 22396 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-03 12:09:23.285 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-03 12:09:23.288 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-03 12:09:25.219 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03 12:09:25.496 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 259 ms. Found 7 JPA repository interfaces.
+2026-02-03 12:09:26.928 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-03 12:09:26.954 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-03 12:09:26.957 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-03 12:09:26.957 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-03 12:09:27.093 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-03 12:09:27.094 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 3678 ms
+2026-02-03 12:09:27.229 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-03 12:09:27.560 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03 12:09:27.739 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-03 12:09:27.858 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-03 12:09:28.443 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-03 12:09:28.506 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-03 12:09:29.144 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1851c7d2
+2026-02-03 12:09:29.149 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-03 12:09:29.301 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-03 12:09:32.262 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-03 12:09:32.688 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 12:09:33.718 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-03 12:09:36.726 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-03 12:09:37.275 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-03 12:09:37.278 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-03 12:09:38.321 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-03 12:09:38.395 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-03 12:09:38.412 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 17.147 seconds (process running for 18.956)
+2026-02-03 12:09:38.622 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-03 12:11:17.767 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-03 12:11:17.768 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-03 12:11:17.770 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-03 12:11:18.085 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 12:11:18.110 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 12:11:18.219 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 12:11:18.317 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 12:11:18.332 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 14:53:38.812 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h27m39s336ms671µs900ns).
+2026-02-03 15:03:26.480 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 15:03:26.505 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 15:03:26.885 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 15:03:26.919 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 15:03:26.924 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.b.controller.auth.AuthController.login | Login successful for email: inam@gmail.com
+2026-02-03 16:32:41.775 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m32s711ms539µs200ns).
+2026-02-03 16:50:00.382 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 16:50:00.388 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 16:50:00.476 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 16:50:00.486 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 16:50:00.489 | INFO  | [http-nio-0.0.0.0-8082-exec-8] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 16:56:05.756 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 16:56:05.758 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 16:56:05.844 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 16:56:05.849 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 16:56:05.851 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 16:57:46.903 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 16:57:46.905 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 16:57:46.991 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 16:57:46.996 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 16:57:46.998 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:10:00.200 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:00.205 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:10:00.293 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:00.299 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:10:00.301 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:10:13.830 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:13.833 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:10:13.913 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:13.918 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:10:13.920 | INFO  | [http-nio-0.0.0.0-8082-exec-8] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:10:18.491 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:18.493 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:10:18.581 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:18.590 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:10:18.592 | INFO  | [http-nio-0.0.0.0-8082-exec-9] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:10:23.714 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:23.716 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:10:23.805 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:10:23.809 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:10:23.811 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:12:44.097 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:12:44.099 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:12:44.180 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:12:44.185 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:12:44.190 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:19:45.068 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:19:45.070 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:19:45.155 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:19:45.160 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:19:45.168 | INFO  | [http-nio-0.0.0.0-8082-exec-7] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:23:10.097 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:23:10.101 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:23:10.190 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:23:10.194 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:23:10.197 | INFO  | [http-nio-0.0.0.0-8082-exec-10] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:28:48.768 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:28:48.772 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:28:48.854 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:28:48.858 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:28:48.861 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:31:38.621 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:31:38.625 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:31:38.708 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:31:38.712 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:31:38.714 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:32:01.535 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:32:01.538 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:32:01.722 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:32:01.726 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:32:01.728 | INFO  | [http-nio-0.0.0.0-8082-exec-8] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:35:12.723 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:35:12.725 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:35:12.806 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:35:12.812 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:35:12.814 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:44:18.098 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:44:18.100 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:44:18.189 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:44:18.194 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:44:18.196 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:45:25.468 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:45:25.471 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:45:25.566 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:45:25.569 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:45:25.572 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:53:01.720 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:53:01.724 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:53:01.808 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:53:01.813 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:53:01.815 | INFO  | [http-nio-0.0.0.0-8082-exec-9] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:53:21.398 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:53:21.400 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:53:21.483 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:53:21.487 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:53:21.489 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:54:28.654 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:54:28.656 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:54:28.741 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:54:28.746 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:54:28.748 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 17:54:56.427 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:54:56.432 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 17:54:56.521 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 17:54:56.525 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 17:54:56.535 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 18:57:20.491 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m8s470ms59µs500ns).
+2026-02-03 18:57:45.868 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 18:57:45.884 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 18:57:46.049 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 18:57:46.063 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 18:57:46.069 | INFO  | [http-nio-0.0.0.0-8082-exec-9] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 18:59:46.211 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 18:59:46.214 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 18:59:46.312 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 18:59:46.320 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 18:59:46.322 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:00:07.707 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:00:07.710 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 19:00:07.801 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:00:07.806 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 19:00:07.807 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:03:54.998 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:03:55.011 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 19:03:55.192 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:03:55.202 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 19:03:55.205 | INFO  | [http-nio-0.0.0.0-8082-exec-8] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:05:03.783 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:05:03.786 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 19:05:03.887 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:05:03.892 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 19:05:03.894 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:08:42.209 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:08:42.211 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 19:08:42.295 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:08:42.299 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 19:08:42.301 | INFO  | [http-nio-0.0.0.0-8082-exec-4] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:19:41.867 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:19:41.871 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 19:19:42.056 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:19:42.065 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 19:19:42.067 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:23:21.986 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:23:21.989 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-03 19:23:22.071 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-03 19:23:22.075 | DEBUG | [http-nio-0.0.0.0-8082-exec-10] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-02-03 19:23:22.078 | INFO  | [http-nio-0.0.0.0-8082-exec-10] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamfg@gmail.com
+2026-02-03 19:30:09.403 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-03 19:30:10.163 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-03 19:30:10.179 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 19:30:10.198 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-03 19:30:10.213 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.

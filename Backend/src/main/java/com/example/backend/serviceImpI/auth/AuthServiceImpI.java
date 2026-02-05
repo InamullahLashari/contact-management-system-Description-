@@ -103,9 +103,7 @@ public class AuthServiceImpI implements AuthService {
             throw new InvalidActionException("User has been deleted");
         }
 
-//        user.setResetPasswordToken(UUID.randomUUID().toString());
-//        user.setResetTokenExpiry(LocalDateTime.now().plusMinutes(15));
-//        userRepository.save(user);
+
 
     }
 

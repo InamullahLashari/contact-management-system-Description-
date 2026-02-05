@@ -22,13 +22,13 @@ public class RoleDataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        // 1️⃣ Load all existing roles in one query
+
         List<Role> existingRoles = roleRepository.findAll();
         Set<RoleName> existingRoleNames = existingRoles.stream()
                 .map(Role::getRoleName)
                 .collect(Collectors.toSet());
 
-        // 2️⃣ Loop through enum values and insert only missing roles
+
         List<Role> rolesToInsert = new ArrayList<>();
         for (RoleName roleName : RoleName.values()) {
             if (!existingRoleNames.contains(roleName)) {
@@ -36,7 +36,7 @@ public class RoleDataInitializer implements CommandLineRunner {
             }
         }
 
-        // 3️⃣ Save all missing roles in one batch
+
         if (!rolesToInsert.isEmpty()) {
             roleRepository.saveAll(rolesToInsert);
             System.out.println("Roles inserted automatically!");
