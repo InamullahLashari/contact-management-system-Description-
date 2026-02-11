@@ -1,12 +1,10 @@
 
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import {
   Search,
   X,
   Filter,
   Plus,
-  LogOut,
   Users,
 } from "lucide-react";
 
@@ -17,12 +15,9 @@ const Navbar = () => {
     sortBy: "firstName",
     sortDir: "asc",
   });
-
-  const navigate = useNavigate();
   const timeoutRef = useRef(null);
   const filterMenuRef = useRef(null);
   const filterButtonRef = useRef(null);
-  const logoutButtonRef = useRef(null);
 
   // Close menus when clicking outside
   useEffect(() => {
@@ -31,10 +26,7 @@ const Navbar = () => {
         filterMenuRef.current?.contains(event.target) || 
         filterButtonRef.current?.contains(event.target);
       
-      const isLogoutClick = 
-        logoutButtonRef.current?.contains(event.target);
-
-      if (!isFilterClick && !isLogoutClick) {
+      if (!isFilterClick) {
         setOpenMenu(null);
       }
     };
@@ -43,9 +35,26 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Load saved filters from sessionStorage on component mount
+  useEffect(() => {
+    const savedFilters = sessionStorage.getItem("contactSearchFilters");
+    if (savedFilters) {
+      try {
+        const { query, filters: savedFilterData } = JSON.parse(savedFilters);
+        setSearchQuery(query || "");
+        setFilters({
+          sortBy: savedFilterData?.sortBy || "firstName",
+          sortDir: savedFilterData?.sortDir || "asc",
+        });
+      } catch (error) {
+        console.error("Error parsing saved filters:", error);
+      }
+    }
+  }, []);
+
   const saveSearchFilters = (query, currentFilters) => {
     const searchData = { query, filters: currentFilters };
-    localStorage.setItem("contactSearchFilters", JSON.stringify(searchData));
+    sessionStorage.setItem("contactSearchFilters", JSON.stringify(searchData));
     window.dispatchEvent(new Event("contactFiltersChanged"));
   };
 
@@ -79,15 +88,6 @@ const Navbar = () => {
     }
   };
 
-
-
-  const handleLogout = () => {
-    sessionStorage.removeItem("token");
-    sessionStorage.removeItem("refreshToken");
-    sessionStorage.removeItem("contactSearchFilters");
-    navigate("/");
-  };
-
   const handleFilterChange = (type, value) => {
     const newFilters = { ...filters, [type]: value };
     setFilters(newFilters);
@@ -97,7 +97,7 @@ const Navbar = () => {
   const clearFilters = () => {
     setSearchQuery("");
     setFilters({ sortBy: "firstName", sortDir: "asc" });
-    localStorage.removeItem("contactSearchFilters");
+    sessionStorage.removeItem("contactSearchFilters");
     window.dispatchEvent(new Event("contactFiltersChanged"));
   };
 
@@ -237,21 +237,9 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Right Section - Only Logout Button */}
+          {/* Right Section - Empty now */}
           <div className="flex items-center space-x-4">
-         
-
-            {/* Logout Button */}
-            <div className="relative">
-              <button
-                ref={logoutButtonRef}
-                onClick={handleLogout}
-                className="flex items-center gap-2 px-4 py-2.5 bg-gray-800/50 text-gray-300 border border-gray-700 rounded-xl hover:bg-gray-800 hover:text-white transition-all duration-200"
-              >
-                <LogOut className="w-5 h-5" />
-                <span className="hidden md:inline">Logout</span>
-              </button>
-            </div>
+            {/* You can add other functionality here if needed */}
           </div>
         </div>
       </div>
