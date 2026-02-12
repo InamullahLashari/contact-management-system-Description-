@@ -1,6 +1,6 @@
-// src/components/DashboardContent.jsx
+
 import React, { useEffect, useState } from "react";
-import { Users, Folder, MoreVertical, ChevronLeft, ChevronRight } from "lucide-react";
+import { Users, Folder, MoreVertical } from "lucide-react";
 
 const DashboardContent = () => {
   const [userName, setUserName] = useState("User");
@@ -8,9 +8,6 @@ const DashboardContent = () => {
   // Contacts
   const [contacts, setContacts] = useState([]);
   const [totalContacts, setTotalContacts] = useState(0);
-  const [contactPage, setContactPage] = useState(0);
-  const [contactSize] = useState(10);
-  const [contactTotalPages, setContactTotalPages] = useState(0);
 
   // Groups
   const [totalGroups, setTotalGroups] = useState(0);
@@ -34,24 +31,23 @@ const DashboardContent = () => {
       .finally(() => setLoadingProfile(false));
   }, []);
 
-  // Fetch contacts with pagination
+  // Fetch only 6 recent contacts - no pagination
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     if (!token) return;
 
     setLoadingContacts(true);
-    fetch(`http://localhost:8082/contact/list?page=${contactPage}&size=${contactSize}`, {
+    fetch(`http://localhost:8082/contact/list?page=0&size=6`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
       .then((data) => {
-        setContacts(data.contacts);
-        setTotalContacts(data.totalItems);
-        setContactTotalPages(data.totalPages);
+        setContacts(data.contacts || []);
+        setTotalContacts(data.totalItems || 0);
       })
       .catch((err) => console.error(err))
       .finally(() => setLoadingContacts(false));
-  }, [contactPage, contactSize]);
+  }, []);
 
   // Fetch total groups
   useEffect(() => {
@@ -64,7 +60,7 @@ const DashboardContent = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const groupsCount = data.data.totalGroups || data.data.groups.length;
+        const groupsCount = data.data?.totalGroups || data.data?.groups?.length || 0;
         setTotalGroups(groupsCount);
       })
       .catch((err) => console.error(err))
@@ -89,9 +85,9 @@ const DashboardContent = () => {
   ];
 
   return (
-    <div className="p-6 h-full flex flex-col space-y-6 overflow-hidden">
+    <div className="p-6 h-full flex flex-col space-y-6">
       {/* Header */}
-      <div className="mb-4">
+      <div>
         <h1 className="text-2xl md:text-3xl font-bold text-white">
           {loadingProfile ? "Loading..." : `Welcome back, ${userName}! 👋`}
         </h1>
@@ -126,26 +122,26 @@ const DashboardContent = () => {
         })}
       </div>
 
-      {/* Recent Contacts */}
-      <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 rounded-2xl p-6 flex-1 overflow-hidden flex flex-col">
+      {/* Recent Contacts - Exactly 6 items, no scroll, no pagination */}
+      <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 rounded-2xl p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-xl font-bold text-white">Recent Contacts</h2>
             <p className="text-sm text-gray-400">
-              Showing {contacts.length} of {totalContacts.toLocaleString()} contacts
+              Your 6 most recent contacts
             </p>
           </div>
         </div>
 
         {loadingContacts ? (
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex items-center justify-center py-12">
             <div className="text-center">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
               <p className="mt-3 text-gray-400">Loading contacts...</p>
             </div>
           </div>
         ) : contacts.length === 0 ? (
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex items-center justify-center py-12">
             <div className="text-center">
               <Users className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <p className="text-gray-400">No contacts found</p>
@@ -153,65 +149,36 @@ const DashboardContent = () => {
             </div>
           </div>
         ) : (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 flex-1 overflow-y-auto pr-2">
-              {contacts.map((contact) => (
-                <div
-                  key={contact.id}
-                  className="bg-gray-800/40 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 border border-gray-700/50 hover:border-gray-600 group"
-                >
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold bg-gradient-to-r from-blue-500/30 to-purple-500/30">
-                      {contact.firstName?.charAt(0) || "?"}
-                    </div>
-                    <div className="ml-4 flex-1 min-w-0">
-                      <h3 className="font-semibold text-white truncate">
-                        {contact.firstName} {contact.lastName}
-                      </h3>
-                      {contact.title && (
-                        <p className="text-sm text-gray-400 truncate mt-1">{contact.title}</p>
-                      )}
-                      {contact.emails && contact.emails[0]?.emailAddress && (
-                        <p className="text-xs text-gray-500 truncate mt-1">
-                          {contact.emails[0].emailAddress}
-                        </p>
-                      )}
-                    </div>
-                    <button className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-white p-1 rounded-lg hover:bg-gray-700/50 transition-all">
-                      <MoreVertical className="w-4 h-4" />
-                    </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {contacts.slice(0, 6).map((contact) => (
+              <div
+                key={contact.id}
+                className="bg-gray-800/40 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 border border-gray-700/50 hover:border-gray-600 group"
+              >
+                <div className="flex items-start">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold bg-gradient-to-r from-blue-500/30 to-purple-500/30">
+                    {contact.firstName?.charAt(0) || "?"}
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Pagination */}
-            {contactTotalPages > 1 && (
-              <div className="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
-                <div className="text-sm text-gray-400">
-                  Page {contactPage + 1} of {contactTotalPages}
-                </div>
-                <div className="flex space-x-2">
-                  <button
-                    onClick={() => setContactPage((prev) => Math.max(prev - 1, 0))}
-                    disabled={contactPage === 0 || loadingContacts}
-                    className="px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 transition-colors"
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                    <span>Previous</span>
-                  </button>
-                  <button
-                    onClick={() => setContactPage((prev) => Math.min(prev + 1, contactTotalPages - 1))}
-                    disabled={contactPage + 1 === contactTotalPages || loadingContacts}
-                    className="px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 transition-colors"
-                  >
-                    <span>Next</span>
-                    <ChevronRight className="w-4 h-4" />
+                  <div className="ml-4 flex-1 min-w-0">
+                    <h3 className="font-semibold text-white truncate">
+                      {contact.firstName} {contact.lastName}
+                    </h3>
+                    {contact.title && (
+                      <p className="text-sm text-gray-400 truncate mt-1">{contact.title}</p>
+                    )}
+                    {contact.emails && contact.emails[0]?.emailAddress && (
+                      <p className="text-xs text-gray-500 truncate mt-1">
+                        {contact.emails[0].emailAddress}
+                      </p>
+                    )}
+                  </div>
+                  <button className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-white p-1 rounded-lg hover:bg-gray-700/50 transition-all">
+                    <MoreVertical className="w-4 h-4" />
                   </button>
                 </div>
               </div>
-            )}
-          </>
+            ))}
+          </div>
         )}
       </div>
     </div>
