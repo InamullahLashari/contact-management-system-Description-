@@ -30,7 +30,7 @@ const ContactList = () => {
     currentPage: 0,
     totalPages: 1,
     totalElements: 0,
-    pageSize: 10
+    pageSize: 12
   });
   
   const [notification, setNotification] = useState({
@@ -89,48 +89,86 @@ const ContactList = () => {
     if (!response) return { contacts: [], totalElements: 0, totalPages: 1 };
     
     const responseData = response.data || response;
-    const contacts = responseData.contacts || responseData.content || 
-                    (Array.isArray(responseData) ? responseData : []);
-    const totalElements = responseData.totalItems || responseData.totalElements || 
-                         responseData.total || contacts.length;
-    const totalPages = responseData.totalPages || Math.ceil(totalElements / pagination.pageSize);
+    
+    let contacts = [];
+    let totalElements = 0;
+    let totalPages = 1;
+    
+    if (responseData.contacts) {
+      // API returns { contacts: [...], totalItems: X, totalPages: Y }
+      contacts = responseData.contacts;
+      totalElements = responseData.totalItems || contacts.length;
+      totalPages = responseData.totalPages || Math.ceil(totalElements / pagination.pageSize);
+    } else if (responseData.content) {
+      // Spring Boot pagination format
+      contacts = responseData.content;
+      totalElements = responseData.totalElements || contacts.length;
+      totalPages = responseData.totalPages || 1;
+    } else if (Array.isArray(responseData)) {
+      // Direct array response
+      contacts = responseData;
+      totalElements = contacts.length;
+      totalPages = Math.ceil(contacts.length / pagination.pageSize);
+    }
     
     return { contacts, totalElements, totalPages };
   };
 
-  const fetchContacts = async (page = 0, size = 10) => {
-    try {
-      setLoading(true);
-      const { keywords, sortBy, sortDir } = getSearchFilters();
-      
-      const response = await contactApi.getContacts({ page, size, sortBy, sortDir });
-      const { contacts, totalElements, totalPages } = extractResponseData(response);
+const fetchContacts = async (page = 0, size = 12) => {
+  try {
+    setLoading(true);
 
-      setAllContacts(contacts);
-      
-      const filteredContacts = applySearchFilter(contacts, keywords);
-      const startIndex = page * size;
-      const paginatedContacts = filteredContacts.slice(startIndex, startIndex + size);
-      
-      setDisplayContacts(paginatedContacts);
-      setPagination({
-        currentPage: page,
-        pageSize: size,
-        totalElements: filteredContacts.length,
-        totalPages: Math.max(1, Math.ceil(filteredContacts.length / size))
-      });
-      
-      setError(null);
-    } catch (err) {
-      console.error("Error fetching contacts:", err);
-      setError(err.response?.data?.message || err.message || "Failed to load contacts. Please try again.");
-      setAllContacts([]);
-      setDisplayContacts([]);
-      setPagination(prev => ({ ...prev, currentPage: 0, totalPages: 1, totalElements: 0 }));
-    } finally {
-      setLoading(false);
-    }
-  };
+    const { keywords, sortBy, sortDir } = getSearchFilters();
+
+    // 🔥 Send keyword to backend
+    const response = await contactApi.getContacts({
+      page,
+      size,
+      sortBy,
+      sortDir,
+      keyword: keywords?.trim() || ""   // IMPORTANT
+    });
+
+    const { contacts, totalElements, totalPages } = extractResponseData(response);
+
+    // ❌ No more client-side filtering
+    setAllContacts(contacts);
+    setDisplayContacts(contacts);
+
+    // ✅ Pagination now reflects filtered result count
+    setPagination({
+      currentPage: page,
+      pageSize: size,
+      totalElements,
+      totalPages
+    });
+
+    setError(null);
+
+  } catch (err) {
+    console.error("Error fetching contacts:", err);
+
+    setError(
+      err.response?.data?.message ||
+      err.message ||
+      "Failed to load contacts. Please try again."
+    );
+
+    setAllContacts([]);
+    setDisplayContacts([]);
+
+    setPagination({
+      currentPage: 0,
+      pageSize: size,
+      totalElements: 0,
+      totalPages: 1
+    });
+
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   const handlePageChange = (newPage) => {
     if (newPage >= 0 && newPage < pagination.totalPages) {
@@ -449,8 +487,8 @@ const ContactList = () => {
         )}
       </div>
 
-      {/* Fixed Pagination at Bottom */}
-      {!loading && displayContacts.length > 0 && pagination.totalPages > 1 && (
+      {/* Fixed Pagination at Bottom - FIXED CONDITION */}
+      {!loading && pagination.totalElements > 0 && pagination.totalPages > 1 && (
         <div className="flex-shrink-0 border-t border-gray-800 bg-gray-900/50 backdrop-blur-sm p-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">
@@ -582,3 +620,4 @@ const ContactList = () => {
 };
 
 export default ContactList;
+

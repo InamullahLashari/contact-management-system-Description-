@@ -1,13 +1,14 @@
+
 import api from "./axios";
 
 const contactAPI = {
-  // 🔹 LIST CONTACTS
+  // 🔹 LIST CONTACTS - FIXED parameter name to match backend
   getContacts: (params) => {
-    return api.get("/contact/list", null, {
+    return api.get("/contact/list", {
       params: {
         page: params?.page || 0,
         size: params?.size || 10,
-        keywords: params?.keywords || "",
+        keyword: params?.keyword || params?.keywords || "", // Use 'keyword' to match backend
         sortBy: params?.sortBy || "firstName",
         sortDir: params?.sortDir || "asc",
       },
@@ -23,15 +24,16 @@ const contactAPI = {
   updateContact: (id, data) => {
     return api.put("/contact/update", {
       ...data,
-      id, // backend expects ID inside request body
+      id,
     });
   },
-//delete
-deleteContact: async (id) => {
+
+  // 🔹 DELETE CONTACT
+  deleteContact: async (id) => {
     try {
       const response = await api.delete(`/contact/contacts/${id}`);
       console.log(`Contact ${id} deleted successfully:`, response.data);
-      return response.data; // { message, status }
+      return response.data;
     } catch (error) {
       console.error(`Error deleting contact ${id}:`, error.response?.data || error.message);
       throw {
@@ -43,4 +45,6 @@ deleteContact: async (id) => {
     }
   },
 };
+
 export default contactAPI;
+
