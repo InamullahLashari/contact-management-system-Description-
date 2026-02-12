@@ -1,19 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Home, Users, Folder, Activity, User, Settings } from "lucide-react";
+import { Home, Users, Folder, Settings } from "lucide-react";
+import Logout from "../../Logout/Logout";
 
 const Sidebar = () => {
   const menuItems = [
     { path: "/dashboard", label: "Dashboard", icon: Home },
-    { path: "/dashboard/contactlist", label: "ContactList", icon: Users },
+    { path: "/dashboard/contactlist", label: "Contact List", icon: Users },
     { path: "/dashboard/groups", label: "Groups", icon: Folder },
-    { path: "/dashboard/activities", label: "Activities", icon: Activity },
-    { path: "/dashboard/profile", label: "Profile", icon: User },
     { path: "/dashboard/settings", label: "Settings", icon: Settings },
   ];
 
   return (
-    <aside className="w-64 bg-gray-900/90 backdrop-blur-sm text-white shadow-2xl border-r border-gray-800 h-screen flex flex-col">
+    <aside className="w-64 bg-gray-900/90 backdrop-blur-sm text-white shadow-2xl border-r border-gray-800 flex flex-col">
       {/* Sidebar Header */}
       <div className="p-6 border-b border-gray-800 flex-shrink-0">
         <div className="flex items-center space-x-3">
@@ -29,8 +28,9 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* Menu Items */}
-      <div className="flex-1 p-4 flex flex-col justify-between">
+      {/* Menu + Logout */}
+      <div className="flex-1 flex flex-col justify-between p-4 overflow-y-auto">
+        {/* Menu items */}
         <nav className="space-y-1">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -47,7 +47,11 @@ const Sidebar = () => {
                   }`
                 }
               >
-                <div className={`p-2 rounded-lg ${item.path === "/dashboard" ? "bg-orange-500/20" : "bg-gray-800"}`}>
+                <div
+                  className={`p-2 rounded-lg ${
+                    item.path === "/dashboard" ? "bg-orange-500/20" : "bg-gray-800"
+                  }`}
+                >
                   <Icon className="w-5 h-5" />
                 </div>
                 <span className="font-medium">{item.label}</span>
@@ -55,6 +59,11 @@ const Sidebar = () => {
             );
           })}
         </nav>
+
+        {/* Logout button pinned at bottom */}
+        <div className="mt-4 flex-shrink-0">
+          <Logout />
+        </div>
       </div>
     </aside>
   );

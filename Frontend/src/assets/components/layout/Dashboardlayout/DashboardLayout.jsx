@@ -6,24 +6,23 @@ import Footer from "../Footer/Footer";
 
 const DashboardLayout = () => {
   return (
-    <div className="flex flex-col h-screen overflow-hidden">
-      {/* Navbar stays at top */}
-      <Navbar />
+    <div className="flex h-screen overflow-hidden bg-gray-950">
+      {/* Sidebar */}
+      <Sidebar />
 
       {/* Main content area */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
-        <Sidebar />
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Navbar at top */}
+        <Navbar />
 
-        {/* Main section */}
-        <main className="flex-1 p-6 overflow-hidden bg-gray-950
-
-">
+        {/* Content area */}
+        <main className="flex-1 overflow-y-auto p-6">
           <Outlet /> {/* Nested routes render here */}
         </main>
-      </div>
 
-     
+        {/* Optional Footer */}
+        <Footer />
+      </div>
     </div>
   );
 };
