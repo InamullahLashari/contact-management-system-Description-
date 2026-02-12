@@ -15,17 +15,17 @@ import java.util.Set;
 public interface ContactRepository extends JpaRepository<Contact, Long> {
 
 
-        @Query("""
-        SELECT c FROM Contact c
-        WHERE c.user.email = :email
-        AND (:keyword IS NULL OR :keyword = '' 
-             OR LOWER(c.firstName) LIKE LOWER(CONCAT('%', :keyword, '%'))
-             OR LOWER(c.lastName) LIKE LOWER(CONCAT('%', :keyword, '%'))
-        )
-    """)
-        Page<Contact> findUserContacts(@Param("email") String email,
-                                       @Param("keyword") String keyword,
-                                       Pageable pageable);
+    @Query("""
+SELECT c FROM Contact c
+WHERE c.user.email = :email
+AND (
+    :keyword IS NULL OR :keyword = '' OR
+    LOWER(c.firstName) LIKE LOWER(CONCAT(:keyword, '%'))
+)
+""")
+    Page<Contact> findUserContacts(String email, String keyword, Pageable pageable);
+
+
 
     Optional<Contact> findByIdAndUser(Long id, User user);
     List<Contact> findAllByIdInAndUserId(Set<Long> ids, Long userId);
