@@ -56,6 +56,7 @@ public class GroupMapper {
                     contactFirstNames.add(contact.getFirstName());
                 }
             }
+            System.out.println("this is contactname"+contactFirstNames);
             dto.setContactFirstNames(contactFirstNames);
             responseSet.add(dto);
         }

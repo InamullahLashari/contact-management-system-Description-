@@ -118,6 +118,25 @@ public class GroupCreateServiceImpl implements GroupCreateService {
 
         return groupMapper.toDto(groups);
     }
+    //========================================delelte Group========================================//
+    @Override
+    @Transactional
+    public void deleteGroup(Long groupId, String email) {
+        // Fetch the user by email
+        User user = userRepo.findByEmailIgnoreCase(email)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
+        // Fetch the group by ID
+        Group group = groupRepo.findById(groupId)
+                .orElseThrow(() -> new EntityNotFoundException("Group not found with id: " + groupId));
+
+        // Check ownership
+        if (!group.getUser().getId().equals(user.getId())) {
+            throw new SecurityException("You are not authorized to delete this group");
+        }
+
+        // Delete the group
+        groupRepo.delete(group);
+    }
 
 }

@@ -7,6 +7,7 @@ import com.example.backend.dto.group.GroupResponseDto;
 import com.example.backend.dto.group.ListGroupResponse;
 import com.example.backend.service.group.GroupCreateService;
 import com.example.backend.util.AuthenticationUtil;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -70,7 +71,26 @@ public class GroupCreateController {
                 )
         );
     }
+    //=================================delete Group================================================//
+    @DeleteMapping("/{groupId}")
+    public ResponseEntity<?> deleteGroup(@PathVariable Long groupId) {
+        String email = authUtil.getEmail();
+        log.info("Request to delete group {} by {}", groupId, email);
 
+        try {
+            groupService.deleteGroup(groupId, email);
+            return ResponseEntity.ok(new ApiResponse<>("success", "Group deleted successfully", null));
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(new ApiResponse<>("error", e.getMessage(), null));
+        } catch (SecurityException e) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                    .body(new ApiResponse<>("error", e.getMessage(), null));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new ApiResponse<>("error", "Failed to delete group", null));
+        }
+    }
 
 
 }

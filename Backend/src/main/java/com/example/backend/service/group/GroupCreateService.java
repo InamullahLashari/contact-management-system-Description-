@@ -11,6 +11,7 @@ public interface GroupCreateService {
     GroupResponseDto createGroup(GroupCreateRequest request, String email);
 
     Set<ListGroupResponse> getAllGroups(String email);
+    void deleteGroup(Long groupId, String email);
 
 
 }
