@@ -11,28 +11,25 @@ import Groups from "./pages/Groups/Groups";
 import ForgotPassword from "./pages/password/ForgotPassword";
 import ResetPassword from "./pages/password/ResetPassword";
 import AdminDashboard from "./pages/adminDashboard/AdminDashboard";
-
+import Settings from "./pages/setting/Settings";
 
 function App() {
   return (
     <Routes>
-
-    
       {/* Public routes */}
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
-<Route path="/reset-password" element={<ResetPassword />} />
 
-{/* Admin dashboard route */}
-<Route
-  path="/admin-dashboard"
-  element={
-    <ProtectedRoute requiredRole="ROLE_ADMIN">
-      <AdminDashboard />
-    </ProtectedRoute>
-  }
-/>
+      {/* Admin dashboard route */}
+      <Route
+        path="/admin-dashboard"
+        element={
+          <ProtectedRoute requiredRole="ROLE_ADMIN">
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
 
       {/* Protected dashboard layout */}
       <Route
@@ -48,8 +45,8 @@ function App() {
 
         {/* Nested routes */}
         <Route path="contactlist" element={<ContactList />} />
-
-        <Route path="groups" element={<Groups/>}/>
+        <Route path="groups" element={<Groups />} />
+        <Route path="settings" element={<Settings />} /> {/* Use actual Settings component */}
       </Route>
 
       {/* Fallback */}
