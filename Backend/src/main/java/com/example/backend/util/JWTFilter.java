@@ -53,6 +53,7 @@ public class JWTFilter extends OncePerRequestFilter {
         try {
             String token = authHeader.substring(7);
             String username = jwtUtil.extractUsername(token);
+            String name = jwtUtil.extractClaim(token, c -> c.get("name", String.class));
 
             if (username != null &&
                     SecurityContextHolder.getContext().getAuthentication() == null &&
@@ -67,6 +68,7 @@ public class JWTFilter extends OncePerRequestFilter {
 
                 CustomUserDetails customUserDetails = new CustomUserDetails(
                         0L,
+                        name,
                         username,
                         "",
                         authorities

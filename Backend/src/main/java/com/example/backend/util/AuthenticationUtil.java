@@ -13,6 +13,7 @@ public class AuthenticationUtil {
     public String getEmail() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null && authentication.getPrincipal() instanceof UserDetails userDetails) {
+            System.out.println(((UserDetails) authentication.getPrincipal()).getUsername());
             return userDetails.getUsername();
         }
         return null;

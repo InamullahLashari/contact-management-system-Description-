@@ -29,6 +29,7 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 
         return new CustomUserDetails(
                 user.getId(),
+                user.getName(),
                 user.getEmail(),
                 user.getPassword(),
                 List.of(new SimpleGrantedAuthority(user.getRole().getRoleName().name()))

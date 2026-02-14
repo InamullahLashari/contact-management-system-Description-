@@ -8,12 +8,14 @@ import java.util.Collection;
 public class CustomUserDetails implements UserDetails {
 
     private final Long userId;
+    private final String name;
     private final String email;
     private final String password;
     private final Collection<? extends GrantedAuthority> authorities;
 
-    public CustomUserDetails(Long userId, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+    public CustomUserDetails(Long userId,String name , String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.userId = userId;
+        this.name = name;
         this.email = email;
         this.password = password;
         this.authorities = authorities;
@@ -26,6 +28,10 @@ public class CustomUserDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.example.backend.serviceImpI.auth;
 import com.example.backend.dto.login.LoginRequestDto;
 import com.example.backend.entity.user.User;
 import com.example.backend.exception.InvalidActionException;
+import com.example.backend.exception.PasswordMismatchException;
 import com.example.backend.exception.PasswordReuseException;
 import com.example.backend.repository.user.UserRepository;
 import com.example.backend.service.auth.AuthService;
@@ -107,26 +108,34 @@ public class AuthServiceImpI implements AuthService {
 
     }
 
-
     @Override
-    public void resetPassword(String email, String newPassword, String confirmPassword) {
+    public void resetPassword(String email, String oldPassword, String newPassword, String confirmPassword) {
 
-        User user = userRepository.findByEmailIgnoreCase(email).orElseThrow(
-                () -> new EntityNotFoundException("User not found")
-        );
+        User user = userRepository.findByEmailIgnoreCase(email)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
         if (user.isDeleted()) {
-
             throw new InvalidActionException("User has been deleted");
-
         }
+
+
+        if (!passwordEncoder.matches(oldPassword, user.getPassword())) {
+            throw new InvalidActionException("Old password is incorrect");
+        }
+
+
+        if (!newPassword.equals(confirmPassword)) {
+            throw new PasswordMismatchException("Passwords do not match");
+        }
+
 
         if (passwordEncoder.matches(newPassword, user.getPassword())) {
             throw new PasswordReuseException("New password must be different from the old password");
         }
+
+        // Save new password
         user.setPassword(passwordEncoder.encode(newPassword));
-
         userRepository.save(user);
-
     }
+
 }

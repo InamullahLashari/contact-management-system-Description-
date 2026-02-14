@@ -44,21 +44,25 @@ public class AuthController {
     }
 
 
+
+
     @PostMapping("/reset-password")
     public ResponseEntity<String> resetPassword(
-            @RequestParam String email,
+            @RequestParam String oldPassword,
             @RequestParam String newPassword,
             @RequestParam String confirmPassword) {
 
-        if (!newPassword.equals(confirmPassword)) {
-            throw new PasswordMismatchException("Passwords do not match");
+        String email = authUtil.getEmail();
+        if (email == null) {
+            throw new UnauthorizedActionException("Unauthorized: No valid user session.");
         }
 
-        authService.resetPassword(email, newPassword, confirmPassword);
-        log.info("Reset password for email: {}", email);
+        authService.resetPassword(email, oldPassword, newPassword, confirmPassword);
 
-        return ResponseEntity.ok("New password successfully set");
+        log.info("Password successfully changed for user: {}", email);
+        return ResponseEntity.ok("Password successfully updated");
     }
+
 
 
     //===================logout==================================

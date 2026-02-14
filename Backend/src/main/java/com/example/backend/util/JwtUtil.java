@@ -70,6 +70,9 @@ public class JwtUtil {
             String role = userDetails.getAuthorities().iterator().next().getAuthority();
             claims.put("role", role);
         }
+        if (userDetails instanceof CustomUserDetails customUser) {
+            claims.put("name", customUser.getName());
+        }
 
         return createToken(claims, userDetails.getUsername(), accessExpiry);
     }
