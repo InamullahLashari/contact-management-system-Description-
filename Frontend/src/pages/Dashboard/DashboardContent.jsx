@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Users, Folder, MoreVertical } from "lucide-react";
 
@@ -13,22 +12,22 @@ const DashboardContent = () => {
   const [totalGroups, setTotalGroups] = useState(0);
 
   // Loading states
-  const [loadingProfile, setLoadingProfile] = useState(true);
   const [loadingContacts, setLoadingContacts] = useState(true);
   const [loadingGroups, setLoadingGroups] = useState(true);
 
-  // Fetch user profile
+  // Decode JWT token to get username
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     if (!token) return;
 
-    fetch("http://localhost:8082/auth/user/profile", {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-      .then((res) => res.json())
-      .then((data) => setUserName(`${data.firstName} ${data.lastName}`))
-      .catch((err) => console.error(err))
-      .finally(() => setLoadingProfile(false));
+    try {
+      const payload = JSON.parse(atob(token.split(".")[1]));
+      const name = payload.name || `${payload.firstName || ""} ${payload.lastName || ""}`.trim();
+      setUserName(name || "User");
+    } catch (err) {
+      console.error("Invalid token", err);
+      setUserName("User");
+    }
   }, []);
 
   // Fetch only 6 recent contacts - no pagination
@@ -89,7 +88,7 @@ const DashboardContent = () => {
       {/* Header */}
       <div>
         <h1 className="text-2xl md:text-3xl font-bold text-white">
-          {loadingProfile ? "Loading..." : `Welcome back, ${userName}! 👋`}
+          {`Welcome back, ${userName}! 👋`}
         </h1>
         <p className="text-gray-400 text-sm md:text-base">
           Manage your contacts and groups efficiently
@@ -122,7 +121,7 @@ const DashboardContent = () => {
         })}
       </div>
 
-      {/* Recent Contacts - Exactly 6 items, no scroll, no pagination */}
+      {/* Recent Contacts */}
       <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 rounded-2xl p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
