@@ -7,6 +7,7 @@ import com.example.backend.exception.InvalidActionException;
 import com.example.backend.repository.role.RoleRepository;
 import com.example.backend.repository.user.UserRepository;
 import com.example.backend.service.user.UserService;
+import com.example.backend.serviceImpI.passwordvalidator.PasswordValidator;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,11 @@ public class UserServiceImpI implements UserService {
         });
 
 
+        // Validate strong password
+        if (!PasswordValidator.isStrongPassword(user.getPassword())) {
+            throw new InvalidActionException("Password must be at least 8 characters, " +
+                    "include uppercase, lowercase, number, and special character");
+        }
         Role role = roleRepository.findByRoleName(RoleName.ROLE_USER)
                 .orElseThrow(() -> new EntityNotFoundException("Role not found"));
         String encodedPassword = passwordEncoder.encode(user.getPassword());

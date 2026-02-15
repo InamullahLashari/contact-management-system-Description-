@@ -10,6 +10,7 @@ import com.example.backend.repository.auth.PasswordResetOtpRepository;
 import com.example.backend.repository.user.UserRepository;
 import com.example.backend.service.auth.AuthService;
 import com.example.backend.serviceImpI.customdetailImpl.CustomUserDetailsServiceImpl;
+import com.example.backend.serviceImpI.passwordvalidator.PasswordValidator;
 import com.example.backend.util.JwtUtil;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
@@ -141,7 +142,7 @@ public class AuthServiceImpI implements AuthService {
     }
 
 
-//=====================================verify otp========================================================
+    //=====================================verify otp========================================================
     @Transactional
     @Override
     public void verifyOtp(String email, String otp) {
@@ -169,36 +170,35 @@ public class AuthServiceImpI implements AuthService {
         otpRepository.save(otpEntity);
     }
 
-//==========================resetpassword
+    //==========================resetpassword
     @Transactional
     @Override
     public void resetPasswordAfterOtp(String email, String newPassword, String confirmPassword) {
 
-        // Fetch OTP entity
         PasswordResetOtp otpEntity = otpRepository.findByEmail(email)
                 .orElseThrow(() -> new InvalidActionException("OTP not verified"));
 
-        // Only allow if OTP was verified (used=true)
         if (!otpEntity.isUsed()) {
-            throw new InvalidActionException("OTP has not been verified. Cannot reset password.");
+            throw new InvalidActionException("OTP has not been verified");
         }
 
-        // Validate password confirmation
         if (!newPassword.equals(confirmPassword)) {
             throw new PasswordMismatchException("Passwords do not match");
         }
 
-        // Fetch user
+        if (!PasswordValidator.isStrongPassword(newPassword)) {
+            throw new InvalidActionException("Password must be 8+ chars with upper/lower/digit/special char");
+        }
+
         User user = userRepository.findByEmailIgnoreCase(email)
                 .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
-        // Update password
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
 
-        // Remove OTP entry after successful reset
-        otpRepository.delete(otpEntity);
+        otpRepository.delete(otpEntity); // remove OTP after successful reset
     }
+
 
 //=======================reset password============================
 
@@ -208,26 +208,22 @@ public class AuthServiceImpI implements AuthService {
         User user = userRepository.findByEmailIgnoreCase(email)
                 .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
-        if (user.isDeleted()) {
-            throw new InvalidActionException("User has been deleted");
-        }
-
-
         if (!passwordEncoder.matches(oldPassword, user.getPassword())) {
             throw new InvalidActionException("Old password is incorrect");
         }
-
 
         if (!newPassword.equals(confirmPassword)) {
             throw new PasswordMismatchException("Passwords do not match");
         }
 
+        if (!PasswordValidator.isStrongPassword(newPassword)) {
+            throw new InvalidActionException("Password must be 8+ chars with upper/lower/digit/special char");
+        }
 
         if (passwordEncoder.matches(newPassword, user.getPassword())) {
             throw new PasswordReuseException("New password must be different from the old password");
         }
 
-        // Save new password
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
     }
