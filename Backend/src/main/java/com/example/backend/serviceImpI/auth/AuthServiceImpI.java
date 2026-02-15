@@ -1,15 +1,20 @@
 package com.example.backend.serviceImpI.auth;
 
 import com.example.backend.dto.login.LoginRequestDto;
+import com.example.backend.entity.auth.PasswordResetOtp;
 import com.example.backend.entity.user.User;
 import com.example.backend.exception.InvalidActionException;
 import com.example.backend.exception.PasswordMismatchException;
 import com.example.backend.exception.PasswordReuseException;
+import com.example.backend.repository.auth.PasswordResetOtpRepository;
 import com.example.backend.repository.user.UserRepository;
 import com.example.backend.service.auth.AuthService;
 import com.example.backend.serviceImpI.customdetailImpl.CustomUserDetailsServiceImpl;
 import com.example.backend.util.JwtUtil;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -27,6 +32,11 @@ public class AuthServiceImpI implements AuthService {
     private final CustomUserDetailsServiceImpl customUserDetailsService;
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordResetOtpRepository otpRepository;
+    @Autowired
+    private JavaMailSender mailSender;
+
 
     public AuthServiceImpI(UserRepository userRepository,
                            CustomUserDetailsServiceImpl customUserDetailsService,
@@ -93,20 +103,104 @@ public class AuthServiceImpI implements AuthService {
         return "";
     }
 
+    //=========================user chcek========================//
+
+    @Override
+    public boolean isUserExist(String email) {
+        return userRepository.findByEmailIgnoreCase(email).isPresent();
+    }
+
+
     //=============================generateResetPasswordToken=======================//
+    @Transactional
     @Override
     public void forgetPassword(String email) {
 
-        User user = userRepository.findByEmailIgnoreCase(email).
-                orElseThrow(() -> new EntityNotFoundException("User not found"));
+        User user = userRepository.findByEmailIgnoreCase(email)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
         if (user.isDeleted()) {
             throw new InvalidActionException("User has been deleted");
         }
 
+        // Generate OTP
+        String generatedOtp = generateOtp();
 
+        // Find existing OTP or create new
+        PasswordResetOtp otpEntity = otpRepository.findByEmail(email)
+                .orElse(new PasswordResetOtp());
 
+        otpEntity.setEmail(email);
+        otpEntity.setOtp(passwordEncoder.encode(generatedOtp));
+        otpEntity.setExpiryTime(LocalDateTime.now().plusMinutes(5));
+        otpEntity.setUsed(false); // mark as not used yet
+
+        otpRepository.save(otpEntity);
+
+        sendOtpEmail(email, generatedOtp);
     }
+
+
+//=====================================verify otp========================================================
+    @Transactional
+    @Override
+    public void verifyOtp(String email, String otp) {
+
+        PasswordResetOtp otpEntity = otpRepository.findByEmail(email)
+                .orElseThrow(() -> new InvalidActionException("Invalid OTP"));
+
+        // Check if OTP is already used
+        if (otpEntity.isUsed()) {
+            throw new InvalidActionException("OTP already used or verified");
+        }
+
+        // Check expiry
+        if (otpEntity.getExpiryTime().isBefore(LocalDateTime.now())) {
+            throw new InvalidActionException("OTP expired");
+        }
+
+        // Check OTP match
+        if (!passwordEncoder.matches(otp, otpEntity.getOtp())) {
+            throw new InvalidActionException("Invalid OTP");
+        }
+
+        // Mark OTP as verified (used=true)
+        otpEntity.setUsed(true);
+        otpRepository.save(otpEntity);
+    }
+
+//==========================resetpassword
+    @Transactional
+    @Override
+    public void resetPasswordAfterOtp(String email, String newPassword, String confirmPassword) {
+
+        // Fetch OTP entity
+        PasswordResetOtp otpEntity = otpRepository.findByEmail(email)
+                .orElseThrow(() -> new InvalidActionException("OTP not verified"));
+
+        // Only allow if OTP was verified (used=true)
+        if (!otpEntity.isUsed()) {
+            throw new InvalidActionException("OTP has not been verified. Cannot reset password.");
+        }
+
+        // Validate password confirmation
+        if (!newPassword.equals(confirmPassword)) {
+            throw new PasswordMismatchException("Passwords do not match");
+        }
+
+        // Fetch user
+        User user = userRepository.findByEmailIgnoreCase(email)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+
+        // Update password
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
+
+        // Remove OTP entry after successful reset
+        otpRepository.delete(otpEntity);
+    }
+
+//=======================reset password============================
 
     @Override
     public void resetPassword(String email, String oldPassword, String newPassword, String confirmPassword) {
@@ -137,5 +231,27 @@ public class AuthServiceImpI implements AuthService {
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
     }
+
+
+
+
+
+    //=====================helper function =====/////////
+
+    private String generateOtp() {
+        return String.valueOf(100000 + new java.security.SecureRandom().nextInt(900000));
+    }
+    private void sendOtpEmail(String email, String otp) {
+
+        org.springframework.mail.SimpleMailMessage message =
+                new org.springframework.mail.SimpleMailMessage();
+
+        message.setTo(email);
+        message.setSubject("Password Reset OTP");
+        message.setText("Your OTP is: " + otp + ". It is valid for 5 minutes.");
+
+        mailSender.send(message);
+    }
+
 
 }

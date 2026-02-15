@@ -30,11 +30,13 @@ public class JWTFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getServletPath();
-        return path.equals("/user/signup") || path.equals("/auth/login")
-                || path.equals("/auth/refresh");
-
-
+        return path.equals("/user/signup")
+                || path.equals("/auth/login")
+                || path.equals("/auth/refresh")
+                || path.equals("/auth/forgot-password")
+                || path.equals("/auth/reset-password-otp");
     }
+
 
     @Override
     protected void doFilterInternal(

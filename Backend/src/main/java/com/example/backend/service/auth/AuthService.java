@@ -16,9 +16,13 @@ public interface AuthService {
 
     void forgetPassword(String email);
 
+    boolean isUserExist(String email);
+
+    void verifyOtp(String email, String otp);
+
+    void resetPasswordAfterOtp(String email, String newPassword, String confirmPassword);
+
     void resetPassword(String email, String oldPassword, String newPassword, String confirmPassword);
-
-
 
 }
 

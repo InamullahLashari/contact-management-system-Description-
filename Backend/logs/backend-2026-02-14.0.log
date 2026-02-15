@@ -1,0 +1,1874 @@
+2026-02-14 20:02:38.461 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:02:38.615 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 23404 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:02:38.620 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:02:38.621 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:02:40.310 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:02:40.519 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 195 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:02:41.419 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:02:41.433 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:02:41.435 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:02:41.435 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:02:41.523 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:02:41.524 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2794 ms
+2026-02-14 20:02:41.586 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:02:41.785 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:02:41.887 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:02:41.930 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:02:42.383 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:02:42.421 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:02:42.660 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@574ebdaf
+2026-02-14 20:02:42.662 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:02:42.752 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:02:44.226 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:02:44.397 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:02:44.906 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:02:46.058 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:02:46.324 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:02:46.325 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:02:46.712 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:02:46.733 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:02:46.743 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 9.052 seconds (process running for 9.531)
+2026-02-14 20:02:46.832 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:03:01.149 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:03:01.149 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:03:01.151 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 2 ms
+2026-02-14 20:03:01.266 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:03:01.294 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:03:01.304 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:03:39.623 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:03:40.092 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:03:40.097 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:03:40.100 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:03:40.111 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:04:36.803 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:04:36.915 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 15880 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:04:36.917 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:04:36.918 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:04:38.366 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:04:38.581 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 193 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:04:39.526 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:04:39.545 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:04:39.548 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:04:39.549 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:04:39.650 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:04:39.650 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2632 ms
+2026-02-14 20:04:39.719 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:04:39.972 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:04:40.092 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:04:40.172 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:04:40.679 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:04:40.725 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:04:41.036 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@349f3ff7
+2026-02-14 20:04:41.039 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:04:41.138 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:04:43.097 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:04:43.274 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:04:43.953 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:04:45.171 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:04:45.449 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:04:45.450 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:04:45.865 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:04:45.888 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:04:45.899 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 10.08 seconds (process running for 10.671)
+2026-02-14 20:04:46.029 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:04:58.497 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:04:58.498 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:04:58.499 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:04:58.592 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:04:58.618 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:04:58.627 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:05:28.270 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:05:28.748 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:05:28.753 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:05:28.756 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:05:28.771 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:06:05.774 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:06:05.874 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 19652 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:06:05.880 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:06:05.881 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:06:07.588 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:06:07.772 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 166 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:06:09.041 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:06:09.054 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:06:09.056 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:06:09.057 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:06:09.154 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:06:09.154 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 3160 ms
+2026-02-14 20:06:09.216 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:06:09.571 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:06:09.952 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:06:10.038 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:06:10.535 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:06:10.585 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:06:10.869 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d626f2
+2026-02-14 20:06:10.872 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:06:10.949 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:06:12.515 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:06:12.682 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:06:13.296 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:06:14.551 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:06:14.839 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:06:14.840 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:06:15.352 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:06:15.376 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:06:15.388 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 10.799 seconds (process running for 11.809)
+2026-02-14 20:06:15.491 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:06:20.293 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:06:20.294 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:06:20.295 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:06:20.405 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:06:20.433 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:06:20.463 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:06:20.616 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:06:20.630 | WARN  | [http-nio-0.0.0.0-8082-exec-1] | o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions | SQL Error: 0, SQLState: 23505
+2026-02-14 20:06:20.631 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions | ERROR: duplicate key value violates unique constraint "uk2kd25jegdre7iapu1ukngyvqb"
+  Detail: Key (email)=(inamm@gmail.com) already exists.
+2026-02-14 20:08:36.424 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:08:36.907 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:08:36.912 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:08:36.920 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:08:36.932 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:11:09.165 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:11:09.230 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 1032 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:11:09.231 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:11:09.232 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:11:11.125 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:11:11.289 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 150 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:11:12.544 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:11:12.559 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:11:12.562 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:11:12.562 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:11:12.641 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:11:12.642 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 3346 ms
+2026-02-14 20:11:12.718 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:11:12.939 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:11:13.032 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:11:13.086 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:11:13.651 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:11:13.699 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:11:13.962 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52856ff9
+2026-02-14 20:11:13.965 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:11:14.110 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:11:17.679 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:11:17.862 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:11:19.652 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:11:22.668 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:11:23.540 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:11:23.541 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:11:24.205 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:11:24.274 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:11:24.286 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 15.979 seconds (process running for 16.503)
+2026-02-14 20:11:24.422 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:11:28.639 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:11:28.639 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:11:28.640 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:11:28.731 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:11:28.752 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:11:28.775 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:11:32.555 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:11:32.557 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:11:32.561 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:11:57.696 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:11:58.152 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:11:58.158 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:11:58.161 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:11:58.176 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:15:23.248 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:15:23.316 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 19652 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:15:23.317 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:15:23.318 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:15:24.693 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:15:24.903 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 191 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:15:25.845 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:15:25.865 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:15:25.868 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:15:25.869 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:15:25.962 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:15:25.962 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2582 ms
+2026-02-14 20:15:26.026 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:15:26.288 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:15:26.389 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:15:26.444 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:15:26.861 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:15:26.905 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:15:27.234 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31e7afde
+2026-02-14 20:15:27.236 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:15:27.335 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:15:28.954 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:15:29.123 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:15:29.650 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:15:30.986 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:15:31.303 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:15:31.305 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:15:31.726 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:15:31.758 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:15:31.769 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 9.331 seconds (process running for 9.879)
+2026-02-14 20:15:32.413 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:15:37.289 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:15:37.289 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:15:37.291 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 2 ms
+2026-02-14 20:15:37.407 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:15:37.431 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:15:37.454 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:18:01.056 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:18:01.058 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:18:01.061 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:18:11.332 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:18:11.778 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:18:11.782 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:18:11.787 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:18:11.800 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:21:32.708 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:21:32.822 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 18452 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:21:32.824 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:21:32.825 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:21:34.904 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:21:35.156 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 230 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:21:37.756 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:21:37.771 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:21:37.773 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:21:37.773 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:21:37.882 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:21:37.882 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 4959 ms
+2026-02-14 20:21:38.009 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:21:38.292 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:21:38.436 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:21:38.540 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:21:39.135 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:21:39.181 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:21:39.501 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31e7afde
+2026-02-14 20:21:39.503 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:21:39.638 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:21:41.584 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:21:41.775 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:21:42.620 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:21:44.319 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:21:44.670 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:21:44.671 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:21:45.491 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:21:45.541 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:21:45.554 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 14.437 seconds (process running for 14.976)
+2026-02-14 20:21:45.689 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:22:16.825 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:22:16.826 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:22:16.827 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:22:16.971 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:22:16.999 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:22:17.025 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:22:17.227 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:22:58.829 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:22:59.277 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:22:59.282 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:22:59.285 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:22:59.304 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:26:54.505 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:26:54.593 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 14048 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:26:54.594 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:26:54.595 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:26:55.888 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:26:56.051 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 150 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:26:56.927 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:26:56.942 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:26:56.946 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:26:56.947 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:26:57.026 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:26:57.027 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2306 ms
+2026-02-14 20:26:57.088 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:26:57.304 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:26:57.391 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:26:57.439 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:26:57.879 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:26:57.922 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:26:58.169 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31e7afde
+2026-02-14 20:26:58.172 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:26:58.250 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:26:59.728 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:26:59.898 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:27:00.492 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:27:01.719 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:27:02.001 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:27:02.003 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:27:02.417 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:27:02.440 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:27:02.449 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 8.66 seconds (process running for 9.146)
+2026-02-14 20:27:02.548 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:27:20.502 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:27:20.503 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:27:20.504 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:27:20.652 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:27:20.678 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:27:20.707 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:27:20.944 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:27:51.190 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:27:51.192 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:27:51.197 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:27:51.286 | DEBUG | [http-nio-0.0.0.0-8082-exec-4] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:28:00.130 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:28:00.596 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:28:00.600 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:28:00.603 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:28:00.616 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:36:24.852 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:36:24.957 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 23912 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:36:24.958 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:36:24.959 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:36:26.387 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:36:26.547 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 146 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:36:27.563 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:36:27.577 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:36:27.580 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:36:27.580 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:36:27.677 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:36:27.677 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2634 ms
+2026-02-14 20:36:27.906 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:36:28.207 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:36:28.359 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:36:28.416 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:36:28.867 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:36:28.910 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:36:29.261 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31e7afde
+2026-02-14 20:36:29.263 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:36:29.344 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:36:31.010 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:36:31.248 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:36:31.917 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:36:33.275 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:36:33.639 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:36:33.640 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:36:34.067 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:36:34.096 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:36:34.110 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 9.963 seconds (process running for 10.462)
+2026-02-14 20:36:34.218 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:36:55.685 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:36:55.686 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:36:55.687 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:36:55.794 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:36:55.816 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:36:55.842 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:36:56.005 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:39:36.579 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:39:37.086 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:39:37.091 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:39:37.094 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:39:37.118 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:39:50.212 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 3748 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:39:50.170 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:39:50.213 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:39:50.214 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:39:52.559 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:39:52.998 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 411 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:39:54.647 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:39:54.663 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:39:54.666 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:39:54.667 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:39:54.796 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:39:54.796 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 4479 ms
+2026-02-14 20:39:54.907 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:39:57.283 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:39:57.620 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:39:57.679 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:39:58.337 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:39:58.422 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:39:58.786 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ceb68a1
+2026-02-14 20:39:58.788 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:39:58.897 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:40:01.088 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:40:01.314 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:40:06.466 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:40:09.079 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:40:11.023 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:40:11.024 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:40:12.075 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:40:12.175 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:40:12.194 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 23.469 seconds (process running for 24.813)
+2026-02-14 20:40:12.370 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:40:17.011 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:40:17.011 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:40:17.012 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:41:19.132 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:41:19.309 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:41:20.904 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.user_id,
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=?
+2026-02-14 20:41:20.921 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        g1_0.user_id,
+        g1_0.id,
+        g1_0.description,
+        g1_0.group_name 
+    from
+        groups g1_0 
+    where
+        g1_0.user_id=?
+2026-02-14 20:42:20.916 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s57ms311µs800ns).
+2026-02-14 20:43:30.784 | WARN  | [HikariPool-1:housekeeper] | com.zaxxer.hikari.pool.HikariPool.run | HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s867ms837µs200ns).
+2026-02-14 20:43:30.902 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:44:06.648 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:44:08.150 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:54:13.429 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:54:13.484 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 24172 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:54:13.485 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:54:13.486 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:54:14.941 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:54:15.132 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 171 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:54:16.058 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:54:16.075 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:54:16.078 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:54:16.078 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:54:16.178 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:54:16.179 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2622 ms
+2026-02-14 20:54:16.245 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:54:16.517 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:54:16.632 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:54:16.694 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:54:17.143 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:54:17.195 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:54:17.470 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3cdfbbef
+2026-02-14 20:54:17.472 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:54:17.570 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:54:19.082 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:54:19.260 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:54:19.920 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:54:21.103 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:54:21.398 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:54:21.399 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:54:21.819 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:54:21.847 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:54:21.858 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 9.195 seconds (process running for 9.735)
+2026-02-14 20:54:21.959 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:54:28.215 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:54:28.216 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:54:28.219 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 3 ms
+2026-02-14 20:54:28.290 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Request received for email: lashariinamullah7@gmail.com
+2026-02-14 20:54:28.314 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:54:28.336 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:54:28.342 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Generated OTP for lashariinamullah7@gmail.com: 136737
+2026-02-14 20:54:28.359 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:54:28.530 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:54:28.558 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] OTP saved for email: lashariinamullah7@gmail.com
+2026-02-14 20:54:28.558 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Sending OTP email to: lashariinamullah7@gmail.com
+2026-02-14 20:55:49.093 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:55:49.565 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:55:49.569 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:55:49.575 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:55:49.593 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:57:08.065 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:57:08.175 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 16728 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:57:08.176 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:57:08.178 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:57:09.540 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:57:09.723 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 169 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:57:10.597 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:57:10.734 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2456 ms
+2026-02-14 20:57:10.813 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:57:10.995 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:57:11.080 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:57:11.159 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:57:11.603 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:57:11.662 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:57:11.954 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a1ddbf1
+2026-02-14 20:57:11.956 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:57:12.060 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:57:13.709 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:57:13.898 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:57:14.604 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:57:16.266 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:57:16.548 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:57:16.549 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:57:16.996 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:57:17.007 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 9.733 seconds (process running for 10.294)
+2026-02-14 20:57:17.011 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:57:17.106 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:57:17.553 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:57:17.557 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:57:17.561 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:57:17.571 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 20:57:25.030 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 20:57:25.122 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 25132 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 20:57:25.123 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 20:57:25.125 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 20:57:26.305 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 20:57:26.453 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 134 ms. Found 8 JPA repository interfaces.
+2026-02-14 20:57:27.234 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 20:57:27.247 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:57:27.250 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 20:57:27.250 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 20:57:27.330 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 20:57:27.330 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2139 ms
+2026-02-14 20:57:27.389 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 20:57:27.581 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 20:57:27.680 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 20:57:27.726 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 20:57:28.126 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 20:57:28.166 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 20:57:28.427 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@349f3ff7
+2026-02-14 20:57:28.429 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 20:57:28.515 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 20:57:29.909 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 20:57:30.069 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:57:30.605 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 20:57:31.677 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 20:57:31.931 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 20:57:31.932 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 20:57:32.298 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 20:57:32.322 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 20:57:32.332 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 8.01 seconds (process running for 8.474)
+2026-02-14 20:57:32.429 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 20:57:36.821 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 20:57:36.822 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 20:57:36.823 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 20:57:37.011 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Request received for email: lashariinamullah7@gmail.com
+2026-02-14 20:57:37.053 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 20:57:37.117 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 20:57:37.124 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Generated OTP for lashariinamullah7@gmail.com: 208810
+2026-02-14 20:57:37.152 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 20:57:37.327 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 20:57:37.349 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] OTP saved for email: lashariinamullah7@gmail.com
+2026-02-14 20:57:37.349 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Sending OTP email to: lashariinamullah7@gmail.com
+2026-02-14 20:59:17.210 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 20:59:17.749 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 20:59:17.754 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 20:59:17.757 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 20:59:17.771 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 21:03:50.217 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 21:03:50.305 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 21604 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 21:03:50.306 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 21:03:50.307 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 21:03:51.537 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 21:03:51.712 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 162 ms. Found 8 JPA repository interfaces.
+2026-02-14 21:03:52.553 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 21:03:52.566 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 21:03:52.569 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 21:03:52.569 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 21:03:52.657 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 21:03:52.657 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2280 ms
+2026-02-14 21:03:52.717 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 21:03:52.921 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 21:03:52.993 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 21:03:53.051 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 21:03:53.471 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 21:03:53.527 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 21:03:53.776 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@460f1cdb
+2026-02-14 21:03:53.779 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 21:03:53.867 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 21:03:55.428 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 21:03:55.618 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:03:56.283 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 21:03:57.525 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 21:03:58.505 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 21:03:58.506 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 21:03:59.383 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 21:03:59.455 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 21:03:59.476 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 9.93 seconds (process running for 10.411)
+2026-02-14 21:03:59.642 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 21:04:03.996 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 21:04:03.997 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 21:04:03.998 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 21:04:04.067 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Request received for email: lashariinamullah7@gmail.com
+2026-02-14 21:04:04.088 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 21:04:04.109 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 21:04:04.114 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Generated OTP for lashariinamullah7@gmail.com: 472151
+2026-02-14 21:04:04.132 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 21:04:04.315 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 21:04:04.336 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] OTP saved for email: lashariinamullah7@gmail.com
+2026-02-14 21:04:04.336 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ===== STARTING EMAIL SEND PROCESS =====
+2026-02-14 21:04:04.336 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Preparing to send OTP email to: lashariinamullah7@gmail.com
+2026-02-14 21:04:04.337 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] OTP value: 472151
+2026-02-14 21:04:04.337 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Email message created successfully
+2026-02-14 21:04:04.337 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Message details - From: default, To: lashariinamullah7@gmail.com, Subject: Password Reset OTP
+2026-02-14 21:04:06.461 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ❌ FAILED to send OTP email to: lashariinamullah7@gmail.com
+2026-02-14 21:04:06.462 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Exception type: org.springframework.mail.MailAuthenticationException
+2026-02-14 21:04:06.462 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Exception message: Authentication failed
+2026-02-14 21:04:06.464 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Full stack trace: org.springframework.mail.MailAuthenticationException: Authentication failed
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:402)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI.sendOtpEmail(AuthServiceImpI.java:247)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI.forgetPassword(AuthServiceImpI.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI$$SpringCGLIB$$0.forgetPassword(<generated>)
+	at com.example.backend.controller.auth.AuthController.forgetPassword(AuthController.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: jakarta.mail.AuthenticationFailedException: 534-5.7.9 Application-specific password required. For more information, go to
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 5b1f17b1804b1-483719b8e71sm127666975e9.2 - gsmtp
+
+	at org.eclipse.angus.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:954)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:865)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:769)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399)
+	... 125 more
+
+2026-02-14 21:04:06.464 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ===== EMAIL SEND PROCESS COMPLETED =====
+2026-02-14 21:09:41.491 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 21:09:41.938 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 21:09:41.943 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:09:41.947 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 21:09:41.960 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 21:12:14.839 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 21:12:15.020 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 17728 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 21:12:15.043 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 21:12:15.046 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 21:12:16.413 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 21:12:16.562 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 137 ms. Found 8 JPA repository interfaces.
+2026-02-14 21:12:17.372 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 21:12:17.384 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 21:12:17.386 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 21:12:17.387 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 21:12:17.467 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 21:12:17.468 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 2340 ms
+2026-02-14 21:12:17.537 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 21:12:17.769 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 21:12:17.843 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 21:12:17.890 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 21:12:18.289 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 21:12:18.332 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 21:12:18.579 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@349f3ff7
+2026-02-14 21:12:18.581 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 21:12:18.664 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 21:12:20.099 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 21:12:20.278 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:12:20.833 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 21:12:22.124 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 21:12:22.381 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 21:12:22.381 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 21:12:22.839 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 21:12:22.862 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 21:12:22.874 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 8.74 seconds (process running for 9.213)
+2026-02-14 21:12:22.985 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 21:12:29.614 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 21:12:29.615 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 21:12:29.616 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 21:12:29.815 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Request received for email: lashariinamullah7@gmail.com
+2026-02-14 21:12:29.846 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 21:12:29.869 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 21:12:29.875 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Generated OTP for lashariinamullah7@gmail.com: 167969
+2026-02-14 21:12:29.902 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 21:12:30.065 | DEBUG | [http-nio-0.0.0.0-8082-exec-2] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 21:12:30.089 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] OTP saved for email: lashariinamullah7@gmail.com
+2026-02-14 21:12:30.090 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ===== STARTING EMAIL SEND PROCESS =====
+2026-02-14 21:12:30.090 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Preparing to send OTP email to: lashariinamullah7@gmail.com
+2026-02-14 21:12:30.091 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] OTP value: 167969
+2026-02-14 21:12:30.092 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Email message created successfully
+2026-02-14 21:12:30.092 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Message details - From: default, To: lashariinamullah7@gmail.com, Subject: Password Reset OTP
+2026-02-14 21:12:31.864 | ERROR | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ❌ FAILED to send OTP email to: lashariinamullah7@gmail.com
+2026-02-14 21:12:31.865 | ERROR | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Exception type: org.springframework.mail.MailAuthenticationException
+2026-02-14 21:12:31.865 | ERROR | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Exception message: Authentication failed
+2026-02-14 21:12:31.867 | ERROR | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Full stack trace: org.springframework.mail.MailAuthenticationException: Authentication failed
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:402)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI.sendOtpEmail(AuthServiceImpI.java:247)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI.forgetPassword(AuthServiceImpI.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI$$SpringCGLIB$$0.forgetPassword(<generated>)
+	at com.example.backend.controller.auth.AuthController.forgetPassword(AuthController.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: jakarta.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4837a5d562esm54823245e9.15 - gsmtp
+
+	at org.eclipse.angus.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:954)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:865)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:769)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399)
+	... 125 more
+
+2026-02-14 21:12:31.868 | INFO  | [http-nio-0.0.0.0-8082-exec-2] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ===== EMAIL SEND PROCESS COMPLETED =====
+2026-02-14 21:21:48.474 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 21:21:48.905 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 21:21:48.910 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:21:48.917 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 21:21:48.928 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
+2026-02-14 21:24:10.789 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-02-14 21:24:10.868 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 15340 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-02-14 21:24:10.870 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-02-14 21:24:10.871 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-02-14 21:24:12.303 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 21:24:12.473 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 155 ms. Found 8 JPA repository interfaces.
+2026-02-14 21:24:14.323 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-02-14 21:24:14.359 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 21:24:14.364 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-02-14 21:24:14.365 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 21:24:14.618 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-02-14 21:24:14.619 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 3656 ms
+2026-02-14 21:24:14.685 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-02-14 21:24:14.906 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 21:24:14.990 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-14 21:24:15.038 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-02-14 21:24:15.501 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 21:24:15.545 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-02-14 21:24:15.815 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31e7afde
+2026-02-14 21:24:15.819 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-02-14 21:24:15.932 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 21:24:17.407 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 21:24:17.580 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:24:18.197 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-14 21:24:20.164 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 21:24:20.531 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-14 21:24:20.532 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-14 21:24:20.930 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-02-14 21:24:20.997 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-02-14 21:24:21.007 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 10.934 seconds (process running for 11.44)
+2026-02-14 21:24:21.172 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-02-14 21:24:26.657 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 21:24:26.657 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-02-14 21:24:26.659 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-02-14 21:24:26.737 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Request received for email: lashariinamullah7@gmail.com
+2026-02-14 21:24:26.764 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-02-14 21:24:26.783 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-02-14 21:24:26.788 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] Generated OTP for lashariinamullah7@gmail.com: 753478
+2026-02-14 21:24:26.804 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        pro1_0.id,
+        pro1_0.email,
+        pro1_0.expiry_time,
+        pro1_0.otp,
+        pro1_0.used 
+    from
+        password_reset_otp pro1_0 
+    where
+        pro1_0.email=?
+2026-02-14 21:24:26.959 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    insert 
+    into
+        password_reset_otp
+        (email, expiry_time, otp, used) 
+    values
+        (?, ?, ?, ?)
+2026-02-14 21:24:26.982 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.forgetPassword | [ForgetPassword] OTP saved for email: lashariinamullah7@gmail.com
+2026-02-14 21:24:26.983 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ===== STARTING EMAIL SEND PROCESS =====
+2026-02-14 21:24:26.983 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Preparing to send OTP email to: lashariinamullah7@gmail.com
+2026-02-14 21:24:26.983 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] OTP value: 753478
+2026-02-14 21:24:26.984 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Email message created successfully
+2026-02-14 21:24:26.984 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Message details - From: default, To: lashariinamullah7@gmail.com, Subject: Password Reset OTP
+2026-02-14 21:24:29.853 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ❌ FAILED to send OTP email to: lashariinamullah7@gmail.com
+2026-02-14 21:24:29.855 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Exception type: org.springframework.mail.MailAuthenticationException
+2026-02-14 21:24:29.855 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Exception message: Authentication failed
+2026-02-14 21:24:29.858 | ERROR | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] Full stack trace: org.springframework.mail.MailAuthenticationException: Authentication failed
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:402)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI.sendOtpEmail(AuthServiceImpI.java:247)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI.forgetPassword(AuthServiceImpI.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.backend.serviceImpI.auth.AuthServiceImpI$$SpringCGLIB$$0.forgetPassword(<generated>)
+	at com.example.backend.controller.auth.AuthController.forgetPassword(AuthController.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: jakarta.mail.AuthenticationFailedException: 535 5.7.0 Invalid credentials
+
+	at org.eclipse.angus.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:954)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:865)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:769)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399)
+	... 125 more
+
+2026-02-14 21:24:29.862 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.s.auth.AuthServiceImpI.sendOtpEmail | [SendEmail] ===== EMAIL SEND PROCESS COMPLETED =====
+2026-02-14 21:25:18.470 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 21:25:18.910 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-02-14 21:25:18.914 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:25:18.918 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-02-14 21:25:18.934 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.

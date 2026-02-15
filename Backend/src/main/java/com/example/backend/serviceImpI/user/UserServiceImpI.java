@@ -35,7 +35,7 @@ public class UserServiceImpI implements UserService {
 
 
         userRepository.findByEmailIgnoreCase(user.getEmail()).ifPresent(existingUser -> {
-            throw new InvalidActionException("Email already in use");
+            throw new InvalidActionException("user already signup");
         });
 
 
