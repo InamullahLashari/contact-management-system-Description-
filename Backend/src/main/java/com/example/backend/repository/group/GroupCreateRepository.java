@@ -9,12 +9,6 @@ import java.util.Set;
 
 public interface GroupCreateRepository extends JpaRepository<Group, Long> {
 
-    /// // ///fecth the group by user
-//Set<Group> findByUser_Id(Long id);
-//
-//    Optional<Group> findByGroupNameAndUserId(String groupName, Long userId);
-//
-
 
 // Fetch groups with contacts in one query
     @EntityGraph(attributePaths = {"contacts"})

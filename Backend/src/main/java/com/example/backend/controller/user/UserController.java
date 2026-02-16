@@ -42,10 +42,5 @@ public class UserController {
 
     }
 
-    @GetMapping("/hello")
-    public ResponseEntity<?> hello() {
-        return ResponseEntity.ok("Hello! User controller is working.");
-    }
-
 
 }
