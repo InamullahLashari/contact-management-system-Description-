@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
-const AuthForm = ({ isLogin, formData, handleChange, handleSubmit }) => {
+const AuthForm = ({ isLogin, formData, handleChange, handleSubmit, isLoading }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="flex items-center justify-center w-full h-screen bg-gray-800">
       <div className="w-full max-w-md bg-gray-900 rounded-2xl shadow-lg p-7">
@@ -9,7 +12,6 @@ const AuthForm = ({ isLogin, formData, handleChange, handleSubmit }) => {
         </h1>
 
         <form className="space-y-4 mt-6" onSubmit={handleSubmit}>
-          {/* Name field only for signup */}
           {!isLogin && (
             <input
               type="text"
@@ -30,16 +32,24 @@ const AuthForm = ({ isLogin, formData, handleChange, handleSubmit }) => {
             className="w-full px-4 py-3 rounded-xl bg-gray-700 text-white"
           />
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl bg-gray-700 text-white"
-          />
+          <div className="relative">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-700 text-white pr-12"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
+            >
+              {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+            </button>
+          </div>
 
-          {/* Forgot password – ONLY on login */}
           {isLogin && (
             <div className="text-right">
               <a
@@ -53,12 +63,14 @@ const AuthForm = ({ isLogin, formData, handleChange, handleSubmit }) => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl text-white font-semibold"
+            disabled={isLoading}
+            className={`w-full py-3 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl text-white font-semibold ${
+              isLoading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            {isLogin ? "Login" : "Sign Up"}
+            {isLoading ? "Processing..." : isLogin ? "Login" : "Sign Up"}
           </button>
 
-          {/* Switch between login & signup */}
           <p className="text-center text-gray-400 mt-4">
             {isLogin ? "Don't have an account? " : "Already have an account? "}
             <a
