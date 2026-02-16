@@ -4,6 +4,8 @@ import com.example.backend.dto.contact.*;
 import com.example.backend.dto.email.ContactEmailDto;
 import com.example.backend.dto.phone.ContactPhoneDto;
 import com.example.backend.entity.contact.Contact;
+import com.example.backend.entity.contactemail.ContactEmail;
+import com.example.backend.entity.contactphone.ContactPhone;
 import com.example.backend.entity.user.User;
 import com.example.backend.exception.InvalidActionException;
 import com.example.backend.mapper.contact.ContactMapper;
@@ -16,10 +18,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.*;
 
 import java.util.*;
 
@@ -29,16 +28,11 @@ import static org.mockito.Mockito.*;
 @ExtendWith(org.mockito.junit.jupiter.MockitoExtension.class)
 class ContactServiceImpITest {
 
-    @Mock
-    private PhoneRepository phoneRepo;
-    @Mock
-    private UserRepository userRepo;
-    @Mock
-    private EmailRepository emailRepo;
-    @Mock
-    private ContactRepository contactRepo;
-    @Mock
-    private ContactMapper contactMapper;
+    @Mock private PhoneRepository phoneRepo;
+    @Mock private UserRepository userRepo;
+    @Mock private EmailRepository emailRepo;
+    @Mock private ContactRepository contactRepo;
+    @Mock private ContactMapper contactMapper;
 
     @InjectMocks
     private ContactServiceImpI contactService;
@@ -52,10 +46,11 @@ class ContactServiceImpITest {
         user.setEmail("test@mail.com");
     }
 
-//==============================================createContact=========================
+
+    // ============================CREATE CONTACT================================
+
     @Test
     void createContact_success() {
-        // Arrange
         ContactDto dto = new ContactDto();
         dto.setFirstName("John");
         dto.setLastName("Doe");
@@ -63,73 +58,134 @@ class ContactServiceImpITest {
 
         ContactEmailDto emailDto = new ContactEmailDto();
         emailDto.setEmailAddress("john@mail.com");
-        emailDto.setLabel("work");
 
         ContactPhoneDto phoneDto = new ContactPhoneDto();
         phoneDto.setPhoneNumber("123456");
-        phoneDto.setLabel("mobile");
 
         dto.setEmails(List.of(emailDto));
         dto.setPhones(List.of(phoneDto));
 
-        when(userRepo.findByEmailIgnoreCase("test@mail.com")).thenReturn(Optional.of(user));
-        when(emailRepo.findByEmailAddressAndContact_User_Id(anyString(), anyLong()))
+        when(userRepo.findByEmailIgnoreCase(user.getEmail()))
+                .thenReturn(Optional.of(user));
+        when(emailRepo.findByEmailAddressAndContact_User_Id(any(), anyLong()))
                 .thenReturn(Optional.empty());
-        when(phoneRepo.findByPhoneNumberAndContact_User_Id(anyString(), anyLong()))
+        when(phoneRepo.findByPhoneNumberAndContact_User_Id(any(), anyLong()))
                 .thenReturn(Optional.empty());
 
-        Contact savedContact = new Contact();
-        savedContact.setId(100L);
+        Contact saved = new Contact();
+        saved.setId(100L);
 
-        when(contactRepo.save(any(Contact.class))).thenReturn(savedContact);
-        when(contactMapper.toDto(savedContact)).thenReturn(new ContactResponseDto());
+        when(contactRepo.save(any(Contact.class))).thenReturn(saved);
+        when(contactMapper.toDto(saved)).thenReturn(new ContactResponseDto());
 
-        // Act
-        ContactResponseDto response = contactService.createContact(dto, "test@mail.com");
+        ContactResponseDto result =
+                contactService.createContact(dto, user.getEmail());
 
-        // Assert
-        assertNotNull(response);
+        assertNotNull(result);
         verify(contactRepo).save(any(Contact.class));
     }
 
-
-    @Test
-    void createContact_shouldThrow_whenEmailExists() {
-        ContactDto dto = new ContactDto();
-
-        ContactEmailDto emailDto = new ContactEmailDto();
-        emailDto.setEmailAddress("dup@mail.com");
-        dto.setEmails(List.of(emailDto));
-
-        when(userRepo.findByEmailIgnoreCase(anyString())).thenReturn(Optional.of(user));
-        when(emailRepo.findByEmailAddressAndContact_User_Id(anyString(), anyLong()))
-                .thenReturn(Optional.of(mock(com.example.backend.entity.contactemail.ContactEmail.class)));
-
-        assertThrows(InvalidActionException.class,
-                () -> contactService.createContact(dto, "test@mail.com"));
-    }
-
-
     @Test
     void createContact_shouldThrow_whenUserNotFound() {
-        when(userRepo.findByEmailIgnoreCase(anyString())).thenReturn(Optional.empty());
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.empty());
 
         assertThrows(EntityNotFoundException.class,
                 () -> contactService.createContact(new ContactDto(), "bad@mail.com"));
     }
+
+    @Test
+    void createContact_shouldThrow_whenEmailExists() {
+        ContactDto dto = new ContactDto();
+        ContactEmailDto emailDto = new ContactEmailDto();
+        emailDto.setEmailAddress("dup@mail.com");
+        dto.setEmails(List.of(emailDto));
+
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(emailRepo.findByEmailAddressAndContact_User_Id(any(), anyLong()))
+                .thenReturn(Optional.of(mock(ContactEmail.class)));
+
+        assertThrows(InvalidActionException.class,
+                () -> contactService.createContact(dto, user.getEmail()));
+    }
+
+    @Test
+    void createContact_shouldThrow_whenPhoneExists() {
+        ContactDto dto = new ContactDto();
+        ContactPhoneDto phoneDto = new ContactPhoneDto();
+        phoneDto.setPhoneNumber("999");
+        dto.setPhones(List.of(phoneDto));
+
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(phoneRepo.findByPhoneNumberAndContact_User_Id(any(), anyLong()))
+                .thenReturn(Optional.of(mock(ContactPhone.class)));
+
+        assertThrows(InvalidActionException.class,
+                () -> contactService.createContact(dto, user.getEmail()));
+    }
+
+
+    // ============================GET CONTACT================================
+
     @Test
     void getContact_success() {
         Contact contact = new Contact();
-        contact.setId(10L);
         contact.setUser(user);
 
-        when(contactRepo.findById(10L)).thenReturn(Optional.of(contact));
-        when(contactMapper.toDto(contact)).thenReturn(new ContactResponseDto());
+        when(contactRepo.findById(1L)).thenReturn(Optional.of(contact));
+        when(contactMapper.toDto(contact))
+                .thenReturn(new ContactResponseDto());
 
-        ContactResponseDto dto = contactService.getContact(10L, "test@mail.com");
+        ContactResponseDto result =
+                contactService.getContact(1L, user.getEmail());
 
-        assertNotNull(dto);
+        assertNotNull(result);
     }
+
+    @Test
+    void getContact_shouldThrow_whenNotOwner() {
+        User other = new User();
+        other.setEmail("other@mail.com");
+
+        Contact contact = new Contact();
+        contact.setUser(other);
+
+        when(contactRepo.findById(1L)).thenReturn(Optional.of(contact));
+
+        assertThrows(InvalidActionException.class,
+                () -> contactService.getContact(1L, user.getEmail()));
+    }
+
+
+    // =========================UPDATE CONTACT===================================
+
+    @Test
+    void updateContact_success() {
+        Contact contact = new Contact();
+        contact.setUser(user);
+        contact.setEmails(new ArrayList<>());
+        contact.setPhones(new ArrayList<>());
+
+        ContactUpdateDto dto = new ContactUpdateDto();
+        dto.setFirstName("Updated");
+
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(contactRepo.findByIdAndUser(anyLong(), any()))
+                .thenReturn(Optional.of(contact));
+        when(contactRepo.save(any())).thenReturn(contact);
+        when(contactMapper.toDto(any()))
+                .thenReturn(new ContactResponseDto());
+
+        ContactResponseDto result =
+                contactService.updateContact(1L, user.getEmail(), dto);
+
+        assertNotNull(result);
+        verify(contactRepo).save(contact);
+    }
+
     @Test
     void updateContact_shouldThrow_whenDuplicateEmail() {
         Contact contact = new Contact();
@@ -138,49 +194,98 @@ class ContactServiceImpITest {
         contact.setPhones(new ArrayList<>());
 
         ContactUpdateDto dto = new ContactUpdateDto();
-        ContactEmailDto email1 = new ContactEmailDto();
-        email1.setEmailAddress("same@mail.com");
 
-        ContactEmailDto email2 = new ContactEmailDto();
-        email2.setEmailAddress("same@mail.com");
+        ContactEmailDto e1 = new ContactEmailDto();
+        e1.setEmailAddress("same@mail.com");
 
-        dto.setEmails(List.of(email1, email2));
+        ContactEmailDto e2 = new ContactEmailDto();
+        e2.setEmailAddress("same@mail.com");
 
-        when(userRepo.findByEmailIgnoreCase(anyString())).thenReturn(Optional.of(user));
-        when(contactRepo.findByIdAndUser(anyLong(), any(User.class))).thenReturn(Optional.of(contact));
+        dto.setEmails(List.of(e1, e2));
+
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(contactRepo.findByIdAndUser(anyLong(), any()))
+                .thenReturn(Optional.of(contact));
 
         assertThrows(InvalidActionException.class,
-                () -> contactService.updateContact(1L, "test@mail.com", dto));
+                () -> contactService.updateContact(1L, user.getEmail(), dto));
     }
+
+    @Test
+    void updateContact_shouldThrow_whenDuplicatePhone() {
+        Contact contact = new Contact();
+        contact.setUser(user);
+        contact.setEmails(new ArrayList<>());
+        contact.setPhones(new ArrayList<>());
+
+        ContactUpdateDto dto = new ContactUpdateDto();
+
+        ContactPhoneDto p1 = new ContactPhoneDto();
+        p1.setPhoneNumber("111");
+
+        ContactPhoneDto p2 = new ContactPhoneDto();
+        p2.setPhoneNumber("111");
+
+        dto.setPhones(List.of(p1, p2));
+
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(contactRepo.findByIdAndUser(anyLong(), any()))
+                .thenReturn(Optional.of(contact));
+
+        assertThrows(InvalidActionException.class,
+                () -> contactService.updateContact(1L, user.getEmail(), dto));
+    }
+
+
+    //============================== DELETE CONTACT=============================/
 
     @Test
     void deleteContact_success() {
         Contact contact = new Contact();
         contact.setUser(user);
 
-        when(userRepo.findByEmailIgnoreCase(anyString())).thenReturn(Optional.of(user));
-        when(contactRepo.findByIdAndUser(anyLong(), any(User.class))).thenReturn(Optional.of(contact));
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(contactRepo.findByIdAndUser(anyLong(), any()))
+                .thenReturn(Optional.of(contact));
 
-        boolean result = contactService.deleteContact(1L, "test@mail.com");
+        boolean result =
+                contactService.deleteContact(1L, user.getEmail());
 
         assertTrue(result);
         verify(contactRepo).delete(contact);
     }
 
     @Test
-    void contactList_success() {
-        Contact contact = new Contact();
-        Page<Contact> page = new PageImpl<>(List.of(contact));
-        Pageable pageable = PageRequest.of(0, 10);
+    void deleteContact_shouldThrow_whenNotFound() {
+        when(userRepo.findByEmailIgnoreCase(any()))
+                .thenReturn(Optional.of(user));
+        when(contactRepo.findByIdAndUser(anyLong(), any()))
+                .thenReturn(Optional.empty());
 
-        when(contactRepo.findUserContacts(anyString(), anyString(), any()))
-                .thenReturn(page);
-        when(contactMapper.toDto(any())).thenReturn(new ContactResponseDto());
-
-        Page<ContactResponseDto> result = contactService.contactList("user@mail.com", "", pageable);
-
-        assertEquals(1, result.getContent().size());
+        assertThrows(InvalidActionException.class,
+                () -> contactService.deleteContact(1L, user.getEmail()));
     }
 
 
+    //============================== CONTACT LIST=============================/
+
+
+    @Test
+    void contactList_success() {
+        Contact contact = new Contact();
+        Page<Contact> page = new PageImpl<>(List.of(contact));
+
+        when(contactRepo.findUserContacts(any(), any(), any()))
+                .thenReturn(page);
+        when(contactMapper.toDto(any()))
+                .thenReturn(new ContactResponseDto());
+
+        Page<ContactResponseDto> result =
+                contactService.contactList(user.getEmail(), "", PageRequest.of(0, 10));
+
+        assertEquals(1, result.getContent().size());
+    }
 }
