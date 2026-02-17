@@ -32,7 +32,7 @@ WHERE email = 'inaamm@gmail.com';
 | ------------------- | ----------------------------------------------------------------------------------------------- |
 | Add Contact         | Users can add contacts with email, phone number, and a label                                    |
 | Edit/Delete Contact | Users can edit or delete their existing contacts                                                |
-| Search Contact      | Users can search for contacts by name or email                                                  |
+| Search Contact      | Users can search for contacts only in the contact list, by first name, last name, or email                                                |
 | Sorting             | Contacts can be sorted by first name or last name in ascending (ASC) or descending (DESC) order |
 | Pagination          | Users can navigate through contact lists using Next and Previous buttons                        |
 | Group Management    | Users can create groups, add multiple contacts to a group, and view group details               |
