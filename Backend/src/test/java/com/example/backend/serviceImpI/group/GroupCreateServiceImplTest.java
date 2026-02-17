@@ -1,4 +1,4 @@
-package com.example.backend.serviceImpI;
+package com.example.backend.serviceImpI.group;
 
 import com.example.backend.dto.group.GroupCreateRequest;
 import com.example.backend.dto.group.GroupResponseDto;
@@ -10,7 +10,6 @@ import com.example.backend.mapper.group.GroupMapper;
 import com.example.backend.repository.contact.ContactRepository;
 import com.example.backend.repository.group.GroupCreateRepository;
 import com.example.backend.repository.user.UserRepository;
-import com.example.backend.serviceImpI.group.GroupCreateServiceImpl;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;

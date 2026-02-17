@@ -84,17 +84,24 @@ public class ContactServiceImpI implements ContactService {
             Contact contact, Long User_Id) {
 
         List<ContactEmail> contactEmails = new ArrayList<>();
+        Set<String> emailSet = new HashSet<>();
 
         if (contactEmailDtos != null && !contactEmailDtos.isEmpty()) {
 
             for (ContactEmailDto emailDto : contactEmailDtos) {
+                String emailLower = emailDto.getEmailAddress().toLowerCase();
 
+                // Check duplicates in the same request
+                if (!emailSet.add(emailLower)) {
+                    throw new InvalidActionException("Duplicate email in request: " + emailDto.getEmailAddress());
+                }
+
+                // Check duplicates in DB
                 emailRepo.findByEmailAddressAndContact_User_Id(emailDto.getEmailAddress(), User_Id)
                         .ifPresent(e -> {
-                            throw new InvalidActionException(
-                                    "Email exists: " + e.getEmailAddress()
-                            );
+                            throw new InvalidActionException("Email exists: " + e.getEmailAddress());
                         });
+
                 ContactEmail contactEmail = new ContactEmail();
                 contactEmail.setEmailAddress(emailDto.getEmailAddress());
                 contactEmail.setLabel(emailDto.getLabel());
@@ -108,21 +115,27 @@ public class ContactServiceImpI implements ContactService {
 
 
     //----------------------------Process phone------------------------//
+
     private List<ContactPhone> processPhone(
             List<ContactPhoneDto> contactPhoneDtos,
             Contact contact, Long User_Id) {
 
         List<ContactPhone> contactPhones = new ArrayList<>();
+        Set<String> phoneSet = new HashSet<>();
 
         if (contactPhoneDtos != null && !contactPhoneDtos.isEmpty()) {
 
             for (ContactPhoneDto phoneDto : contactPhoneDtos) {
 
+                // Check duplicates in request
+                if (!phoneSet.add(phoneDto.getPhoneNumber())) {
+                    throw new InvalidActionException("Duplicate phone in request: " + phoneDto.getPhoneNumber());
+                }
+
+                // Check duplicates in DB
                 phoneRepo.findByPhoneNumberAndContact_User_Id(phoneDto.getPhoneNumber(), User_Id)
                         .ifPresent(p -> {
-                            throw new InvalidActionException(
-                                    "PhoneNo exists: " + p.getPhoneNumber()
-                            );
+                            throw new InvalidActionException("Phone exists: " + p.getPhoneNumber());
                         });
 
                 ContactPhone phone = new ContactPhone();
@@ -136,6 +149,7 @@ public class ContactServiceImpI implements ContactService {
 
         return contactPhones;
     }
+
 
 
     //================================================Pagenation  Contact=======================================//

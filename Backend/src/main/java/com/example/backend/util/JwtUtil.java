@@ -23,6 +23,13 @@ public class JwtUtil {
     private long refreshExpiry = 1000 * 60 * 60 * 24 * 7;
 
 
+    public JwtUtil(long accessExpiry, long refreshExpiry) {
+        this.accessExpiry = accessExpiry;
+        this.refreshExpiry = refreshExpiry;
+    }
+
+    public JwtUtil() {}
+
     // Extract username (email in your case) from token
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
