@@ -1,0 +1,1978 @@
+2026-04-02 19:06:48.896 | INFO  | [background-preinit] | o.h.validator.internal.util.Version.<clinit> | HV000001: Hibernate Validator 8.0.3.Final
+2026-04-02 19:06:49.109 | INFO  | [main] | c.example.backend.BackendApplication.logStarting | Starting BackendApplication using Java 17.0.12 with PID 19212 (C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend\target\classes started by inam in C:\Users\inam\Desktop\Real github project\contact-management-system-Description-\Backend)
+2026-04-02 19:06:49.111 | DEBUG | [main] | c.example.backend.BackendApplication.logStarting | Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-04-02 19:06:49.112 | INFO  | [main] | c.example.backend.BackendApplication.logStartupProfileInfo | No active profile set, falling back to 1 default profile: "default"
+2026-04-02 19:06:50.939 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-02 19:06:51.348 | INFO  | [main] | o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn | Finished Spring Data repository scanning in 391 ms. Found 8 JPA repository interfaces.
+2026-04-02 19:06:52.424 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.initialize | Tomcat initialized with port 8082 (http)
+2026-04-02 19:06:52.439 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Initializing ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-04-02 19:06:52.442 | INFO  | [main] | o.a.catalina.core.StandardService.log | Starting service [Tomcat]
+2026-04-02 19:06:52.443 | INFO  | [main] | o.a.catalina.core.StandardEngine.log | Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-04-02 19:06:52.537 | INFO  | [main] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring embedded WebApplicationContext
+2026-04-02 19:06:52.540 | INFO  | [main] | o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext | Root WebApplicationContext: initialization completed in 3324 ms
+2026-04-02 19:06:52.625 | DEBUG | [main] | com.example.backend.util.JWTFilter.init | Filter 'JWTFilter' configured for use
+2026-04-02 19:06:52.998 | INFO  | [main] | o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation | HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-02 19:06:53.114 | INFO  | [main] | org.hibernate.Version.logVersion | HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-04-02 19:06:53.181 | INFO  | [main] | o.h.c.i.RegionFactoryInitiator.initiateService | HHH000026: Second-level cache disabled
+2026-04-02 19:06:53.662 | INFO  | [main] | o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer | No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-02 19:06:53.710 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Starting...
+2026-04-02 19:06:54.023 | INFO  | [main] | com.zaxxer.hikari.pool.HikariPool.checkFailFast | HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a1ddbf1
+2026-04-02 19:06:54.025 | INFO  | [main] | com.zaxxer.hikari.HikariDataSource.getConnection | HikariPool-1 - Start completed.
+2026-04-02 19:06:54.160 | INFO  | [main] | o.hibernate.orm.connections.pooling.logConnectionInfo | HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-02 19:06:55.700 | INFO  | [main] | o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService | HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-02 19:06:55.970 | INFO  | [main] | o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory | Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02 19:06:56.642 | INFO  | [main] | o.s.d.j.r.query.QueryEnhancerFactory.<clinit> | Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-02 19:06:57.980 | WARN  | [main] | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor | spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-02 19:06:58.248 | INFO  | [main] | o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer.configure | Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-02 19:06:58.249 | WARN  | [main] | o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure | Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-02 19:06:58.646 | INFO  | [main] | o.a.coyote.http11.Http11NioProtocol.log | Starting ProtocolHandler ["http-nio-0.0.0.0-8082"]
+2026-04-02 19:06:58.672 | INFO  | [main] | o.s.b.w.e.tomcat.TomcatWebServer.start | Tomcat started on port 8082 (http) with context path '/'
+2026-04-02 19:06:58.683 | INFO  | [main] | c.example.backend.BackendApplication.logStarted | Started BackendApplication in 10.591 seconds (process running for 11.261)
+2026-04-02 19:06:58.782 | DEBUG | [main] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0
+2026-04-02 19:07:34.469 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.a.c.c.C.[Tomcat].[localhost].[/].log | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-02 19:07:34.470 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Initializing Servlet 'dispatcherServlet'
+2026-04-02 19:07:34.471 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | o.s.web.servlet.DispatcherServlet.initServletBean | Completed initialization in 1 ms
+2026-04-02 19:07:34.735 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-04-02 19:07:34.760 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-04-02 19:07:34.855 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-04-02 19:07:34.937 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-04-02 19:07:34.949 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamm@gmail.com
+2026-04-02 19:07:42.169 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:07:42.204 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:07:42.224 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:07:42.231 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.238 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.244 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.246 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.248 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.250 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.252 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.255 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.257 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.259 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.261 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.263 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.265 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.267 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.268 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.269 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.271 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.272 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.274 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.275 | DEBUG | [http-nio-0.0.0.0-8082-exec-6] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.276 | INFO  | [http-nio-0.0.0.0-8082-exec-6] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:07:42.344 | INFO  | [http-nio-0.0.0.0-8082-exec-7] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:07:42.346 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:07:42.352 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:07:42.353 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.355 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.356 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.357 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.359 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.365 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.366 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.368 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.369 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.370 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.372 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.374 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.376 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.378 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.379 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.381 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.382 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.383 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.384 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:42.385 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:42.399 | INFO  | [http-nio-0.0.0.0-8082-exec-7] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:07:45.543 | INFO  | [http-nio-0.0.0.0-8082-exec-8] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:07:45.544 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:07:45.550 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:07:45.551 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.553 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.554 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.555 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.556 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.557 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.558 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.559 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.560 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.563 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.565 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.567 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.568 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.569 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.570 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.572 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.573 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.574 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.575 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.576 | DEBUG | [http-nio-0.0.0.0-8082-exec-8] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.577 | INFO  | [http-nio-0.0.0.0-8082-exec-8] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:07:45.606 | INFO  | [http-nio-0.0.0.0-8082-exec-9] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:07:45.607 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:07:45.610 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:07:45.613 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.615 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.616 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.617 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.618 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.619 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.620 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.622 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.623 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.624 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.625 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.626 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.627 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.630 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.632 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.633 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.634 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.635 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.636 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:07:45.637 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:07:45.638 | INFO  | [http-nio-0.0.0.0-8082-exec-9] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:08:01.344 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:08:01.345 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:08:01.349 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:08:01.350 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.352 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.353 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.354 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.355 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.356 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.357 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.359 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.361 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.362 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.363 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.364 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.365 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.366 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.367 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.368 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.369 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.370 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.371 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.372 | DEBUG | [http-nio-0.0.0.0-8082-exec-1] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.373 | INFO  | [http-nio-0.0.0.0-8082-exec-1] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:08:01.385 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:08:01.386 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:08:01.389 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:08:01.391 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.393 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.395 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.396 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.397 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.398 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.399 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.400 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.401 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.402 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.404 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.405 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.406 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.406 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.407 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.408 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.409 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.411 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.412 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:01.413 | DEBUG | [http-nio-0.0.0.0-8082-exec-3] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:01.414 | INFO  | [http-nio-0.0.0.0-8082-exec-3] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:08:05.977 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:08:05.980 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-04-02 19:08:05.983 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:05.984 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:05.985 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:05.986 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:05.987 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:05.988 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:05.989 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:05.990 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:05.992 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:05.993 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:05.994 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:05.995 | DEBUG | [http-nio-0.0.0.0-8082-exec-5] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:05.996 | INFO  | [http-nio-0.0.0.0-8082-exec-5] | c.e.b.c.contact.ContactController.listContacts | contacts Page 2 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:08:08.367 | INFO  | [http-nio-0.0.0.0-8082-exec-7] | c.e.b.c.contact.ContactController.listContacts | email inamm@gmail.com
+2026-04-02 19:08:08.369 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        c1_0.id,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-04-02 19:08:08.371 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        count(c1_0.id) 
+    from
+        contacts c1_0 
+    join
+        users u1_0 
+            on u1_0.id=c1_0.user_id 
+    where
+        u1_0.email=? 
+        and (
+            ? is null 
+            or ?='' 
+            or lower(c1_0.first_name) like lower((?||'%')) escape ''
+        )
+2026-04-02 19:08:08.372 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.374 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.375 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.377 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.378 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.379 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.380 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.381 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.382 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.383 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.384 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.385 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.386 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.387 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.388 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.389 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.390 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.391 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.392 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email_address,
+        e1_0.label 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-04-02 19:08:08.394 | DEBUG | [http-nio-0.0.0.0-8082-exec-7] | org.hibernate.SQL.logStatement | 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.label,
+        p1_0.phone_number 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-04-02 19:08:08.395 | INFO  | [http-nio-0.0.0.0-8082-exec-7] | c.e.b.c.contact.ContactController.listContacts | contacts Page 1 of 2 containing com.example.backend.dto.contact.ContactResponseDto instances
+2026-04-02 19:08:14.731 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-04-02 19:08:14.733 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        r1_0.id,
+        r1_0.role_name 
+    from
+        roles r1_0 
+    where
+        r1_0.id=?
+2026-04-02 19:08:14.816 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    select
+        u1_0.id,
+        u1_0.is_deleted,
+        u1_0.email,
+        u1_0.last_login,
+        u1_0.name,
+        u1_0.password,
+        u1_0.refresh_token,
+        u1_0.role_id 
+    from
+        users u1_0 
+    where
+        upper(u1_0.email)=upper(?)
+2026-04-02 19:08:14.820 | DEBUG | [http-nio-0.0.0.0-8082-exec-9] | org.hibernate.SQL.logStatement | 
+    update
+        users 
+    set
+        is_deleted=?,
+        email=?,
+        last_login=?,
+        name=?,
+        password=?,
+        refresh_token=?,
+        role_id=? 
+    where
+        id=?
+2026-04-02 19:08:14.823 | INFO  | [http-nio-0.0.0.0-8082-exec-9] | c.e.b.controller.auth.AuthController.login | Login successful for email: inamm@gmail.com
+2026-04-02 19:57:42.943 | INFO  | [SpringApplicationShutdownHook] | o.s.b.w.e.tomcat.GracefulShutdown.shutDownGracefully | Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02 19:57:44.078 | INFO  | [tomcat-shutdown] | o.s.b.w.e.tomcat.GracefulShutdown.doShutdown | Graceful shutdown complete
+2026-04-02 19:57:44.114 | INFO  | [SpringApplicationShutdownHook] | o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy | Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02 19:57:44.170 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown initiated...
+2026-04-02 19:57:44.201 | INFO  | [SpringApplicationShutdownHook] | com.zaxxer.hikari.HikariDataSource.close | HikariPool-1 - Shutdown completed.
